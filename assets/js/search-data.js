@@ -426,20 +426,33 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-i-began-my-undergraduate-studies-in-mechanical-engineering-at-the-university-of-manchester",
+          title: 'I began my undergraduate studies in Mechanical Engineering at the University of Manchester....',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-launched-and-coordinated-the-peer-mentoring-program-for-foundation-year-students-in-the-faculty-of-science-and-engineering-at-the-university-of-manchester",
+          title: 'Launched and coordinated the Peer Mentoring program for foundation year students in the...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-the-peer-mentoring-scheme-was-honoured-as-a-recipient-of-the-peer-support-awards-2024",
+          title: 'The Peer Mentoring scheme was honoured as a recipient of the Peer Support...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "news-completed-an-internship-as-a-research-and-design-engineer-at-naffco",
+          title: 'Completed an internship as a Research and Design Engineer at NAFFCO.',
+          description: "",
+          section: "News",},{id: "news-completed-an-internship-as-a-research-and-design-engineer-at-danway",
+          title: 'Completed an internship as a Research and Design Engineer at DANWAY.',
+          description: "",
+          section: "News",},{id: "news-graduated-from-the-university-of-manchester-with-an-80-average-and-was-a-recipient-of-the-stellify-award",
+          title: 'Graduated from the University of Manchester with an 80% average and was a...',
+          description: "",
+          section: "News",},{id: "news-submitted-my-undergraduate-thesis-computational-fluid-dynamics-of-intracranial-aneurysms-and-rupture-prediction-to-the-journal-scientific-reports",
+          title: 'Submitted my undergraduate thesis, “Computational Fluid Dynamics of Intracranial Aneurysms and Rupture Prediction,”...',
+          description: "",
+          section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
+          title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
+          description: "",
+          section: "News",},{id: "projects-vima",
+          title: 'VIMA',
+          description: "Visual Impairment Motion Assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
@@ -516,13 +529,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://youtube.com/@dinethilapperuma3451", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
         },
       },{
       id: 'light-theme',
