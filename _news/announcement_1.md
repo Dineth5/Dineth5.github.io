@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-09-19 11:38:00+0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I began my undergraduate studies in Mechanical Engineering at the [University of Manchester](https://www.manchester.ac.uk/study/undergraduate/courses/2025/03389/beng-mechanical-engineering/).

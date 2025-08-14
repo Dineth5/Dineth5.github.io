@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-04-25 11:38:00+0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+The Peer Mentoring scheme was honoured as a recipient of the [Peer Support Awards 2024](https://www.peersupport.manchester.ac.uk/rewards-recognition/peersupportawards2024/).
