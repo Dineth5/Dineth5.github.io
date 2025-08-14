@@ -32,5 +32,3 @@ Hi Hi, my name is Dineth! I am currently pursuing my MSc in Computational Biomed
 My academic interests lie at the intersection of engineering and medicine — in particular, using simulation and numerical modelling to address challenges in healthcare. I am currently working on publishing my undergraduate dissertation in Scientific Reports, where I quantitatively evaluated the likelihood of aneurysm rupture.
 
 In the summer of 2024, I interned as a Research and Design Engineer at both [NAFFCO](https://www.naffco.com) and [DANWAY](https://danwaygroup.com)
-
-
