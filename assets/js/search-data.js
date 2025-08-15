@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "This is my CV, available for viewing and download.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -455,9 +455,9 @@ ninja.data = [{
           description: "Visual Impairment Motion Assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-cfd-of-intracranial-aneurysms-and-rupture-prediction",
+          title: 'CFD of Intracranial Aneurysms and Rupture Prediction',
+          description: "Final-year dissertation applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
