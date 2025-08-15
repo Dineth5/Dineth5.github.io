@@ -455,8 +455,8 @@ ninja.data = [{
           description: "Visual Impairment Motion Assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-cfd-of-intracranial-aneurysms-and-rupture-prediction",
-          title: 'CFD of Intracranial Aneurysms and Rupture Prediction',
+            },},{id: "projects-cfd-of-aneurysms",
+          title: 'CFD of Aneurysms',
           description: "Final-year dissertation applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
