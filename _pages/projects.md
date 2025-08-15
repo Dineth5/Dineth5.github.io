@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: These projects showcase my curiosity and drive to tackle engineering and biomedical challenges, combining computational modelling, simulation, and hands-on design to solve real-world problems.
 nav: true
 nav_order: 1
 display_categories: [Work, Side Quests]

@@ -39,7 +39,8 @@ nav_order: 5
     <p><strong>Phone:</strong><br>📞 <a href="tel:+447585261005">+44 7585 261005</a></p>
     <p><strong>Social Media:</strong><br>
       - <a href="https://linkedin.com/in/ilapperuma">LinkedIn</a><br>
-      - <a href="https://github.com/yourusername">GitHub</a>
+      - <a href="https://github.com/Dineth5">GitHub</a><br>
+      - <a href="https://www.instagram.com/dineth.ilapperuma/">Instagram</a>
     </p>
   </div>
 
