@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CFD of Intracranial Aneurysms and Rupture Prediction
+title: CFD of Aneurysms
 description: Final-year dissertation applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms
 img: assets/img/C2_TA-WSS2.png
 importance: 2
@@ -28,11 +28,11 @@ category: Work
 **Overview**  
 My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial Aneurysms in Clinical Settings_, was conducted under the supervision of [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) and is currently pending publication in Scientific Reports.
 
-[**📄 Download Dissertation (PDF)**](assets/files/Dineth_Ilapperuma_11121002_Aneurysms.pdf){:target="\_blank" rel="noopener"}
+[**📄 Download Dissertation (PDF)**](assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf){:target="\_blank" rel="noopener"}
 
 <div style="height:80vh; border:1px solid #eee; border-radius:12px; overflow:hidden; margin-top:1rem;">
   <iframe
-    src="/assets/files/Dineth_Ilapperuma_11121002_Aneurysms.pdf#toolbar=1&view=FitH"
+    src="/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf#toolbar=1&view=FitH"
     title="Undergraduate Dissertation"
     width="100%"
     height="100%"

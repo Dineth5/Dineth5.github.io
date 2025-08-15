@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 4
-cv_pdf: assets/pdf/DinethCV.pdf
+cv_pdf: DinethCV.pdf
 description: This is my CV, available for viewing and download.
 toc:
   sidebar: left
