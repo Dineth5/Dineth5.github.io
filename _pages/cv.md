@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 description: Materials for courses you taught. Replace this text with your description.
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 <div style="height:90vh; border:1px solid #eee; border-radius:12px; overflow:hidden; margin-top:1rem;">
