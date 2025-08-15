@@ -407,12 +407,7 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-i-began-my-undergraduate-studies-in-mechanical-engineering-at-the-university-of-manchester",
+      },{id: "news-i-began-my-undergraduate-studies-in-mechanical-engineering-at-the-university-of-manchester",
           title: 'I began my undergraduate studies in Mechanical Engineering at the University of Manchester....',
           description: "",
           section: "News",},{id: "news-launched-and-coordinated-the-peer-mentoring-program-for-foundation-year-students-in-the-faculty-of-science-and-engineering-at-the-university-of-manchester",
