@@ -13,7 +13,7 @@ profile:
     Dubai, United Arab Emirates<br>
     London, United Kingdom
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+#selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
