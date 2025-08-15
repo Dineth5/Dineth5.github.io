@@ -28,7 +28,7 @@ category: Work
 **Overview**  
 My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial Aneurysms in Clinical Settings_, was conducted under the supervision of [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) and is currently pending publication in Scientific Reports.
 
-[**📄 Download Dissertation (PDF)**](assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf){:target="\_blank" rel="noopener"}
+[**📄 Download Dissertation (PDF)**]({{ '/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf' | relative_url }}){:target="\_blank" rel="noopener"}
 
 <div style="height:80vh; border:1px solid #eee; border-radius:12px; overflow:hidden; margin-top:1rem;">
   <iframe

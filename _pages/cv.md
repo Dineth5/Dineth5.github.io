@@ -12,4 +12,11 @@ toc:
 
 Click the button above to download my CV, or view it directly below.
 
-<embed src="{{ '/assets/pdf/DinethCV.pdf' | relative_url }}" type="application/pdf" width="100%" height="800px" />
+<div style="height:90vh; border:1px solid #eee; border-radius:12px; overflow:hidden;">
+  <iframe
+    src="/assets/pdf/DinethCV.pdf#toolbar=1&view=FitH"
+    width="100%"
+    height="100%"
+    style="border:0;">
+  </iframe>
+</div>
