@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "Blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-projects",
+  },{id: "nav-projects",
           title: "Projects",
           description: "A growing collection of your cool projects.",
           section: "Navigation",
@@ -38,14 +31,14 @@ ninja.data = [{
             window.location.href = "/publications/";
           },
         },{id: "dropdown-bookshelf",
-              title: "bookshelf",
+              title: "Bookshelf",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "/books/";
               },
             },{id: "dropdown-blog",
-              title: "blog",
+              title: "Blog",
               description: "",
               section: "Dropdown",
               handler: () => {
