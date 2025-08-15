@@ -4,24 +4,17 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
-          },
-        },{id: "nav-publications",
-          title: "Publications",
-          description: "Publications by categories in reversed chronological order.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
           },
         },{id: "nav-projects",
           title: "Projects",
@@ -32,17 +25,17 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is my CV, available for viewing and download.",
+          description: "Materials for courses you taught. Replace this text with your description.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "Teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Publications by categories in reversed chronological order.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/teaching/";
+            window.location.href = "/publications/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
