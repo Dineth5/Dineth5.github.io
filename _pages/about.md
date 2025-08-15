@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: MSc Biomedical Engineering @ Imperial College London
 
