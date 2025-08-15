@@ -2,7 +2,7 @@
 layout: page
 title: project 6
 description: a project with no image
-img:
+img: assets/img/4.jpg
 importance: 1
 category: Side Quests
 ---
