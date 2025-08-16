@@ -28,24 +28,28 @@ category: Work
 **Overview**  
 My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial Aneurysms in Clinical Settings_, was conducted under the supervision of [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) and is currently pending publication in Scientific Reports.
 
-[**📄 Download Dissertation (PDF)**]({{ '/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf' | relative_url }}){:target="\_blank" rel="noopener"}
+<a href="{{ '/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-right:10px; margin-bottom:10px;">
+  📄 Download Dissertation
+</a>
 
-<div style="height:80vh; border:1px solid #eee; border-radius:12px; overflow:hidden; margin-top:1rem;">
-  <iframe
-    src="/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf#toolbar=1&view=FitH"
-    title="Undergraduate Dissertation"
-    width="100%"
-    height="100%"
-    style="border:0;">
-  </iframe>
-</div>
+<a href="{{ '/assets/pdf/TF38_Ilapperuma.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-success" style="margin-bottom:10px;">
+  🖼️ Download Poster
+</a>
+
+📄 [**Download Dissertation**]({{ '/assets/pdf/Dineth_Ilapperuma_11121002_Aneurysms.pdf' | relative_url }}){:target="\_blank" rel="noopener"}
+
+🖼️ [**Download Poster**]({{ '/assets/pdf/TF38_Ilapperuma.pdf' | relative_url }}){:target="\_blank" rel="noopener"}
 
 ---
 
-**Results**
+### Results
 
-- Achieved a final grade of 91%.
-- Segmented patient-specific vascular geometries from medical imaging data.
-- Generated high-fidelity CFD meshes and ran simulations in ANSYS Fluent.
-- Analyzed hemodynamic parameters to assess rupture risk.
-- Validated findings against published clinical literature.
+- Achieved a final grade of 91% for the dissertation.
+- Awarded a grade of 100% for the accompanying poster.
+- Successfully segmented patient-specific intracranial aneurysm geometries from medical imaging data.
+- Developed and validated high-fidelity CFD meshes to capture aneurysmal blood flow.
+- Simulations in STAR-CCM+ demonstrated distinct haemodynamic responses under different treatment strategies:
+  - Endovascular coiling reduced flow velocity but in some cases left regions of residual circulation.
+  - Flow-diverting stents provided greater reduction in inflow jet momentum, lowering wall shear stress and oscillatory shear index across the aneurysm dome.
+- Quantitative haemodynamic analysis showed that elevated OSI and WSS gradients correlated strongly with rupture-prone regions, in line with published clinical literature.
+- The study presented a proof-of-concept for employing patient-specific CFD as a clinical decision-support tool in endovascular treatment planning.

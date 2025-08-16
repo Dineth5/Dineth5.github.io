@@ -12,7 +12,7 @@ horizontal: false
 <div style="margin-bottom: 2rem; text-align: center;">
   <a href="/assets/pdf/Dineth_Portfolio.pdf" target="_blank" 
      style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #007acc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
-    📄 View Full Portfolio
+    📄 Download Portfolio
   </a>
 </div>
 
