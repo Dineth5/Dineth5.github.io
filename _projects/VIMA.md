@@ -2,7 +2,7 @@
 layout: page
 title: VIMA
 description: Visual Impairment Motion Assistant
-img: assets/img/VIMA_logo.jpg
+img: assets/img/VIMA/VIMA_logo.jpg
 importance: 1
 category: Work
 ---
@@ -13,13 +13,13 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA_sketch.png" title="Sketch" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_sketch.png" title="Sketch" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA_cross.png" title="Cross section" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_cross.png" title="Cross section" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA_assembly.jpeg" title="Assembly" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_assembly.jpeg" title="Assembly" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -34,7 +34,7 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA_expo.png" title="Exploded" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_expo.png" title="Exploded" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
