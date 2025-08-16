@@ -424,12 +424,7 @@ ninja.data = [{
           section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
           description: "",
-          section: "News",},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
+          section: "News",},{id: "projects-project-5",
           title: 'project 5',
           description: "a project with a background image",
           section: "Projects",handler: () => {
@@ -454,6 +449,11 @@ ninja.data = [{
           description: "Design project focused on enhancing fire safety equipment",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Fire_Advancer/";
+            },},{id: "projects-2-axes-cnc-lathe",
+          title: '2-Axes CNC Lathe',
+          description: "Mechanical design project for a compact classroom CNC lathe",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Lathe/";
             },},{id: "projects-vima",
           title: 'VIMA',
           description: "Visual Impairment Motion Assistant",
