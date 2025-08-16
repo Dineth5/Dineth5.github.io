@@ -424,17 +424,7 @@ ninja.data = [{
           section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
           description: "",
-          section: "News",},{id: "projects-vima",
-          title: 'VIMA',
-          description: "Visual Impairment Motion Assistant",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-cfd-of-aneurysms",
-          title: 'CFD of Aneurysms',
-          description: "Final-year dissertation applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
+          section: "News",},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
@@ -454,6 +444,16 @@ ninja.data = [{
           description: "a project with no image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
+            },},{id: "projects-cfd-of-aneurysms",
+          title: 'CFD of Aneurysms',
+          description: "Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Aneurysms/";
+            },},{id: "projects-vima",
+          title: 'VIMA',
+          description: "Visual Impairment Motion Assistant",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/VIMA/";
             },},{
         id: 'social-email',
         title: 'email',
