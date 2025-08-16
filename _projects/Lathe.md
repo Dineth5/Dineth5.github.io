@@ -29,14 +29,14 @@ Designed a compact 2-axes tabletop CNC lathe capable of precision machining alum
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Lathe/House.png" title="Spindle Housing & Drivetrain (Isometric)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/Lathe/Full.png" title="Full Assembly – Isometric View" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Lathe/Cross.png" title="Spindle Housing & Drivetrain (Cross-Section)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/Lathe/House.png" title="Spindle Housing & Drivetrain (Isometric)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-  Isometric view (left) and cross-sectional view (right) of the spindle housing and drivetrain assembly.
+  Isometric front and rear view of the spindle housing and drivetrain assembly.
 </div>
 
 ---
@@ -89,7 +89,7 @@ The lathe was developed by focusing on three main subsystems: the spindle, X-sta
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Lathe/Full.png" title="Full Assembly – Isometric View" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/Lathe/Cross.png" title="Spindle Housing & Drivetrain (Cross-Section)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/Lathe/Full_explo.png" title="Full Assembly – Exploded View" class="img-fluid rounded z-depth-1" %}
@@ -97,5 +97,5 @@ The lathe was developed by focusing on three main subsystems: the spindle, X-sta
 </div>
 
 <div class="caption">
-  Isometric (left) and exploded (right) views of the complete CNC lathe assembly.
+  Cross-sectional (left) and exploded (right) views of the complete CNC lathe assembly.
 </div>
