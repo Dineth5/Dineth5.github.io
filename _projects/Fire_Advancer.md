@@ -64,13 +64,13 @@ The system consists of two complementary modules — the Gripping Rover for hose
 
 ## Sustainability Considerations
 
-The design with three UN Sustainable Development Goals (SDGs):
+The Fire Hose Advancer supports three UN Sustainable Development Goals (SDGs):
 
-- **SDG 3: Good Health and Well-Being** – by improving safety for firefighters.
-- **SDG 9: Industry, Innovation, and Infrastructure** – through engineering innovation and manufacturability.
-- **SDG 12: Responsible Consumption and Production** – by selecting durable and recyclable materials.
+- **SDG 2: Zero Hunger** – In rural and under-resourced areas, firefighting relies on self-organised efforts. The device simplifies hose advancement for minimally trained individuals and resolves kinks automatically, allowing communities to better protect crops and reduce famine risks caused by wildfires.
 
-These considerations ensured that the project addressed not only technical performance but also global sustainability challenges.
+- **SDG 12: Responsible Consumption and Production** – Modular design and standardised off-the-shelf components reduce energy demands during manufacturing and simplify repairs. The chassis uses recycled aluminium, which is lightweight, durable, and infinitely recyclable, extending the device’s lifespan and supporting a circular economy.
+
+- **SDG 15: Life on Land** – Wildfires destroy forests, wildlife habitats, and agricultural land globally. This device allows a single firefighter to advance hoses efficiently, while the automatic unkinking system reduces downtime, improving wildfire response and protecting ecosystems.
 
 ---
 
