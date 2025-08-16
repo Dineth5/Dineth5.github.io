@@ -11,20 +11,33 @@ category: Work
 
 VIMA is a detachable handle designed to assist visually impaired users by detecting obstacles and providing real-time haptic feedback. It replicates the sensation of a traditional white cane while detecting both ground-level and overhanging obstacles.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_sketch.png" title="Sketch" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_cross.png" title="Cross section" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_assembly.jpeg" title="Assembly" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    VIMA's design journey from initial sketches to CAD models
-</div>
+---
+
+{% include figure.liquid
+    path="assets/img/VIMA/VIMA_sketch.png"
+    caption="VIMA Initial Sketch"
+    row=true
+    loading="eager"
+    class="img-fluid rounded z-depth-1"
+%}
+
+{% include figure.liquid
+    path="assets/img/VIMA/VIMA_cross.png"
+    caption="VIMA Cross Section"
+    row=true
+    loading="eager"
+    class="img-fluid rounded z-depth-1"
+%}
+
+{% include figure.liquid
+    path="assets/img/VIMA/VIMA_assembly.jpeg"
+    caption="VIMA Full Assembly"
+    row=true
+    loading="eager"
+    class="img-fluid rounded z-depth-1"
+%}
+
+---
 
 **Development**
 

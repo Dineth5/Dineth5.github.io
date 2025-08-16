@@ -2,17 +2,20 @@
 {% assign parts = include.path | split: '.' %}
 {% assign ext = parts.last %}
 
+{% comment %}
+  If 'row' is true, wrap multiple figures in a flex container
+{% endcomment %}
+{% if include.row %}
+  <div class="figure-row" style="display:flex; gap:1rem; align-items:flex-start;">
+{% endif %}
+
 <figure
   {% if include.slot %}
     slot="{{ include.slot }}"
   {% endif %}
+  style="flex:1 1 0;"
 >
   <picture>
-    <!-- Auto scaling with imagemagick -->
-    <!--
-      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
-      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
-    -->
     {% if site.imagemagick.enabled %}
       {% unless include.avoid_scaling %}
         <source
@@ -36,32 +39,7 @@
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
-      {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% else %}
-        height="auto"
-      {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        style="
-          {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
-          {% endif %}
-          {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
-          {% endif %}
-          {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
-          {% endif %}
-          {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
-          {% endif %}
-        "
-      {% endif %}
+      style="width:100%; height:auto; object-fit:contain;"
       {% if include.alt %}
         alt="{{ include.alt }}"
       {% endif %}
@@ -84,3 +62,7 @@
     <figcaption class="caption">{{ include.caption }}</figcaption>
   {% endif %}
 </figure>
+
+{% if include.row %}
+  </div>
+{% endif %}

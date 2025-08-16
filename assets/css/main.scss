@@ -23,3 +23,21 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/* Automatically stretch images in a row */
+figure.row-figure-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; // spacing between images
+  align-items: stretch; // all images match height
+}
+
+figure.row-figure-container picture {
+  flex: 1 1 auto; // allow images to grow/shrink equally
+}
+
+figure.row-figure-container img {
+  width: 100%;
+  height: 100%;  // match container height
+  object-fit: cover; // maintain visual proportion
+}
