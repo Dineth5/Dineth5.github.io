@@ -24,10 +24,30 @@ The project focused on creating a device to help firefighters advance hoses duri
 
 ### How the Design Works
 
-The system was developed in two complementary design directions:
+The system consists of two complementary modules — the Gripping Rover for hose advancement and the Unkinking Shuttle for kink removal. Together, they allow firefighters to advance hoses continuously, even in the presence of kinks.
 
-- **Rover Design** – A two-module chassis with a central pivot for unpowered automatic steering. The battery housing was made water-resistant and heat-protected to withstand wildfire conditions.
-- **Shuttle Design** – A three-module system with two unpowered units featuring concave rollers for hose alignment, and one powered unit providing propulsion. An adjustable roller gap allowed for quick hose mounting and removal.
+**Gripping Rover**
+
+- Two-module chassis with a central pivot for unpowered steering, keeping the device aligned without electronics.
+- Six all-terrain wheels, with the front pair powered independently for traction.
+- Water-resistant, heat-shielded battery housing with quick-release access.
+
+**Unkinking Shuttle**
+
+- Three modules: a powered central roller unit and two unpowered alignment modules.
+- Hinged connectors allow the shuttle to snake along bends until it reaches a kink.
+- Magnetic docking system for secure storage and easy deployment.
+
+**Triangular Wheels**
+
+- Each assembly uses three rotating sub-wheels.
+- Provides “stepping” motion to climb over rough terrain or obstacles.
+
+**Hose Grip**
+
+- Concave arms shaped for 45 mm and 64 mm hoses.
+- Rubber lining for high friction and slip prevention.
+- Open-top actuator design for quick mounting and release.
 
 ---
 
@@ -37,9 +57,6 @@ The system was developed in two complementary design directions:
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/Fire/Advancer2.png" title="Fire Hose Advancer 2" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Fire/Roller.jpg" title="Roller Mechanism" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -54,6 +71,14 @@ The design with three UN Sustainable Development Goals (SDGs):
 - **SDG 12: Responsible Consumption and Production** – by selecting durable and recyclable materials.
 
 These considerations ensured that the project addressed not only technical performance but also global sustainability challenges.
+
+---
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Fire/Roller.jpg" title="Roller Mechanism of Fire Hose Advancer" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ---
 
