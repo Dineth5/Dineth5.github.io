@@ -424,9 +424,9 @@ ninja.data = [{
           section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
           description: "",
-          section: "News",},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+          section: "News",},{id: "projects-fire-hose-advancer",
+          title: 'Fire Hose Advancer',
+          description: "Design project focused on enhancing fire safety equipment",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
