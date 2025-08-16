@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 6
+title: Hyperloop
 description: a project with no image
 img: assets/img/4.jpg
 importance: 1
