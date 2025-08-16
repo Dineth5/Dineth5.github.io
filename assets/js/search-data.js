@@ -424,12 +424,7 @@ ninja.data = [{
           section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
           description: "",
-          section: "News",},{id: "projects-fire-hose-advancer",
-          title: 'Fire Hose Advancer',
-          description: "Design project focused on enhancing fire safety equipment",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
+          section: "News",},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
           section: "Projects",handler: () => {
@@ -449,6 +444,11 @@ ninja.data = [{
           description: "Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Aneurysms/";
+            },},{id: "projects-fire-hose-advancer",
+          title: 'Fire Hose Advancer',
+          description: "Design project focused on enhancing fire safety equipment",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Fire_Advancer/";
             },},{id: "projects-vima",
           title: 'VIMA',
           description: "Visual Impairment Motion Assistant",
