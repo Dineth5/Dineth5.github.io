@@ -1,65 +1,67 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
+title: Fire Hose Advancer
+description: Design project focused on enhancing fire safety equipment
+img: assets/img/Fire/Whole.png
 importance: 3
 category: Work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-10 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Fire/Whole.png" title="Final CAD Model of Fire Hose Advancer" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Final CAD model of the Fire Hose Advancer & Kink Preventer.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Overview
+
+The project focused on creating a device to help firefighters advance hoses during high-pressure operations while preventing kinks that restrict water flow. The design prioritized robustness, ease of use, and low-cost manufacturability, making it suitable for deployment in rural and underprivileged areas where resources are limited.
+
+---
+
+### How the Design Works
+
+The system was developed in two complementary design directions:
+
+- **Rover Design** – A two-module chassis with a central pivot for unpowered automatic steering. The battery housing was made water-resistant and heat-protected to withstand wildfire conditions.
+- **Shuttle Design** – A three-module system with two unpowered units featuring concave rollers for hose alignment, and one powered unit providing propulsion. An adjustable roller gap allowed for quick hose mounting and removal.
+
+---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Fire/Advancer1.png" title="Fire Hose Advancer 1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Fire/Advancer2.png" title="Fire Hose Advancer 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Fire/Roller.jpg" title="Roller Mechanism" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+---
+
+## Sustainability Considerations
+
+The design with three UN Sustainable Development Goals (SDGs):
+
+- **SDG 3: Good Health and Well-Being** – by improving safety for firefighters.
+- **SDG 9: Industry, Innovation, and Infrastructure** – through engineering innovation and manufacturability.
+- **SDG 12: Responsible Consumption and Production** – by selecting durable and recyclable materials.
+
+These considerations ensured that the project addressed not only technical performance but also global sustainability challenges.
+
+---
+
+## Results
+
+The project achieved a grade of **82%**. Key feedback highlighted:
+
+- A **clear and systematic evaluation** process (Selection Matrix).
+- A **comprehensive design overview** with detailed CAD models.
+- **Strong operational clarity**, showing exactly how the device functions.
+- **Well-integrated sustainability considerations** linked to SDGs.
