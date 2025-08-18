@@ -7,6 +7,12 @@ importance: 2
 category: Work
 ---
 
+### Overview
+
+My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial Aneurysms in Clinical Settings_, was conducted under the supervision of [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) and is currently pending publication in Scientific Reports.
+
+---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI1.png" title="C2 OSI 1" class="img-fluid rounded z-depth-1" %}
@@ -25,9 +31,19 @@ category: Work
     Oscillatory Shear Index (OSI) distributions for Patient&nbsp;#2 in the untreated case, shown across four different simulation views.
 </div>
 
-### Overview
+---
 
-My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial Aneurysms in Clinical Settings_, was conducted under the supervision of [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) and is currently pending publication in Scientific Reports.
+### Results
+
+- Achieved a final grade of 91% for the dissertation.
+- Awarded a grade of 100% for the accompanying poster.
+- Successfully segmented patient-specific intracranial aneurysm geometries from medical imaging data.
+- Developed and validated high-fidelity CFD meshes to capture aneurysmal blood flow.
+- Simulations in STAR-CCM+ demonstrated distinct haemodynamic responses under different treatment strategies:
+  - Endovascular coiling reduced flow velocity but in some cases left regions of residual circulation.
+  - Flow-diverting stents provided greater reduction in inflow jet momentum, lowering wall shear stress and oscillatory shear index across the aneurysm dome.
+- Quantitative haemodynamic analysis showed that elevated OSI and WSS gradients correlated strongly with rupture-prone regions, in line with published clinical literature.
+- The study presented a proof-of-concept for employing patient-specific CFD as a clinical decision-support tool in endovascular treatment planning.
 
 ---
 
@@ -43,17 +59,3 @@ My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial An
 </a>
 
 </div>
-
----
-
-### Results
-
-- Achieved a final grade of 91% for the dissertation.
-- Awarded a grade of 100% for the accompanying poster.
-- Successfully segmented patient-specific intracranial aneurysm geometries from medical imaging data.
-- Developed and validated high-fidelity CFD meshes to capture aneurysmal blood flow.
-- Simulations in STAR-CCM+ demonstrated distinct haemodynamic responses under different treatment strategies:
-  - Endovascular coiling reduced flow velocity but in some cases left regions of residual circulation.
-  - Flow-diverting stents provided greater reduction in inflow jet momentum, lowering wall shear stress and oscillatory shear index across the aneurysm dome.
-- Quantitative haemodynamic analysis showed that elevated OSI and WSS gradients correlated strongly with rupture-prone regions, in line with published clinical literature.
-- The study presented a proof-of-concept for employing patient-specific CFD as a clinical decision-support tool in endovascular treatment planning.

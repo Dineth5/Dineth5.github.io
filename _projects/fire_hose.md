@@ -7,18 +7,23 @@ importance: 3
 category: Work
 ---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Fire/Whole.png" title="Final CAD Model of Fire Hose Advancer" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Final CAD model of the Fire Hose Advancer & Kink Preventer.
-</div>
-
 ## Overview
 
 The project focused on creating a device to help firefighters advance hoses during high-pressure operations while preventing kinks that restrict water flow. The design prioritized robustness, ease of use, and low-cost manufacturability, making it suitable for deployment in rural and underprivileged areas where resources are limited.
+
+---
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Fire/Whole.png" 
+       title="Final CAD Model of Fire Hose Advancer" 
+       class="img-fluid rounded z-depth-1" 
+       style="width:100%; height:400px;" %}
+  </div>
+</div>
+<div class="caption">
+  Final CAD model of the Fire Hose Advancer & Kink Preventer.
+</div>
 
 ---
 

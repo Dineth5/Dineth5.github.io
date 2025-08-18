@@ -7,6 +7,12 @@ importance: 3
 category: Work
 ---
 
+## Overview
+
+Designed a compact 2-axes tabletop CNC lathe capable of precision machining aluminium and polymer workpieces up to 40 mm in diameter and length. Features a 3-jaw chuck, achieves high accuracy (≤8 μm deflection at the cutting edge), and fits within a 625 × 250 mm footprint. Ideal for classroom demonstrations, small-scale prototyping, and educational workshops.
+
+---
+
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/Lathe/Lathe.png" title="Lathe Isometric View" class="img-fluid rounded z-depth-1" %}
@@ -17,26 +23,6 @@ category: Work
 </div>
 <div class="caption">
    CAD model (left) and detailed engineering drawing (right) of the 2-Axes Tabletop CNC Lathe.
-</div>
-
----
-
-## Overview
-
-Designed a compact 2-axes tabletop CNC lathe capable of precision machining aluminium and polymer workpieces up to 40 mm in diameter and length. Features a 3-jaw chuck, achieves high accuracy (≤8 μm deflection at the cutting edge), and fits within a 625 × 250 mm footprint. Ideal for classroom demonstrations, small-scale prototyping, and educational workshops.
-
----
-
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Lathe/Full.png" title="Full Assembly – Isometric View" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Lathe/House.png" title="Spindle Housing & Drivetrain (Isometric)" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Isometric front and rear view of the spindle housing and drivetrain assembly.
 </div>
 
 ---

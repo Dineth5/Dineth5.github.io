@@ -11,6 +11,8 @@ category: Work
 
 VIMA is a detachable handle designed to assist visually impaired users by detecting obstacles and providing real-time haptic feedback. It replicates the sensation of a traditional white cane while detecting both ground-level and overhanging obstacles.
 
+---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_sketch.png" title="Sketch" class="img-fluid rounded z-depth-1" %}
@@ -26,6 +28,8 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
     VIMA's design journey from initial sketches to CAD models
 </div>
 
+---
+
 **Development**
 
 - Designed 3D CAD models and detailed 2D engineering drawings for the enclosure using SolidWorks.
@@ -40,6 +44,8 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 <div class="caption">
     Exploded view of VIMA showing its components and compatibility with standard white canes
 </div>
+
+---
 
 **Results**
 

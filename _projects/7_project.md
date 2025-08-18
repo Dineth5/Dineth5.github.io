@@ -1,80 +1,41 @@
 ---
 layout: page
 title: Hydro-pede
-description: a project with no image
+description: Concept design for fire hose advancer
 img: assets/img/4.jpg
 importance: 2
 category: Side Quests
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+#### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Hydropede** was the initial concept design that inspired the development of the [Fire Hose Crawler](https://dineth5.github.io/projects/fire_hose/).  
+The design took inspiration from **biomimetics**, specifically the segmented locomotion of centipedes and millipedes, to create a modular crawler capable of traversing alongside and supporting a pressurised fire hose.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<img src="assets/img/Hydropede/Hydropede_sketch.jpg" alt="Hydropede Concept Sketch" style="float: right; width: 180px; margin-left: 15px;"/>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+#### Concept Design Requirements
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The project was part of **Design 3 (MECH31041)**, with objectives including:
 
-{% raw %}
+- Generating and evaluating conceptual design ideas using a formalised method.
+- Developing the chosen concept into an embodiment design compliant with engineering principles and design codes.
+- Identifying links to **sustainable development goals (SDGs)** and considering **Equality, Diversity, Inclusion and Access (EDIA)** aspects.
+- Producing clear, well-presented concept sketches with annotations only.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+#### Outcome
 
-{% endraw %}
+- **Grade:** 95%
+- **Feedback highlights:**
+  - Excellent concept presentation through sketches and clear mechanisms.
+  - Areas for improvement:
+    - Power cable management (exposed cable may deform or cause safety issues).
+    - Hose threading mechanism could be automated for efficiency.
+    - Larger wheels recommended to improve terrain handling.
+  - Formatting refinements suggested (page numbers, figure label alignment).
+
+The Hydropede served as a foundation for the refined fire hose crawler, bridging the gap between biomimetic inspiration and practical engineering embodiment.

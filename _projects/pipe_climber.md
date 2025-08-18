@@ -9,10 +9,6 @@ category: Work
 
 ### Overview
 
-<img src="assets/img/Pipe/imeche.jpg" 
-     alt="IMechE Logo" 
-     style="float: right; width: 80px; height: auto; margin-right: 15px;"/>
-
 As part of the IMechE Design Challenge 2022, designed and fabricated an internal pipe climber built to ascend a 2 m vertical pipe, lift an attached 0.265 kg chain load, and return to the start point as quickly as possible.
 
 The challenge simulated real-world pipeline pigging operations used for inspection and cleaning. The design had to meet strict constraints:
@@ -31,6 +27,8 @@ Several concepts were explored before arriving at the final rectangular chassis.
 - **Tripod concept:** Lightweight, but aligning wheels and axles was impractical within the given dimensions.
 - **Quadrant concept:** Allowed for efficient free-fall return, but the spring-loaded wheel mechanism introduced instability and safety risks.
 - **Final rectangular chassis:** Provided a robust frame to house the motor, battery pack, and gear system. Triangular cut-outs reduced weight while maintaining rigidity.
+
+---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
