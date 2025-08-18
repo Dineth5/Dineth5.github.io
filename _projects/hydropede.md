@@ -16,19 +16,19 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    <img src="assets/img/Hydropede/contracted.png" 
+    <img src="/assets/img/Hydropede/contracted.png" 
          alt="Contracted" 
          style="height:300px; width:100%;" 
          class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    <img src="assets/img/Hydropede/extended.png" 
+    <img src="/assets/img/Hydropede/extended.png" 
          alt="Extended" 
          style="height:300px; width:100%;" 
          class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    <img src="assets/img/Hydropede/bent.png" 
+    <img src="/assets/img/Hydropede/bent.png" 
          alt="Bent" 
          style="height:300px; width:100%;" 
          class="rounded z-depth-1" />
