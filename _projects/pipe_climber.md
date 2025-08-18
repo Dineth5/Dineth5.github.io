@@ -9,7 +9,7 @@ category: Work
 
 ### Overview
 
-<img src="assets/img/Pipe/imeche.png" alt="IMechE Logo" style="float: right; width: 100px; margin-left: 15px;"/>
+<img src="assets/img/Pipe/imeche.jpg" alt="IMechE Logo" style="float: right; width: 100px; margin-left: 15px;"/>
 
 As part of the IMechE Design Challenge 2022, designed and fabricated an internal pipe climber built to ascend a 2 m vertical pipe, lift an attached 0.265 kg chain load, and return to the start point as quickly as possible.
 
