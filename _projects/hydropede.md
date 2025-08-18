@@ -16,25 +16,22 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid 
-       path="assets/img/Hydropede/contracted.png" 
-       title="Contracted" 
-       class="img-fluid rounded z-depth-1" 
-       height="300" %}
+    <img src="assets/img/Hydropede/contracted.png" 
+         alt="Contracted" 
+         style="height:300px; width:100%;" 
+         class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid 
-       path="assets/img/Hydropede/extended.png" 
-       title="Extended" 
-       class="img-fluid rounded z-depth-1" 
-       height="300" %}
+    <img src="assets/img/Hydropede/extended.png" 
+         alt="Extended" 
+         style="height:300px; width:100%;" 
+         class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid 
-       path="assets/img/Hydropede/bent.png" 
-       title="Bent" 
-       class="img-fluid rounded z-depth-1" 
-       height="300" %}
+    <img src="assets/img/Hydropede/bent.png" 
+         alt="Bent" 
+         style="height:300px; width:100%;" 
+         class="rounded z-depth-1" />
   </div>
 </div>
 <div class="caption">
