@@ -431,7 +431,7 @@ ninja.data = [{
               window.location.href = "/projects/6_project/";
             },},{id: "projects-hydro-pede",
           title: 'Hydro-pede',
-          description: "a project with no image",
+          description: "Concept design for fire hose advancer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-cfd-of-aneurysms",
