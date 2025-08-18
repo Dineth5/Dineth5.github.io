@@ -429,11 +429,6 @@ ninja.data = [{
           description: "a project with no image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-hydro-pede",
-          title: 'Hydro-pede',
-          description: "Concept design for fire hose advancer",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
             },},{id: "projects-cfd-of-aneurysms",
           title: 'CFD of Aneurysms',
           description: "Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
@@ -453,12 +448,17 @@ ninja.data = [{
           title: 'Fire Hose Advancer',
           description: "Design project focused on enhancing fire safety equipment",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/fire_hose/";
+              window.location.href = "/projects/firehose/";
+            },},{id: "projects-hydro-pede",
+          title: 'Hydro-pede',
+          description: "Concept design for fire hose advancer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/hydropede/";
             },},{id: "projects-internal-pipe-climber",
           title: 'Internal Pipe Climber',
           description: "IMechE Design Challenge 2022 – Internal Pipe Climber",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/pipe_climber/";
+              window.location.href = "/projects/pipeclimber/";
             },},{
         id: 'social-email',
         title: 'email',
