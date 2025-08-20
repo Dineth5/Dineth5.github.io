@@ -18,19 +18,19 @@ The design took inspiration from biomimetics, specifically the segmented locomot
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/contracted.png" 
          alt="Contracted" 
-         style="height:300px; width:100%;" 
+         style="height:250px; width:100%;" 
          class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/extended.png" 
          alt="Extended" 
-         style="height:300px; width:100%;" 
+         style="height:250px; width:100%;" 
          class="rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/bent.png" 
          alt="Bent" 
-         style="height:300px; width:100%;" 
+         style="height:250px; width:100%;" 
          class="rounded z-depth-1" />
   </div>
 </div>
@@ -48,14 +48,24 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 ---
 
+<style>
+  .equal-h {
+    height: clamp(200px, 30vw, 320px); /* ~0.30 × viewport width, with sensible bounds */
+    width: 100%;
+  }
+</style>
+
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Hydropede/batterypack.png" title="Portable Battery Pack" class="img-fluid rounded z-depth-1" %}
+  <div class="col-4 mt-3 mt-md-0">
+    <img src="/assets/img/Hydropede/batterypack.png" alt="Battery Pack"
+         class="equal-h rounded z-depth-1" />
   </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Hydropede/modular.png" title="Modular Design" class="img-fluid rounded z-depth-1" %}
+  <div class="col-8 mt-3 mt-md-0">
+    <img src="/assets/img/Hydropede/modular.png" alt="Modular"
+         class="equal-h rounded z-depth-1" />
   </div>
 </div>
+
 <div class="caption">
   The Hydro-pede’s modular design allows it to be disassembled for transport and storage, with a dedicated portable battery pack enabling operation in remote locations.
 </div>

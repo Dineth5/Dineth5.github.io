@@ -13,19 +13,33 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 
 ---
 
+<style>
+  .equal-h {
+    height: clamp(140px, 20vw, 200px);
+    width: 100%;
+  }
+</style>
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_sketch.png" title="Sketch" class="img-fluid rounded z-depth-1" %}
+    <div class="col-4 mt-3 mt-md-0">
+        <img src="/assets/img/VIMA/VIMA_sketch.png" 
+             alt="Sketch" 
+             class="equal-h rounded z-depth-1" />
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_cross.png" title="Cross section" class="img-fluid rounded z-depth-1" %}
+    <div class="col-4 mt-3 mt-md-0">
+        <img src="/assets/img/VIMA/VIMA_cross.png" 
+             alt="Cross section" 
+             class="equal-h rounded z-depth-1" />
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_assembly.jpeg" title="Assembly" class="img-fluid rounded z-depth-1" %}
+    <div class="col-4 mt-3 mt-md-0">
+        <img src="/assets/img/VIMA/VIMA_assembly.jpeg" 
+             alt="Assembly" 
+             class="equal-h rounded z-depth-1" />
     </div>
 </div>
+
 <div class="caption">
-    VIMA's design journey from initial sketches to CAD models
+    VIMA's design journey from initial sketches to CAD models.
 </div>
 
 ---
