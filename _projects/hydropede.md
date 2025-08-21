@@ -14,14 +14,6 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 ---
 
-<style>
-  .equal-h {
-    height: clamp(200px, 22vw, 280px);
-    width: 100%;
-    object-fit: cover;
-  }
-</style>
-
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/contracted.png" 
@@ -53,14 +45,6 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 - Producing clear, well-presented concept sketches with annotations only.
 
 ---
-
-<style>
-  .equal-h {
-    height: clamp(200px, 25vw, 300px); /* adaptive height */
-    width: 100%;
-    object-fit: cover; /* keeps images aligned, may crop edges */
-  }
-</style>
 
 <div class="row">
   <div class="col-sm-4 mt-3 mt-md-0">
