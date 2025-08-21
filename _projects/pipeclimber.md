@@ -2,7 +2,7 @@
 layout: page
 title: Internal Pipe Climber
 description: IMechE Design Challenge 2022 – Internal Pipe Climber
-img: assets/img/thumbnails/Iso.jpg
+img: assets/img/Pipe/Iso.jpg
 importance: 5
 category: Work
 ---

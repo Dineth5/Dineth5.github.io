@@ -2,7 +2,7 @@
 layout: page
 title: Fire Hose Advancer
 description: Design project focused on enhancing fire safety equipment
-img: assets/img/thumbnails/Fire.png
+img: assets/img/Fire/Whole.png
 importance: 3
 category: Work
 ---
