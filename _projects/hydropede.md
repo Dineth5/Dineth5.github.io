@@ -2,7 +2,7 @@
 layout: page
 title: Hydro-pede
 description: Concept design for fire hose advancer
-img: assets/img/Hydropede/hydropede.jpg
+img: assets/img/thumbnails/hydropede.jpg
 importance: 1
 category: Side Quests
 ---

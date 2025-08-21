@@ -2,7 +2,7 @@
 layout: page
 title: CFD of Aneurysms
 description: Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms
-img: assets/img/CFD/C2_TA-WSS2.png
+img: assets/img/thumbnails/C2.png
 importance: 2
 category: Work
 ---
