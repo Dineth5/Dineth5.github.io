@@ -31,15 +31,12 @@ Several concepts were explored before arriving at the final rectangular chassis.
 ---
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    <img src="assets/img/Pipe/sketch_pipe.jpg"
-         alt="Pipe Climber Sketch" 
-         style="width:100%; max-height:450px; object-fit:contain;" 
-         class="rounded z-depth-1" />
-  </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Pipe/sketch_pipe.jpg" title="Final Assembly Drawing" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 <div class="caption">
-  Pipe climber initial concept designs
+    Pipe climber initial concept designs
 </div>
 
 ---
