@@ -9,7 +9,7 @@ category: Work
 
 ### Overview
 
-As part of the IMechE Design Challenge 2022, designed and fabricated an internal pipe climber built to ascend a 2 m vertical pipe, lift an attached 0.265 kg chain load, and return to the start point as quickly as possible.
+As part of the [IMechE Design Challenge 2022](https://www.imechedesignchallenge.org/wp-content/uploads/2023/01/IMechE-1st-Year-Design-Challenge-Project-Specification-2023-V1.1.pdf), designed and fabricated an internal pipe climber built to ascend a 2 m vertical pipe, lift an attached 0.265 kg chain load, and return to the start point as quickly as possible.
 
 The challenge simulated real-world pipeline pigging operations used for inspection and cleaning. The design had to meet strict constraints:
 
