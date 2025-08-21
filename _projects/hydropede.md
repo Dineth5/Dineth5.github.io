@@ -3,7 +3,7 @@ layout: page
 title: Hydro-pede
 description: Concept design for fire hose advancer
 img: assets/img/Hydropede/hydropede.jpg
-importance: 2
+importance: 1
 category: Side Quests
 ---
 
@@ -14,26 +14,32 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 ---
 
+<style>
+  .equal-h {
+    height: clamp(200px, 22vw, 280px);
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/contracted.png" 
          alt="Contracted" 
-         style="height:250px; width:100%;" 
-         class="rounded z-depth-1" />
+         class="equal-h rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/extended.png" 
          alt="Extended" 
-         style="height:250px; width:100%;" 
-         class="rounded z-depth-1" />
+         class="equal-h rounded z-depth-1" />
   </div>
   <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/bent.png" 
          alt="Bent" 
-         style="height:250px; width:100%;" 
-         class="rounded z-depth-1" />
+         class="equal-h rounded z-depth-1" />
   </div>
 </div>
+
 <div class="caption">
   Hydropede concept showing the coupler in its contracted, extended, and bent configurations.
 </div>
@@ -50,18 +56,21 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 <style>
   .equal-h {
-    height: clamp(200px, 30vw, 320px); /* ~0.30 × viewport width, with sensible bounds */
+    height: clamp(200px, 25vw, 300px); /* adaptive height */
     width: 100%;
+    object-fit: cover; /* keeps images aligned, may crop edges */
   }
 </style>
 
 <div class="row">
-  <div class="col-4 mt-3 mt-md-0">
-    <img src="/assets/img/Hydropede/batterypack.png" alt="Battery Pack"
+  <div class="col-sm-4 mt-3 mt-md-0">
+    <img src="/assets/img/Hydropede/batterypack.png" 
+         alt="Battery Pack" 
          class="equal-h rounded z-depth-1" />
   </div>
-  <div class="col-8 mt-3 mt-md-0">
-    <img src="/assets/img/Hydropede/modular.png" alt="Modular"
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <img src="/assets/img/Hydropede/modular.png" 
+         alt="Modular" 
          class="equal-h rounded z-depth-1" />
   </div>
 </div>

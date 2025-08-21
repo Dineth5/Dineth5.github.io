@@ -31,12 +31,15 @@ Several concepts were explored before arriving at the final rectangular chassis.
 ---
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Pipe/Sketch.jpg" title="Pipe Climber Sketch" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="assets/img/Pipe/Sketch.jpg" 
+         alt="Pipe Climber Sketch" 
+         style="width:100%; max-height:450px; object-fit:contain;" 
+         class="rounded z-depth-1" />
+  </div>
 </div>
 <div class="caption">
-    Pipe climber inital concepts designs
+  Pipe climber initial concept designs
 </div>
 
 ---
@@ -53,16 +56,29 @@ These risks were addressed through spring rate adjustments, tyre selection, and 
 
 ---
 
+<style>
+  .equal-h {
+    height: clamp(220px, 28vw, 320px); /* scales with screen size */
+    width: 100%;
+    object-fit: contain; /* shows the full image without cropping */
+  }
+</style>
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Pipe/Explo1.jpg" title="Isometric Exploded View" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Pipe/Explo2.jpg" title="Front Exploded View" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="/assets/img/Pipe/Explo1.jpg" 
+         alt="Isometric Exploded View" 
+         class="equal-h rounded z-depth-1" />
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="/assets/img/Pipe/Explo2.jpg" 
+         alt="Front Exploded View" 
+         class="equal-h rounded z-depth-1" />
+  </div>
 </div>
+
 <div class="caption">
-    Exploded views of the internal pipe climber, shown from isometric and front perspectives
+  Exploded views of the internal pipe climber, shown from isometric and front perspectives
 </div>
 
 ---
