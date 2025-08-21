@@ -15,24 +15,24 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 ---
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0">
+  <div class="col-sm-4 mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/contracted.png" 
          alt="Contracted" 
-         class="equal-h rounded z-depth-1" />
+         class="equal-h rounded z-depth-1 img-fluid" />
   </div>
-  <div class="col-sm mt-3 mt-md-0">
+  <div class="col-sm-4 mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/extended.png" 
          alt="Extended" 
-         class="equal-h rounded z-depth-1" />
+         class="equal-h rounded z-depth-1 img-fluid" />
   </div>
-  <div class="col-sm mt-3 mt-md-0">
+  <div class="col-sm-4 mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/bent.png" 
          alt="Bent" 
-         class="equal-h rounded z-depth-1" />
+         class="equal-h rounded z-depth-1 img-fluid" />
   </div>
 </div>
 
-<div class="caption">
+<div class="caption text-center">
   Hydropede concept showing the coupler in its contracted, extended, and bent configurations.
 </div>
 
@@ -47,19 +47,19 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 ---
 
 <div class="row">
-  <div class="col-sm-4 mt-3 mt-md-0">
+  <div class="col-sm-5 mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/batterypack.png" 
          alt="Battery Pack" 
-         class="equal-h rounded z-depth-1" />
+         class="equal-h rounded z-depth-1 img-fluid" />
   </div>
-  <div class="col-sm-6 mt-3 mt-md-0">
+  <div class="col-sm-7 mt-3 mt-md-0">
     <img src="/assets/img/Hydropede/modular.png" 
          alt="Modular" 
-         class="equal-h rounded z-depth-1" />
+         class="equal-h rounded z-depth-1 img-fluid" />
   </div>
 </div>
 
-<div class="caption">
+<div class="caption text-center">
   The Hydro-pede’s modular design allows it to be disassembled for transport and storage, with a dedicated portable battery pack enabling operation in remote locations.
 </div>
 
@@ -74,4 +74,4 @@ The design took inspiration from biomimetics, specifically the segmented locomot
     - Power cable management (exposed cable may deform or cause safety issues).
     - Hose threading mechanism could be automated for efficiency.
     - Larger wheels recommended to improve terrain handling.
-  - The modular body design and integrated battery pack enhanced adaptability and ensured mobility in remote or hard-to-reach areas, reinforcing the practicality of the Hydro-pede concept.
+  - The modular body design and integrated battery pack enhanced adaptability and ensured mobility in remote areas, reinforcing the practicality of the Hydro-pede concept.
