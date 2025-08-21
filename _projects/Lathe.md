@@ -2,7 +2,7 @@
 layout: page
 title: 2-Axes CNC Lathe
 description: Mechanical design project for a compact classroom CNC lathe
-img: assets/img/Lathe/Lathe.png
+img: assets/img/thumbnails/Lathe.png
 importance: 3
 category: Work
 ---

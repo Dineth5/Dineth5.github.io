@@ -2,7 +2,7 @@
 layout: page
 title: VIMA
 description: Visual Impairment Motion Assistant
-img: assets/img/VIMA/VIMA_logo.jpg
+img: assets/img/thumbnails/VIMA_logo.jpg
 importance: 1
 category: Work
 ---
