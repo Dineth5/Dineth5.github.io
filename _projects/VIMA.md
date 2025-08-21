@@ -63,7 +63,7 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 
 **Results**
 
-- Achieved 95% similarity in obstacle detection and haptic feedback compared to traditional white canes.
+- Achieved 85% similarity in obstacle detection and haptic feedback compared to traditional white canes.
 - Enabled visually impaired users to navigate urban environments more accurately and safely.
 - Received over £5,000 in funding from [Sister](https://sistermanchester.com) and [Masood Entrepreneurship Center](https://www.entrepreneurship.manchester.ac.uk).
 
