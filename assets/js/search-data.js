@@ -426,7 +426,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-cfd-of-aneurysms",
           title: 'CFD of Aneurysms',
-          description: "Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
+          description: "CFD to predict rupture risk in intracranial aneurysms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Aneurysms/";
             },},{id: "projects-2-axes-cnc-lathe",
