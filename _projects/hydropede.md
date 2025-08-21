@@ -16,9 +16,9 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 <style>
   .equal-h {
-    height: clamp(200px, 22vw, 280px);
-    width: 100%;
-    object-fit: cover;
+    height: 250px;          /* fixed height */
+    width: 100%;            /* full width of the column */
+    object-fit: cover;      /* crop edges if needed to fill box */
   }
 </style>
 
@@ -56,9 +56,9 @@ The design took inspiration from biomimetics, specifically the segmented locomot
 
 <style>
   .equal-h {
-    height: clamp(200px, 25vw, 300px); /* adaptive height */
-    width: 100%;
-    object-fit: cover; /* keeps images aligned, may crop edges */
+    height: 250px;          /* fixed height */
+    width: 100%;            /* full width of the column */
+    object-fit: cover;      /* crop edges if needed to fill box */
   }
 </style>
 

@@ -52,7 +52,12 @@ VIMA is a detachable handle designed to assist visually impaired users by detect
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/VIMA/VIMA_expo.png" title="Exploded" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid
+           loading="eager"
+           path="assets/img/VIMA/VIMA_expo.png"
+           title="Exploded"
+           class="img-fluid rounded z-depth-1"
+           style="height:280px; width:100%; object-fit:cover;" %}
     </div>
 </div>
 <div class="caption">

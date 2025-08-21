@@ -32,7 +32,7 @@ Several concepts were explored before arriving at the final rectangular chassis.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    <img src="assets/img/Pipe/Sketch.jpg" 
+    <img src="/assets/img/Pipe/Sketch.jpg" 
          alt="Pipe Climber Sketch" 
          style="width:100%; max-height:450px; object-fit:contain;" 
          class="rounded z-depth-1" />
