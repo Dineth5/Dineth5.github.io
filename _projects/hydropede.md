@@ -90,4 +90,4 @@ The design took inspiration from biomimetics, specifically the segmented locomot
     - Power cable management (exposed cable may deform or cause safety issues).
     - Hose threading mechanism could be automated for efficiency.
     - Larger wheels recommended to improve terrain handling.
-  - The modular body design and integrated battery pack enhanced adaptability and ensured mobility in remote areas, reinforcing the practicality of the Hydro-pede concept.
+  - The modular body design and integrated battery pack enhanced adaptability and ensured mobility in remote or hard-to-reach areas, reinforcing the practicality of the Hydro-pede concept.
