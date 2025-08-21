@@ -13,27 +13,14 @@ Designed a compact 2-axes tabletop CNC lathe capable of precision machining alum
 
 ---
 
-<style>
-  .equal-h {
-    height: clamp(180px, 25vw, 300px);
-    width: 100%;
-    object-fit: cover;
-  }
-</style>
-
 <div class="row">
-    <div class="col-6 mt-3 mt-md-0">
-        <img src="/assets/img/Lathe/Lathe.png" 
-             alt="Lathe Isometric View" 
-             class="equal-h rounded z-depth-1" />
-    </div>
-    <div class="col-6 mt-3 mt-md-0">
-        <img src="/assets/img/Lathe/Lathe_drawing.png" 
-             alt="Lathe Engineering Drawing" 
-             class="equal-h rounded z-depth-1" />
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Lathe/Lathe.png" title="Lathe Isometric View" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Lathe/Lathe_drawing.png" title="Lathe Engineering Drawing" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
-
 <div class="caption">
    CAD model (left) and detailed engineering drawing (right) of the 2-Axes Tabletop CNC Lathe.
 </div>
@@ -86,25 +73,13 @@ The lathe was developed by focusing on three main subsystems: the spindle, X-sta
 
 ---
 
-<style>
-  .equal-h {
-    height: clamp(200px, 28vw, 320px);
-    width: 100%;
-    object-fit: cover;
-  }
-</style>
-
 <div class="row">
-    <div class="col-6 mt-3 mt-md-0">
-        <img src="/assets/img/Lathe/Cross.png" 
-             alt="Spindle Housing & Drivetrain (Cross-Section)" 
-             class="equal-h rounded z-depth-1" />
-    </div>
-    <div class="col-6 mt-3 mt-md-0">
-        <img src="/assets/img/Lathe/Full_explo.png" 
-             alt="Full Assembly – Exploded View" 
-             class="equal-h rounded z-depth-1" />
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Lathe/Cross.png" title="Spindle Housing & Drivetrain (Cross-Section)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Lathe/Full_explo.png" title="Full Assembly – Exploded View" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 
 <div class="caption">
