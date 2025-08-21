@@ -13,14 +13,22 @@ The project focused on creating a device to help firefighters advance hoses duri
 
 ---
 
+<style>
+  .responsive-img {
+    width: 100%;
+    height: clamp(200px, 30vw, 350px);
+    object-fit: cover;
+  }
+</style>
+
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Fire/Whole.png" 
-       title="Final CAD Model of Fire Hose Advancer" 
-       class="img-fluid rounded z-depth-1" 
-       style="width:100%; height:400px;" %}
+    <img src="/assets/img/Fire/Whole.png" 
+         alt="Final CAD Model of Fire Hose Advancer" 
+         class="responsive-img rounded z-depth-1" />
   </div>
 </div>
+
 <div class="caption">
   Final CAD model of the Fire Hose Advancer & Kink Preventer.
 </div>
@@ -56,12 +64,24 @@ The system consists of two complementary modules — the Gripping Rover for hose
 
 ---
 
+<style>
+  .equal-h {
+    height: clamp(250px, 30vw, 350px);
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Fire/Advancer1.png" title="Fire Hose Advancer 1" class="img-fluid rounded z-depth-1" %}
+    <div class="col-6 mt-3 mt-md-0">
+        <img src="/assets/img/Fire/Advancer1.png" 
+             alt="Fire Hose Advancer 1" 
+             class="equal-h rounded z-depth-1" />
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Fire/Advancer2.png" title="Fire Hose Advancer 2" class="img-fluid rounded z-depth-1" %}
+    <div class="col-6 mt-3 mt-md-0">
+        <img src="/assets/img/Fire/Advancer2.png" 
+             alt="Fire Hose Advancer 2" 
+             class="equal-h rounded z-depth-1" />
     </div>
 </div>
 
@@ -79,10 +99,24 @@ The Fire Hose Advancer supports three UN Sustainable Development Goals (SDGs):
 
 ---
 
+<style>
+  .responsive-img {
+    width: 100%;
+    height: clamp(180px, 28vw, 300px);
+    object-fit: cover;
+  }
+</style>
+
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Fire/Roller.jpg" title="Roller Mechanism of Fire Hose Advancer" class="img-fluid rounded z-depth-1" %}
+        <img src="/assets/img/Fire/Roller.jpg" 
+             alt="Roller Mechanism of Fire Hose Advancer" 
+             class="responsive-img rounded z-depth-1" />
     </div>
+</div>
+
+<div class="caption">
+  Roller Mechanism of the Fire Hose Advancer.
 </div>
 
 ---

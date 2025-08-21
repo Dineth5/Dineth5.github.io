@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CFD of Aneurysms
-description: Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms
+description: CFD to predict rupture risk in intracranial aneurysms
 img: assets/img/thumbnails/C2.png
 importance: 2
 category: Work
@@ -14,21 +14,18 @@ My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial An
 ---
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI1.png" title="C2 OSI 1" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI2.png" title="C2 OSI 2" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI3.png" title="C2 OSI 3" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI4.png" title="C2 OSI 4" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Oscillatory Shear Index (OSI) distributions for Patient&nbsp;#2 in the untreated case, shown across four different simulation views.
+  <div class="col-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI1.png" title="C2 OSI 1" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI2.png" title="C2 OSI 2" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI3.png" title="C2 OSI 3" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI4.png" title="C2 OSI 4" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 
 ---
