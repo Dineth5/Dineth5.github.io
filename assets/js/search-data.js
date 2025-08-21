@@ -424,12 +424,7 @@ ninja.data = [{
           section: "News",},{id: "news-scheduled-to-begin-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Scheduled to begin my MSc in Computational Biomedical Engineering at Imperial College London....',
           description: "",
-          section: "News",},{id: "projects-hyperloop",
-          title: 'Hyperloop',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-cfd-of-aneurysms",
+          section: "News",},{id: "projects-cfd-of-aneurysms",
           title: 'CFD of Aneurysms',
           description: "Final-year induvidual research project applying computational fluid dynamics to predict rupture risk in patient-specific intracranial aneurysms",
           section: "Projects",handler: () => {
