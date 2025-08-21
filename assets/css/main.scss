@@ -23,10 +23,3 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
-.project-thumb {
-  width: 100%;                     /* always fill the card width */
-  height: clamp(180px, 22vw, 260px); /* responsive height */
-  object-fit: cover;               /* crop edges to fill box */
-  border-radius: 8px;              /* optional: rounded corners */
-  display: block;                  /* removes inline spacing */
-}
