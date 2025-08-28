@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://Dineth5.github.io/sitemap.xml
+Sitemap: https://dinethilapperuma.com/sitemap.xml
