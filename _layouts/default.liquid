@@ -12,7 +12,12 @@
       {% endif %}
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
+
     {% include head.liquid %}
+
+    <!-- Canonical tag -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB14DEZMRD"></script>
     <script>
@@ -21,7 +26,6 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-
       gtag('config', 'G-BB14DEZMRD');
     </script>
   </head>
