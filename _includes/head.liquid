@@ -5,9 +5,18 @@
 <meta name="google-site-verification" content="5ZGcQ6cZ-Qo1Mr-P6DW8xdiWZF5qkNiVAou5xSXQLaA">
 
 <!-- SEO Meta Tags -->
+<title>Dineth Ilapperuma</title>
 <meta name="description" content="Dineth Ilapperuma – MSc Computational Biomedical Engineering, publications, projects, CV, news">
 <meta name="author" content="Dineth Ilapperuma">
 <meta name="keywords" content="Dineth Ilapperuma, aneurysm, biomedical engineering, Imperial College, Manchester University">
+<meta name="robots" content="index, follow">
+
+<!-- Canonical -->
+{% if page.url == '/' or page.url == '/index.html' %}
+  <link rel="canonical" href="https://www.dinethilapperuma.com/">
+{% else %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% endif %}
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
@@ -54,7 +63,6 @@
 {% endif %}
 
 <!-- Styles -->
-
 {% if page.pseudocode %}
   <!-- pseudocode -->
   <link
@@ -74,7 +82,6 @@
 <link rel="manifest" href="{{ '/assets/img/site.webmanifest' | relative_url }}">
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
