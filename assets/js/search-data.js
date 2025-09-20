@@ -157,7 +157,7 @@ ninja.data = [{
         title: 'YouTube',
         section: 'Socials',
         handler: () => {
-          window.open("https://youtube.com/@dinethilapperuma3451", "_blank");
+          window.open("https://youtube.com/@dineth.ilapperuma", "_blank");
         },
       },{
       id: 'light-theme',
