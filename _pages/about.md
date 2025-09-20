@@ -9,7 +9,7 @@ profile:
   image: #prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    Moratuwa, Sri Lanka<br>
+    Colombo, Sri Lanka<br>
     Dubai, United Arab Emirates<br>
     London, United Kingdom
 
@@ -31,4 +31,4 @@ Hi, my name is Dineth! I am currently pursuing my MSc in Computational Biomedica
 
 My academic interests lie at the intersection of engineering and medicine — in particular, using simulation and numerical modelling to address challenges in healthcare. I am currently working on publishing my undergraduate dissertation in Scientific Reports, where I quantitatively evaluated the likelihood of aneurysm rupture.
 
-In the summer of 2024, I interned as a Research and Design Engineer at both [NAFFCO](https://www.naffco.com) and [DANWAY](https://danwaygroup.com)
+I interned as a Research & Design Engineer at [Danway](https://danwaygroup.com) in summer 2023, and at [NAFFCO](https://www.naffco.com) in summer 2024.

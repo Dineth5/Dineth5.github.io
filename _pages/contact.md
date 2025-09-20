@@ -40,7 +40,6 @@ nav_order: 5
     <p><strong>Social Media:</strong><br>
       - <a href="https://linkedin.com/in/ilapperuma">LinkedIn</a><br>
       - <a href="https://github.com/Dineth5">GitHub</a><br>
-      - <a href="https://www.instagram.com/dineth.ilapperuma/">Instagram</a>
     </p>
   </div>
 
