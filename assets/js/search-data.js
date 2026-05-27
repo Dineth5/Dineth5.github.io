@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-gallery",
+          title: "Gallery",
+          description: "Film photography — 35mm analog archive.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
         },{id: "nav-contact",
           title: "Contact",
           description: "📬 Get in touch with me",
@@ -119,6 +126,16 @@ ninja.data = [{
           description: "Concept design for fire hose advancer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/hydropede/";
+            },},{id: "projects-hyperloop-manchester",
+          title: 'Hyperloop Manchester',
+          description: "Vacuum capsule structural lead — airlock design, FEA, fabrication",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/hyperloop/";
+            },},{id: "projects-qcpinn-ai-accelerated-cfd",
+          title: 'QCPINN — AI-Accelerated CFD',
+          description: "Physics-Informed Neural Networks for real-time intracranial haemodynamics (Imperial MSc Dissertation)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pinns/";
             },},{id: "projects-internal-pipe-climber",
           title: 'Internal Pipe Climber',
           description: "IMechE Design Challenge 2022 – Internal Pipe Climber",
