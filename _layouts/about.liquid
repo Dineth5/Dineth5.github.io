@@ -26,8 +26,8 @@ layout: default
 
         <p class="hero-bio">
           Building at the intersection of fluid dynamics, machine learning, and clinical medicine — from patient-specific CFD of intracranial
-          aneurysms to physics-informed neural networks for real-time haemodynamics. Co-founder of&nbsp;<strong>VIMA</strong>, an assistive-technology
-          venture secured with £10,000+ in competitive funding.
+          aneurysms to physics-informed neural networks for real-time haemodynamics. Co-founder of&nbsp;VIMA, an assistive-technology venture secured
+          with £10,000+ in competitive funding.
         </p>
 
         <div class="hero-cta">
@@ -37,7 +37,7 @@ layout: default
               <path d="M2.5 7h9m-4-4.5 4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <a href="/cv/" class="btn-outline-custom">Download CV</a>
+          <a href="/cv/" class="btn-outline-custom">Request CV</a>
         </div>
 
         <div class="hero-socials">
@@ -104,26 +104,49 @@ layout: default
     </div>
 
     <div class="bento-grid" data-reveal data-reveal-delay="100">
-      <!-- VIMA — XL -->
-      <a href="/projects/VIMA/" class="bento-cell bento-xl" aria-label="VIMA project">
+      <!-- PINNs — XL (large, half width) -->
+      <a href="/projects/pinns/" class="bento-cell bento-xl" aria-label="PINNs project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/Meth_Flow.png' | relative_url }}" alt="PINNs" class="bento-img" loading="lazy">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">MSc Dissertation · Imperial College London</div>
+            <div class="bento-title">QCPINN — Physics-Informed Neural Networks for CFD</div>
+            <div class="bento-desc">
+              Quasi-Cartesian PINNs for real-time intracranial haemodynamics. Replaces multi-hour Navier–Stokes solvers with sub-second AI inference.
+              Trained on Imperial's HPC cluster.
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">PyTorch</span>
+            <span class="bento-tag">PINNs</span>
+            <span class="bento-tag">HPC / CUDA</span>
+            <span class="bento-tag">Navier–Stokes</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <!-- VIMA — MD -->
+      <a href="/projects/VIMA/" class="bento-cell bento-md" aria-label="VIMA project">
         <div class="bento-img-wrap">
           <img src="{{ '/assets/img/thumbnails/VIMA_logo.png' | relative_url }}" alt="VIMA" class="bento-img" loading="lazy">
         </div>
         <div class="bento-overlay"></div>
         <div class="bento-content">
           <div>
-            <div class="bento-category">Venture · Assistive Tech</div>
+            <div class="bento-category">Venture · Assistive Tech · £10k+</div>
             <div class="bento-title">VIMA — Visual Impairment Motion Assistant</div>
             <div class="bento-desc">
-              Co-founder &amp; Technical Lead. Detachable haptic-feedback handle for white-cane users. Secured £10,000+ in competitive funding. 85%
-              parity with traditional canes.
+              Co-founder &amp; Technical Lead. Haptic-feedback handle for white-cane users. 85% parity with traditional canes.
             </div>
           </div>
           <div class="bento-tags">
             <span class="bento-tag">Arduino</span>
             <span class="bento-tag">SolidWorks</span>
             <span class="bento-tag">3D Print</span>
-            <span class="bento-tag">Ultrasonic Sensing</span>
           </div>
         </div>
         <div class="bento-arrow" aria-hidden="true">↗</div>
@@ -140,36 +163,13 @@ layout: default
             <div class="bento-category">Research · Dissertation · 91%</div>
             <div class="bento-title">CFD of Intracranial Aneurysms</div>
             <div class="bento-desc">
-              Patient-specific Navier–Stokes simulations. WSS, OSI, TAWSS haemodynamic analysis. Pending publication in Scientific Reports.
+              Patient-specific Navier–Stokes simulations. WSS, OSI, TAWSS analysis. Pending publication in Scientific Reports.
             </div>
           </div>
           <div class="bento-tags">
             <span class="bento-tag">STAR-CCM+</span>
             <span class="bento-tag">OpenFOAM</span>
             <span class="bento-tag">Python</span>
-          </div>
-        </div>
-        <div class="bento-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <!-- PINNs — MD -->
-      <a href="/projects/pinns/" class="bento-cell bento-md" aria-label="PINNs project">
-        <div class="bento-img-wrap">
-          <img src="{{ '/assets/img/Meth_Flow.png' | relative_url }}" alt="PINNs" class="bento-img" loading="lazy">
-        </div>
-        <div class="bento-overlay"></div>
-        <div class="bento-content">
-          <div>
-            <div class="bento-category">MSc Dissertation · Imperial</div>
-            <div class="bento-title">QCPINN — AI-Accelerated CFD</div>
-            <div class="bento-desc">
-              Physics-informed neural networks for real-time intracranial haemodynamics. Quasi-Cartesian architecture trained on HPC clusters.
-            </div>
-          </div>
-          <div class="bento-tags">
-            <span class="bento-tag">PyTorch</span>
-            <span class="bento-tag">PINNs</span>
-            <span class="bento-tag">HPC</span>
           </div>
         </div>
         <div class="bento-arrow" aria-hidden="true">↗</div>
@@ -225,17 +225,17 @@ layout: default
         <div class="bento-arrow" aria-hidden="true">↗</div>
       </a>
 
-      <!-- MechSoc — light text card -->
-      <div class="bento-cell bento-sm bento-light" data-href="/projects/" tabindex="0" role="link" aria-label="MechSoc">
+      <!-- Peer Mentoring — light text card -->
+      <div class="bento-cell bento-sm bento-light" tabindex="0" aria-label="Peer Mentoring">
         <div class="bento-content" style="justify-content: space-between; padding: 1.5rem;">
           <div>
-            <div class="bento-category">Leadership</div>
-            <div class="bento-title">MechSoc President</div>
-            <div class="bento-desc">Led the Mechanical Engineering Society across Manchester's 1,200+ member community.</div>
+            <div class="bento-category">Leadership · Manchester</div>
+            <div class="bento-title">Peer Mentoring Founder</div>
+            <div class="bento-desc">Founded &amp; coordinated the PASS scheme for foundation-year students. Peer Support Award 2024.</div>
           </div>
           <div>
-            <div class="bento-stat">1,200+</div>
-            <div class="bento-stat-label">Members</div>
+            <div class="bento-stat">200+</div>
+            <div class="bento-stat-label">Mentees</div>
           </div>
         </div>
         <div class="bento-arrow" aria-hidden="true">↗</div>

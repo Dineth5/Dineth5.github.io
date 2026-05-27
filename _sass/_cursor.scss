@@ -20,6 +20,7 @@
   transform: translate(-50%, -50%);
   transition-property: transform, opacity;
   transition-timing-function: ease;
+  opacity: 0; /* hidden until first mousemove */
 
   @media (pointer: coarse) {
     display: none !important;

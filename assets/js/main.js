@@ -25,12 +25,19 @@
       ry = -200;
     let isHovered = false;
     let isClicking = false;
+    let hasEnteredViewport = false;
 
     document.addEventListener("mousemove", (e) => {
       mx = e.clientX;
       my = e.clientY;
       dot.style.left = mx + "px";
       dot.style.top = my + "px";
+      // Reveal cursor on first real mouse movement
+      if (!hasEnteredViewport) {
+        hasEnteredViewport = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "0.7";
+      }
     });
 
     document.addEventListener("mousedown", () => {
