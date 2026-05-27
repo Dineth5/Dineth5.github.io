@@ -2,33 +2,22 @@
 layout: about
 title: About
 permalink: /
-subtitle: MSc Biomedical Engineering @ Imperial College London
+subtitle: MSc Computational Biomedical Engineering · Imperial College London
 
-profile:
-  align: right
-  image: #prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    Colombo, Sri Lanka<br>
-    Dubai, United Arab Emirates<br>
-    London, United Kingdom
-
-#selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 9999999 # leave blank to include all the news in the `_news` folder
-
-#latest_posts:
-#  enabled: true
-#  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-#  limit: 3 # leave blank to include all the blog posts
+  enabled: true
+  scrollable: false
+  limit: 9999999
 ---
 
-Hi, my name is Dineth! I am currently pursuing my MSc in Computational Biomedical Engineering at [Imperial College London](https://www.imperial.ac.uk). Before that, I graduated from the [University of Manchester](https://www.manchester.ac.uk) with a degree in Mechanical Engineering under the mentorship of my supervisor [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri).
+I'm a mechanical and biomedical engineer building computational tools at the intersection of fluid dynamics, machine learning, and clinical medicine.
 
-My academic interests lie at the intersection of engineering and medicine — in particular, using simulation and numerical modelling to address challenges in healthcare. I am currently working on publishing my undergraduate dissertation in Scientific Reports, where I quantitatively evaluated the likelihood of aneurysm rupture.
+Currently pursuing my **MSc in Computational Biomedical Engineering at Imperial College London**, where my dissertation develops physics-informed neural networks (PINNs) to provide real-time haemodynamic risk assessment for intracranial aneurysms — work that could replace multi-hour CFD pipelines with sub-second AI inference.
 
-I interned as a Research & Design Engineer at [Danway](https://danwaygroup.com) in summer 2023, and at [NAFFCO](https://www.naffco.com) in summer 2024.
+Before Imperial, I graduated with a **First-Class BEng in Mechanical Engineering from The University of Manchester** (80% overall), where my dissertation on patient-specific CFD of intracranial aneurysms — supervised by [Dr. Amir Keshmiri](https://research.manchester.ac.uk/en/persons/a.keshmiri) — earned a 91% grade and is currently under review at *Scientific Reports*.
+
+Beyond the lab, I'm the co-founder of **[VIMA](https://github.com/Dineth5)**, an assistive technology venture building haptic-feedback navigation handles for visually impaired users, which secured £10,000+ in competitive funding. I've also held leadership roles in the Mechanical Engineering Society (1,200+ members), served as PASS Student Coordinator (200+ mentees), co-founded the Solar Car Society, and led structural engineering for the Hyperloop Manchester team.
+
+When I'm not running simulations or debugging PyTorch, you'll find me shooting 35mm film, restoring vintage watches, or following Formula 1 aerodynamics obsessively.

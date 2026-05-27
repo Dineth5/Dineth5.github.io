@@ -1,80 +1,286 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<!-- ═══════════════════════════════════════════════════════ HERO ═══ -->
+<section class="hero-section" aria-label="Introduction">
+  <div class="container">
+    <div class="hero-inner">
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+      <!-- Left: text -->
+      <div class="hero-text">
+        <span class="hero-eyebrow">
+          <span class="dot"></span>
+          Mechanical &amp; Biomedical Engineering
+        </span>
+
+        <h1 class="hero-name">
+          {{ site.first_name }}<br>
+          <span class="name-dim">{{ site.last_name }}</span>
+        </h1>
+        <div class="hero-period">.</div>
+
+        <div class="hero-role">
+          <p class="role-line">
+            <strong>MSc Computational Biomedical Engineering</strong> — Imperial College London
+          </p>
+          <p class="role-line" style="margin:0">
+            BEng Mechanical Engineering — The University of Manchester
+          </p>
+        </div>
+
+        <p class="hero-bio">
+          Building at the intersection of fluid dynamics, machine learning,
+          and clinical medicine — from patient-specific CFD of intracranial
+          aneurysms to physics-informed neural networks for real-time haemodynamics.
+          Co-founder of&nbsp;<strong>VIMA</strong>, an assistive-technology venture secured
+          with £10,000+ in competitive funding.
+        </p>
+
+        <div class="hero-cta">
+          <a href="/projects/" class="btn-primary-custom">
+            View Projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9m-4-4.5 4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/cv/" class="btn-outline-custom">Download CV</a>
+        </div>
+
+        <div class="hero-socials">
+          {% for social in site.data.socials %}
+            {% case social[0] %}
+              {% when 'github_username' %}
+                <a href="https://github.com/{{ social[1] }}" class="social-icon" title="GitHub" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              {% when 'linkedin_username' %}
+                <a href="https://www.linkedin.com/in/{{ social[1] }}" class="social-icon" title="LinkedIn" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              {% when 'scholar_userid' %}
+                <a href="https://scholar.google.com/citations?user={{ social[1] }}" class="social-icon" title="Google Scholar" target="_blank" rel="noopener">
+                  <i class="ai ai-google-scholar"></i>
+                </a>
+              {% when 'email' %}
+                <a href="mailto:{{ social[1] | encode_email }}" class="social-icon" title="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+            {% endcase %}
+          {% endfor %}
+          <div class="social-divider" aria-hidden="true"></div>
+          <span class="social-label hide-xs">London · Dubai · Colombo</span>
+        </div>
+      </div><!-- /hero-text -->
+
+      <!-- Right: CFD canvas visualization -->
+      <div class="hero-visual">
+        <div class="canvas-wrapper">
+          <canvas id="hero-canvas" aria-label="Real-time blood flow simulation in an intracranial aneurysm" role="img"></canvas>
+          <div class="canvas-live-dot" aria-hidden="true">LIVE SIM</div>
+          <div class="canvas-label" aria-hidden="true">Intracranial Haemodynamics · CFD</div>
+        </div>
+      </div><!-- /hero-visual -->
+
+    </div><!-- /hero-inner -->
+  </div><!-- /container -->
+
+  <!-- Scroll indicator -->
+  <a href="#work" class="hero-scroll-indicator" aria-label="Scroll to projects">
+    <span>Scroll</span>
+    <div class="scroll-chevron" aria-hidden="true"></div>
+  </a>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ BENTO ═══ -->
+<section class="bento-section" id="work" aria-label="Projects">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">Work</span>
+      <h2>Projects &amp; Research</h2>
+      <p>From patient-specific haemodynamics to embedded assistive systems — engineering that matters.</p>
+    </div>
+
+    <div class="bento-grid" data-reveal data-reveal-delay="100">
+
+      <!-- VIMA — XL -->
+      <a href="/projects/VIMA/" class="bento-cell bento-xl" aria-label="VIMA project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/thumbnails/VIMA_logo.png' | relative_url }}" alt="VIMA" class="bento-img" loading="lazy">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">Venture · Assistive Tech</div>
+            <div class="bento-title">VIMA — Visual Impairment Motion Assistant</div>
+            <div class="bento-desc">
+              Co-founder &amp; Technical Lead. Detachable haptic-feedback handle for white-cane users.
+              Secured £10,000+ in competitive funding. 85% parity with traditional canes.
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">Arduino</span>
+            <span class="bento-tag">SolidWorks</span>
+            <span class="bento-tag">3D Print</span>
+            <span class="bento-tag">Ultrasonic Sensing</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <!-- CFD Aneurysms — MD -->
+      <a href="/projects/Aneurysms/" class="bento-cell bento-md" aria-label="CFD Aneurysms project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/thumbnails/C2.png' | relative_url }}" alt="CFD" class="bento-img" loading="lazy">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">Research · Dissertation · 91%</div>
+            <div class="bento-title">CFD of Intracranial Aneurysms</div>
+            <div class="bento-desc">
+              Patient-specific Navier–Stokes simulations. WSS, OSI, TAWSS haemodynamic analysis.
+              Pending publication in Scientific Reports.
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">STAR-CCM+</span>
+            <span class="bento-tag">OpenFOAM</span>
+            <span class="bento-tag">Python</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <!-- PINNs — MD -->
+      <a href="/projects/pinns/" class="bento-cell bento-md" aria-label="PINNs project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/Meth_Flow.png' | relative_url }}" alt="PINNs" class="bento-img" loading="lazy">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">MSc Dissertation · Imperial</div>
+            <div class="bento-title">QCPINN — AI-Accelerated CFD</div>
+            <div class="bento-desc">
+              Physics-informed neural networks for real-time intracranial haemodynamics.
+              Quasi-Cartesian architecture trained on HPC clusters.
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">PyTorch</span>
+            <span class="bento-tag">PINNs</span>
+            <span class="bento-tag">HPC</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <!-- Side Quests divider -->
+      <div class="bento-section-label" aria-hidden="true">
+        <span>Side Quests</span>
       </div>
-    {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <!-- Hyperloop — SM -->
+      <a href="/projects/hyperloop/" class="bento-cell bento-sm" aria-label="Hyperloop project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/thumbnails/Lathe.png' | relative_url }}" alt="Hyperloop" class="bento-img" loading="lazy" style="object-position: center;">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">Engineering · Structural</div>
+            <div class="bento-title">Hyperloop Manchester</div>
+            <div class="bento-desc">Vacuum capsule structural lead. FEA-driven airlock fabrication.</div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">FEA</span>
+            <span class="bento-tag">ANSYS</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <!-- Fire Hose — SM -->
+      <a href="/projects/firehose/" class="bento-cell bento-sm" aria-label="Fire Hose project">
+        <div class="bento-img-wrap">
+          <img src="{{ '/assets/img/thumbnails/Fire.png' | relative_url }}" alt="Fire Hose" class="bento-img" loading="lazy">
+        </div>
+        <div class="bento-overlay"></div>
+        <div class="bento-content">
+          <div>
+            <div class="bento-category">Design · Safety</div>
+            <div class="bento-title">Fire Hose Advancer</div>
+            <div class="bento-desc">Mechanical design for enhanced fire-safety equipment.</div>
+          </div>
+          <div class="bento-tags">
+            <span class="bento-tag">SolidWorks</span>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <!-- MechSoc — light text card -->
+      <div class="bento-cell bento-sm bento-light" data-href="/projects/" tabindex="0" role="link" aria-label="MechSoc">
+        <div class="bento-content" style="justify-content: space-between; padding: 1.5rem;">
+          <div>
+            <div class="bento-category">Leadership</div>
+            <div class="bento-title">MechSoc President</div>
+            <div class="bento-desc">Led the Mechanical Engineering Society across Manchester's 1,200+ member community.</div>
+          </div>
+          <div>
+            <div class="bento-stat">1,200+</div>
+            <div class="bento-stat-label">Members</div>
+          </div>
+        </div>
+        <div class="bento-arrow" aria-hidden="true">↗</div>
+      </div>
+
+    </div><!-- /bento-grid -->
+
+    <div style="margin-top: 2rem; text-align: center;" data-reveal data-reveal-delay="200">
+      <a href="/projects/" class="btn-outline-custom">
+        View all projects
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2.5 7h9m-4-4.5 4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ TIMELINE ═══ -->
+{% if page.announcements and page.announcements.enabled %}
+<section class="timeline-section" id="timeline" aria-label="Timeline">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">Timeline</span>
+      <h2>News &amp; Milestones</h2>
+    </div>
+    <div data-reveal data-reveal-delay="100">
       {% include news.liquid limit=true %}
-    {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
+<!-- ═══════════════════════════════════════════════════════ ABOUT BIO ═══ -->
+<section class="section" style="padding: 4rem 0 6rem; border-top: 1px solid var(--border);" aria-label="About">
+  <div class="container">
+    <div class="row align-items-center" style="max-width: 900px; margin: 0 auto; gap: 2rem;">
+      <div class="col-12" data-reveal>
+        <span class="eyebrow">About</span>
+        <div style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-width: 700px;">
+          {{ content }}
+        </div>
+        {% if page.social %}
+        <div class="hero-socials" style="margin-top: 1.5rem;">
+          {% include social.liquid %}
+        </div>
+        {% endif %}
       </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
-</div>
+    </div>
+  </div>
+</section>

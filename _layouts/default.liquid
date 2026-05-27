@@ -1,71 +1,84 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  <!-- Head -->
-  <head>
-    {% if page.redirect %}
-      {% if page.redirect == true %}
-        {% assign redirect = site.baseurl | append: '/' %}
-      {% elsif page.redirect contains '://' %}
-        {% assign redirect = page.redirect %}
-      {% else %}
-        {% assign redirect = page.redirect | relative_url %}
-      {% endif %}
-      <meta http-equiv="refresh" content="3; url={{ redirect }}">
+<head>
+  {% if page.redirect %}
+    {% if page.redirect == true %}
+      {% assign redirect = site.baseurl | append: '/' %}
+    {% elsif page.redirect contains '://' %}
+      {% assign redirect = page.redirect %}
+    {% else %}
+      {% assign redirect = page.redirect | relative_url %}
     {% endif %}
+    <meta http-equiv="refresh" content="3; url={{ redirect }}">
+  {% endif %}
 
-    {% include head.liquid %}
+  {% include head.liquid %}
 
-    <!-- Canonical tag -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB14DEZMRD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-BB14DEZMRD');
-    </script>
-  </head>
+  <!-- Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 
-  <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
-    {% include header.liquid %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB14DEZMRD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BB14DEZMRD');
+  </script>
+</head>
 
-    <!-- Content -->
-    <div class="container mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
+<body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+
+  <!-- Custom cursor elements (hidden on touch) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Header -->
+  {% include header.liquid %}
+
+  <!-- Main content -->
+  <main role="main">
+    {% if page.layout == 'about' %}
+      {{- content -}}
+    {% elsif page.toc and page.toc.sidebar %}
+      <div class="container mt-5">
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
-            <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
+            <div class="col-sm-3"><nav id="toc-sidebar" class="sticky-top"></nav></div>
           </div>
         {% else %}
           <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
+            <div class="col-sm-3"><nav id="toc-sidebar" class="sticky-top"></nav></div>
             <div class="col-sm-9">{{ content }}</div>
           </div>
         {% endif %}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    </div>
+      </div>
+    {% else %}
+      <div class="container mt-5">{{ content }}</div>
+    {% endif %}
+  </main>
 
-    <!-- Footer -->
-    {% include footer.liquid %}
+  <!-- Footer -->
+  {% include footer.liquid %}
 
-    <!-- JavaScripts -->
-    {% include scripts.liquid %}
-  </body>
+  <!-- al-folio scripts (dark mode toggle, search, etc.) -->
+  {% include scripts.liquid %}
+
+  <!-- Custom JS -->
+  <script defer src="{{ '/assets/js/main.js' | relative_url | bust_file_cache }}"></script>
+
+  {% if page.layout == 'about' or page.canvas == true %}
+    <script defer src="{{ '/assets/js/hero-canvas.js' | relative_url | bust_file_cache }}"></script>
+  {% endif %}
+
+</body>
 </html>

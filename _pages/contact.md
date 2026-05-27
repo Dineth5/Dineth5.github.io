@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 description: 📬 Get in touch with me
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">

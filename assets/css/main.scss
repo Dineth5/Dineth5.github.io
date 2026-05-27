@@ -3,18 +3,27 @@
 ---
 @charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
+// Dimensions — expanded for new design
+$max-content-width: 1200px;
 
+// ─── Core design tokens (must load first) ────────────────────────────────────
 @import
   "variables",
-  "themes",
+  "themes"
+;
+
+// ─── al-folio originals (keep for plugin compat) ─────────────────────────────
+@import
   "layout",
   "base",
   "distill",
   "cv",
   "tabs",
-  "typograms",
+  "typograms"
+;
+
+// ─── Icon fonts ───────────────────────────────────────────────────────────────
+@import
   "font-awesome/fontawesome",
   "font-awesome/brands",
   "font-awesome/solid",
@@ -22,4 +31,15 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons.scss",
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
+;
+
+// ─── Custom design system (loaded last to override everything) ────────────────
+@import
+  "custom",
+  "nav",
+  "hero",
+  "bento",
+  "gallery",
+  "timeline",
+  "cursor"
 ;

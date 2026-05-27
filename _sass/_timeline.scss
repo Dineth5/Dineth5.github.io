@@ -1,0 +1,212 @@
+/*******************************************************************************
+ * Timeline — News/announcements section (restyled al-folio news)
+ ******************************************************************************/
+
+.timeline-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+
+  .container { max-width: 1200px; }
+}
+
+// Override al-folio news styles
+.news {
+  // Remove scroll limit
+  .table-responsive {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  table {
+    border: none !important;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+
+    tr {
+      td, th {
+        border: none !important;
+        background: none !important;
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Style news table as a timeline
+.news .table {
+  tr {
+    th[scope="row"] {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--clr-gold);
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+      padding: 0.6rem 1.5rem 0.6rem 0;
+      vertical-align: top;
+      width: 130px;
+      border-right: 1px solid var(--border);
+    }
+
+    td {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+
+      a {
+        color: var(--text-primary);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-color: var(--border-strong);
+        text-underline-offset: 3px;
+
+        &:hover {
+          text-decoration-color: var(--clr-gold);
+          color: var(--clr-gold);
+        }
+      }
+    }
+  }
+
+  // Alternating row spacing
+  tr + tr td, tr + tr th {
+    border-top: 1px solid var(--border);
+    padding-top: 0.85rem;
+  }
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 0;
+  list-style: none;
+  margin: 2rem 0 0;
+
+  // Vertical line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 12px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--clr-gold) 0%, var(--border) 30%, transparent 100%);
+
+    @media (max-width: 576px) { left: 60px; }
+  }
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  @media (max-width: 576px) { grid-template-columns: 60px 1fr; gap: 1rem; }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--border-strong);
+    transform: translateX(-50%);
+    transition: border-color 0.2s ease, background 0.2s ease;
+    z-index: 1;
+
+    @media (max-width: 576px) { left: 60px; }
+  }
+
+  &:first-child::before {
+    border-color: var(--clr-gold);
+    background: var(--clr-gold);
+  }
+
+  &:hover::before {
+    border-color: var(--clr-gold);
+  }
+}
+
+.timeline-date {
+  text-align: right;
+  padding-top: 0.1rem;
+
+  .year {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--clr-gold);
+  }
+
+  .month {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+}
+
+.timeline-content {
+  padding: 0.1rem 0 0;
+
+  p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+
+    a {
+      color: var(--text-primary);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border-strong);
+      transition: border-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        color: var(--clr-gold);
+        border-color: var(--clr-gold);
+      }
+    }
+  }
+}
+
+// ─── Fallback: keep al-folio news table readable ─────────────────────────────
+table.news-table {
+  width: 100%;
+
+  tr {
+    td:first-child {
+      width: 100px;
+      white-space: nowrap;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      padding-right: 1rem;
+      vertical-align: top;
+      padding-top: 0.2rem;
+    }
+
+    td:last-child {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      padding-bottom: 1.25rem;
+
+      a {
+        color: var(--text-primary);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-color: var(--border-strong);
+        text-underline-offset: 3px;
+        &:hover { text-decoration-color: var(--clr-gold); color: var(--clr-gold); }
+      }
+    }
+  }
+}
