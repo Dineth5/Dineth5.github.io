@@ -51,18 +51,22 @@
 
     <div class="container" style="max-width: 1200px; padding: 3.5rem 2rem 2.5rem;">
       <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; align-items: start;">
-        <!-- Col 1: Brand -->
-        <div>
-          <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-footer-link-color); letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+        <!-- Col 1: Brand — always on dark bg, so hardcode light colours -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <div
+            style="font-size: 1.1rem; font-weight: 700; color: #e8f1fb; letter-spacing: -0.02em; margin: 0 0 0.5rem 0; padding: 0; line-height: 1.3;"
+          >
             {{ site.first_name }}
             {{ site.last_name }}
           </div>
-          <p style="font-size: 0.82rem; color: var(--global-footer-text-color); line-height: 1.7; max-width: 260px; margin-bottom: 1.25rem;">
+          <div
+            style="font-size: 0.82rem; color: #7aa3c8; line-height: 1.7; max-width: 260px; margin: 0 0 1.25rem 0; padding: 0;"
+          >
             MSc Biomedical Engineering · Imperial College London.<br>
             Building at the boundary of computation and clinical medicine.
-          </p>
+          </div>
           <!-- Social icons -->
-          <div style="display: flex; gap: 0.5rem;">
+          <div style="display: flex; gap: 0.625rem; align-items: center;">
             {% for social in site.data.socials %}
               {% case social[0] %}
                 {% when 'github_username' %}
@@ -70,47 +74,43 @@
                     href="https://github.com/{{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    onmouseout="this.style.color='#7aa3c8'"
                     title="GitHub"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
                 {% when 'linkedin_username' %}
                   <a
                     href="https://www.linkedin.com/in/{{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    onmouseout="this.style.color='#7aa3c8'"
                     title="LinkedIn"
-                  >
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
                 {% when 'scholar_userid' %}
                   <a
                     href="https://scholar.google.com/citations?user={{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    onmouseout="this.style.color='#7aa3c8'"
                     title="Google Scholar"
-                  >
-                    <i class="ai ai-google-scholar"></i>
-                  </a>
+                    ><i class="ai ai-google-scholar"></i
+                  ></a>
                 {% when 'email' %}
                   <a
                     href="mailto:{{ social[1] | encode_email }}"
-                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    onmouseout="this.style.color='#7aa3c8'"
                     title="Email"
-                  >
-                    <i class="fa-solid fa-envelope"></i>
-                  </a>
+                    ><i class="fa-solid fa-envelope"></i
+                  ></a>
               {% endcase %}
             {% endfor %}
           </div>
@@ -118,7 +118,9 @@
 
         <!-- Col 2: Work -->
         <div>
-          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+          <div
+            style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin: 0 0 1rem 0; padding: 0;"
+          >
             Work
           </div>
           {% assign work_links = '/projects/|Projects,/projects/VIMA/|VIMA,/projects/Aneurysms/|CFD Research,/projects/pinns/|PINNs (Imperial),/cv/|Curriculum Vitae'
@@ -129,11 +131,11 @@
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
                 onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='var(--global-footer-text-color)'"
+                onmouseout="this.style.color='#7aa3c8'"
               >
-                {{ parts[1] }}
+                {{- parts[1] -}}
               </a>
             </div>
           {% endfor %}
@@ -141,7 +143,9 @@
 
         <!-- Col 3: Side Quests -->
         <div>
-          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+          <div
+            style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin: 0 0 1rem 0; padding: 0;"
+          >
             Side Quests
           </div>
           {% assign sq_links = '/projects/hyperloop/|Hyperloop Manchester,/projects/firehose/|Fire Hose Advancer,/projects/Lathe/|CNC Lathe,/projects/pipeclimber/|Pipe Climber'
@@ -152,19 +156,21 @@
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
                 onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='var(--global-footer-text-color)'"
+                onmouseout="this.style.color='#7aa3c8'"
               >
-                {{ parts[1] }}
+                {{- parts[1] -}}
               </a>
             </div>
           {% endfor %}
         </div>
 
-        <!-- Col 4: Other -->
+        <!-- Col 4: More -->
         <div>
-          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+          <div
+            style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin: 0 0 1rem 0; padding: 0;"
+          >
             More
           </div>
           {% assign other_links = '/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact' | split: ',' %}
@@ -173,11 +179,11 @@
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
                 onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='var(--global-footer-text-color)'"
+                onmouseout="this.style.color='#7aa3c8'"
               >
-                {{ parts[1] }}
+                {{- parts[1] -}}
               </a>
             </div>
           {% endfor %}
@@ -186,10 +192,10 @@
       <!-- /grid -->
 
       <!-- Bottom bar -->
-      <div style="border-top: 1px solid rgba(232,241,251,0.07); padding-top: 1.5rem; text-align: center;">
-        <span style="font-size: 0.75rem; color: var(--global-footer-text-color); opacity: 0.5;">
-          &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma
-        </span>
+      <div
+        style="border-top: 1px solid rgba(232,241,251,0.07); padding-top: 1.5rem; text-align: center;"
+      >
+        <span style="font-size: 0.75rem; color: #4a78b0;"> &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma </span>
       </div>
     </div>
   </footer>
