@@ -6,7 +6,9 @@
   padding: 5rem 0;
   border-top: 1px solid var(--border);
 
-  .container { max-width: 1200px; }
+  .container {
+    max-width: 1200px;
+  }
 }
 
 // Override al-folio news styles
@@ -24,7 +26,8 @@
     width: 100%;
 
     tr {
-      td, th {
+      td,
+      th {
         border: none !important;
         background: none !important;
         padding: 0;
@@ -40,7 +43,7 @@
       font-size: 0.78rem;
       font-weight: 500;
       color: var(--clr-gold);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: "JetBrains Mono", monospace;
       white-space: nowrap;
       padding: 0.6rem 1.5rem 0.6rem 0;
       vertical-align: top;
@@ -70,7 +73,8 @@
   }
 
   // Alternating row spacing
-  tr + tr td, tr + tr th {
+  tr + tr td,
+  tr + tr th {
     border-top: 1px solid var(--border);
     padding-top: 0.85rem;
   }
@@ -84,7 +88,7 @@
 
   // Vertical line
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 80px;
     top: 12px;
@@ -92,7 +96,9 @@
     width: 1px;
     background: linear-gradient(to bottom, var(--clr-gold) 0%, var(--border) 30%, transparent 100%);
 
-    @media (max-width: 576px) { left: 60px; }
+    @media (max-width: 576px) {
+      left: 60px;
+    }
   }
 }
 
@@ -103,10 +109,13 @@
   margin-bottom: 2rem;
   position: relative;
 
-  @media (max-width: 576px) { grid-template-columns: 60px 1fr; gap: 1rem; }
+  @media (max-width: 576px) {
+    grid-template-columns: 60px 1fr;
+    gap: 1rem;
+  }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 80px;
     top: 9px;
@@ -116,10 +125,14 @@
     background: var(--bg);
     border: 2px solid var(--border-strong);
     transform: translateX(-50%);
-    transition: border-color 0.2s ease, background 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
     z-index: 1;
 
-    @media (max-width: 576px) { left: 60px; }
+    @media (max-width: 576px) {
+      left: 60px;
+    }
   }
 
   &:first-child::before {
@@ -166,7 +179,9 @@
       color: var(--text-primary);
       font-weight: 500;
       border-bottom: 1px solid var(--border-strong);
-      transition: border-color 0.2s ease, color 0.2s ease;
+      transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
 
       &:hover {
         color: var(--clr-gold);
@@ -205,7 +220,10 @@ table.news-table {
         text-decoration: underline;
         text-decoration-color: var(--border-strong);
         text-underline-offset: 3px;
-        &:hover { text-decoration-color: var(--clr-gold); color: var(--clr-gold); }
+        &:hover {
+          text-decoration-color: var(--clr-gold);
+          color: var(--clr-gold);
+        }
       }
     }
   }

@@ -4,7 +4,9 @@
 
 // Hide default cursor on pointer devices only
 @media (pointer: fine) {
-  * { cursor: none !important; }
+  * {
+    cursor: none !important;
+  }
 }
 
 .cursor-dot,
@@ -19,8 +21,12 @@
   transition-property: transform, opacity;
   transition-timing-function: ease;
 
-  @media (pointer: coarse) { display: none !important; }
-  @media (prefers-reduced-motion: reduce) { display: none !important; }
+  @media (pointer: coarse) {
+    display: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    display: none !important;
+  }
 }
 
 .cursor-dot {
@@ -30,7 +36,9 @@
   transition-duration: 0ms; // immediate
   z-index: 100000;
 
-  html[data-theme="dark"] & { background: var(--navy-100, #e8f1fb); }
+  html[data-theme="dark"] & {
+    background: var(--navy-100, #e8f1fb);
+  }
 }
 
 .cursor-ring {

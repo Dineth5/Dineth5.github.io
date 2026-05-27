@@ -1,134 +1,200 @@
 {% if site.footer_fixed %}
-<footer class="fixed-bottom" role="contentinfo" style="background: var(--global-footer-bg-color); border-top: 1px solid var(--border);">
-  <div class="container" style="max-width: 1200px; padding: 0.75rem 2rem;">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-      <span style="font-size: 0.78rem; color: var(--global-footer-text-color);">
-        &copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.last_name }}
-      </span>
-      <div style="display: flex; gap: 1.25rem; align-items: center;">
-        <a href="/" style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">About</a>
-        <a href="/projects/" style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">Projects</a>
-        <a href="/gallery/" style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">Gallery</a>
-        <a href="/cv/" style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">CV</a>
+  <footer class="fixed-bottom" role="contentinfo" style="background: var(--global-footer-bg-color); border-top: 1px solid var(--border);">
+    <div class="container" style="max-width: 1200px; padding: 0.75rem 2rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <span style="font-size: 0.78rem; color: var(--global-footer-text-color);">
+          &copy; {{ site.time | date: '%Y' }}
+          {{ site.first_name }}
+          {{ site.last_name }}
+        </span>
+        <div style="display: flex; gap: 1.25rem; align-items: center;">
+          <a
+            href="/"
+            style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity=1"
+            onmouseout="this.style.opacity=0.7"
+            >About</a
+          >
+          <a
+            href="/projects/"
+            style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity=1"
+            onmouseout="this.style.opacity=0.7"
+            >Projects</a
+          >
+          <a
+            href="/gallery/"
+            style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity=1"
+            onmouseout="this.style.opacity=0.7"
+            >Gallery</a
+          >
+          <a
+            href="/cv/"
+            style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity=1"
+            onmouseout="this.style.opacity=0.7"
+            >CV</a
+          >
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 {% else %}
-<footer class="sticky-bottom mt-5" role="contentinfo"
-  style="background: var(--global-footer-bg-color); border-top: 1px solid rgba(232,241,251,0.07);">
+  <footer
+    class="sticky-bottom mt-5"
+    role="contentinfo"
+    style="background: var(--global-footer-bg-color); border-top: 1px solid rgba(232,241,251,0.07);"
+  >
+    {% if site.newsletter.enabled %}{% include newsletter.liquid %}{% endif %}
 
-  {% if site.newsletter.enabled %}{% include newsletter.liquid %}{% endif %}
-
-  <div class="container" style="max-width: 1200px; padding: 3.5rem 2rem 2.5rem;">
-    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
-
-      <!-- Col 1: Brand -->
-      <div>
-        <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-footer-link-color); letter-spacing: -0.02em; margin-bottom: 0.75rem;">
-          {{ site.first_name }} {{ site.last_name }}
+    <div class="container" style="max-width: 1200px; padding: 3.5rem 2rem 2.5rem;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+        <!-- Col 1: Brand -->
+        <div>
+          <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-footer-link-color); letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+            {{ site.first_name }}
+            {{ site.last_name }}
+          </div>
+          <p style="font-size: 0.82rem; color: var(--global-footer-text-color); line-height: 1.7; max-width: 260px; margin-bottom: 1.25rem;">
+            MSc Biomedical Engineering · Imperial College London.<br>
+            Building at the boundary of computation and clinical medicine.
+          </p>
+          <!-- Social icons -->
+          <div style="display: flex; gap: 0.5rem;">
+            {% for social in site.data.socials %}
+              {% case social[0] %}
+                {% when 'github_username' %}
+                  <a
+                    href="https://github.com/{{ social[1] }}"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    onmouseover="this.style.color='#c8a97e'"
+                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    title="GitHub"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                {% when 'linkedin_username' %}
+                  <a
+                    href="https://www.linkedin.com/in/{{ social[1] }}"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    onmouseover="this.style.color='#c8a97e'"
+                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    title="LinkedIn"
+                  >
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                {% when 'scholar_userid' %}
+                  <a
+                    href="https://scholar.google.com/citations?user={{ social[1] }}"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    onmouseover="this.style.color='#c8a97e'"
+                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    title="Google Scholar"
+                  >
+                    <i class="ai ai-google-scholar"></i>
+                  </a>
+                {% when 'email' %}
+                  <a
+                    href="mailto:{{ social[1] | encode_email }}"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    onmouseover="this.style.color='#c8a97e'"
+                    onmouseout="this.style.color='var(--global-footer-text-color)'"
+                    title="Email"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+              {% endcase %}
+            {% endfor %}
+          </div>
         </div>
-        <p style="font-size: 0.82rem; color: var(--global-footer-text-color); line-height: 1.7; max-width: 260px; margin-bottom: 1.25rem;">
-          MSc Biomedical Engineering · Imperial College London.<br>
-          Building at the boundary of computation and clinical medicine.
-        </p>
-        <!-- Social icons -->
-        <div style="display: flex; gap: 0.5rem;">
-          {% for social in site.data.socials %}
-            {% case social[0] %}
-              {% when 'github_username' %}
-                <a href="https://github.com/{{ social[1] }}" target="_blank" rel="noopener"
-                   style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
-                   onmouseover="this.style.color='#c8a97e'" onmouseout="this.style.color='var(--global-footer-text-color)'"
-                   title="GitHub">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              {% when 'linkedin_username' %}
-                <a href="https://www.linkedin.com/in/{{ social[1] }}" target="_blank" rel="noopener"
-                   style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
-                   onmouseover="this.style.color='#c8a97e'" onmouseout="this.style.color='var(--global-footer-text-color)'"
-                   title="LinkedIn">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-              {% when 'scholar_userid' %}
-                <a href="https://scholar.google.com/citations?user={{ social[1] }}" target="_blank" rel="noopener"
-                   style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
-                   onmouseover="this.style.color='#c8a97e'" onmouseout="this.style.color='var(--global-footer-text-color)'"
-                   title="Google Scholar">
-                  <i class="ai ai-google-scholar"></i>
-                </a>
-              {% when 'email' %}
-                <a href="mailto:{{ social[1] | encode_email }}"
-                   style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
-                   onmouseover="this.style.color='#c8a97e'" onmouseout="this.style.color='var(--global-footer-text-color)'"
-                   title="Email">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-            {% endcase %}
+
+        <!-- Col 2: Work -->
+        <div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+            Work
+          </div>
+          {% assign work_links = '/projects/|Projects,/projects/VIMA/|VIMA,/projects/Aneurysms/|CFD Research,/projects/pinns/|PINNs (Imperial),/cv/|Curriculum Vitae'
+            | split: ','
+          %}
+          {% for link in work_links %}
+            {% assign parts = link | split: '|' %}
+            <div style="margin-bottom: 0.5rem;">
+              <a
+                href="{{ parts[0] }}"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='#e8f1fb'"
+                onmouseout="this.style.color='var(--global-footer-text-color)'"
+              >
+                {{ parts[1] }}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Col 3: Side Quests -->
+        <div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+            Side Quests
+          </div>
+          {% assign sq_links = '/projects/hyperloop/|Hyperloop Manchester,/projects/firehose/|Fire Hose Advancer,/projects/Lathe/|CNC Lathe,/projects/pipeclimber/|Pipe Climber'
+            | split: ','
+          %}
+          {% for link in sq_links %}
+            {% assign parts = link | split: '|' %}
+            <div style="margin-bottom: 0.5rem;">
+              <a
+                href="{{ parts[0] }}"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='#e8f1fb'"
+                onmouseout="this.style.color='var(--global-footer-text-color)'"
+              >
+                {{ parts[1] }}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Col 4: Other -->
+        <div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">
+            More
+          </div>
+          {% assign other_links = '/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact' | split: ',' %}
+          {% for link in other_links %}
+            {% assign parts = link | split: '|' %}
+            <div style="margin-bottom: 0.5rem;">
+              <a
+                href="{{ parts[0] }}"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='#e8f1fb'"
+                onmouseout="this.style.color='var(--global-footer-text-color)'"
+              >
+                {{ parts[1] }}
+              </a>
+            </div>
           {% endfor %}
         </div>
       </div>
+      <!-- /grid -->
 
-      <!-- Col 2: Work -->
-      <div>
-        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">Work</div>
-        {% assign work_links = "/projects/|Projects,/projects/VIMA/|VIMA,/projects/Aneurysms/|CFD Research,/projects/pinns/|PINNs (Imperial),/cv/|Curriculum Vitae" | split: "," %}
-        {% for link in work_links %}
-          {% assign parts = link | split: "|" %}
-          <div style="margin-bottom: 0.5rem;">
-            <a href="{{ parts[0] }}"
-               style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
-               onmouseover="this.style.color='#e8f1fb'" onmouseout="this.style.color='var(--global-footer-text-color)'">
-              {{ parts[1] }}
-            </a>
-          </div>
-        {% endfor %}
+      <!-- Bottom bar -->
+      <div style="border-top: 1px solid rgba(232,241,251,0.07); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+        <span style="font-size: 0.75rem; color: var(--global-footer-text-color); opacity: 0.5;">
+          &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma
+          {% if site.last_updated %} · Last updated {{ 'now' | date: '%B %Y' }}{% endif %}
+        </span>
+        <span style="font-size: 0.72rem; color: var(--global-footer-text-color); opacity: 0.4; font-family: 'JetBrains Mono', monospace;">
+          Built with Jekyll · Hosted on GitHub Pages
+        </span>
       </div>
-
-      <!-- Col 3: Side Quests -->
-      <div>
-        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">Side Quests</div>
-        {% assign sq_links = "/projects/hyperloop/|Hyperloop Manchester,/projects/firehose/|Fire Hose Advancer,/projects/Lathe/|CNC Lathe,/projects/pipeclimber/|Pipe Climber" | split: "," %}
-        {% for link in sq_links %}
-          {% assign parts = link | split: "|" %}
-          <div style="margin-bottom: 0.5rem;">
-            <a href="{{ parts[0] }}"
-               style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
-               onmouseover="this.style.color='#e8f1fb'" onmouseout="this.style.color='var(--global-footer-text-color)'">
-              {{ parts[1] }}
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-
-      <!-- Col 4: Other -->
-      <div>
-        <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c8a97e; margin-bottom: 1rem;">More</div>
-        {% assign other_links = "/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact" | split: "," %}
-        {% for link in other_links %}
-          {% assign parts = link | split: "|" %}
-          <div style="margin-bottom: 0.5rem;">
-            <a href="{{ parts[0] }}"
-               style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
-               onmouseover="this.style.color='#e8f1fb'" onmouseout="this.style.color='var(--global-footer-text-color)'">
-              {{ parts[1] }}
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div><!-- /grid -->
-
-    <!-- Bottom bar -->
-    <div style="border-top: 1px solid rgba(232,241,251,0.07); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
-      <span style="font-size: 0.75rem; color: var(--global-footer-text-color); opacity: 0.5;">
-        &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma
-        {% if site.last_updated %} · Last updated {{ 'now' | date: '%B %Y' }}{% endif %}
-      </span>
-      <span style="font-size: 0.72rem; color: var(--global-footer-text-color); opacity: 0.4; font-family: 'JetBrains Mono', monospace;">
-        Built with Jekyll · Hosted on GitHub Pages
-      </span>
     </div>
-  </div>
-</footer>
+  </footer>
 {% endif %}

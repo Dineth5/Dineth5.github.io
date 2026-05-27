@@ -5,7 +5,6 @@ layout: default
 <section class="hero-section" aria-label="Introduction">
   <div class="container">
     <div class="hero-inner">
-
       <!-- Left: text -->
       <div class="hero-text">
         <span class="hero-eyebrow">
@@ -14,26 +13,21 @@ layout: default
         </span>
 
         <h1 class="hero-name">
-          {{ site.first_name }}<br>
+          {{ site.first_name -}}
+          <br>
           <span class="name-dim">{{ site.last_name }}</span>
         </h1>
         <div class="hero-period">.</div>
 
         <div class="hero-role">
-          <p class="role-line">
-            <strong>MSc Computational Biomedical Engineering</strong> — Imperial College London
-          </p>
-          <p class="role-line" style="margin:0">
-            BEng Mechanical Engineering — The University of Manchester
-          </p>
+          <p class="role-line"><strong>MSc Computational Biomedical Engineering</strong> — Imperial College London</p>
+          <p class="role-line" style="margin:0">BEng Mechanical Engineering — The University of Manchester</p>
         </div>
 
         <p class="hero-bio">
-          Building at the intersection of fluid dynamics, machine learning,
-          and clinical medicine — from patient-specific CFD of intracranial
-          aneurysms to physics-informed neural networks for real-time haemodynamics.
-          Co-founder of&nbsp;<strong>VIMA</strong>, an assistive-technology venture secured
-          with £10,000+ in competitive funding.
+          Building at the intersection of fluid dynamics, machine learning, and clinical medicine — from patient-specific CFD of intracranial
+          aneurysms to physics-informed neural networks for real-time haemodynamics. Co-founder of&nbsp;<strong>VIMA</strong>, an assistive-technology
+          venture secured with £10,000+ in competitive funding.
         </p>
 
         <div class="hero-cta">
@@ -58,7 +52,13 @@ layout: default
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
               {% when 'scholar_userid' %}
-                <a href="https://scholar.google.com/citations?user={{ social[1] }}" class="social-icon" title="Google Scholar" target="_blank" rel="noopener">
+                <a
+                  href="https://scholar.google.com/citations?user={{ social[1] }}"
+                  class="social-icon"
+                  title="Google Scholar"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <i class="ai ai-google-scholar"></i>
                 </a>
               {% when 'email' %}
@@ -70,7 +70,8 @@ layout: default
           <div class="social-divider" aria-hidden="true"></div>
           <span class="social-label hide-xs">London · Dubai · Colombo</span>
         </div>
-      </div><!-- /hero-text -->
+      </div>
+      <!-- /hero-text -->
 
       <!-- Right: CFD canvas visualization -->
       <div class="hero-visual">
@@ -79,10 +80,12 @@ layout: default
           <div class="canvas-live-dot" aria-hidden="true">LIVE SIM</div>
           <div class="canvas-label" aria-hidden="true">Intracranial Haemodynamics · CFD</div>
         </div>
-      </div><!-- /hero-visual -->
-
-    </div><!-- /hero-inner -->
-  </div><!-- /container -->
+      </div>
+      <!-- /hero-visual -->
+    </div>
+    <!-- /hero-inner -->
+  </div>
+  <!-- /container -->
 
   <!-- Scroll indicator -->
   <a href="#work" class="hero-scroll-indicator" aria-label="Scroll to projects">
@@ -90,7 +93,6 @@ layout: default
     <div class="scroll-chevron" aria-hidden="true"></div>
   </a>
 </section>
-
 
 <!-- ═══════════════════════════════════════════════════════ BENTO ═══ -->
 <section class="bento-section" id="work" aria-label="Projects">
@@ -102,7 +104,6 @@ layout: default
     </div>
 
     <div class="bento-grid" data-reveal data-reveal-delay="100">
-
       <!-- VIMA — XL -->
       <a href="/projects/VIMA/" class="bento-cell bento-xl" aria-label="VIMA project">
         <div class="bento-img-wrap">
@@ -114,8 +115,8 @@ layout: default
             <div class="bento-category">Venture · Assistive Tech</div>
             <div class="bento-title">VIMA — Visual Impairment Motion Assistant</div>
             <div class="bento-desc">
-              Co-founder &amp; Technical Lead. Detachable haptic-feedback handle for white-cane users.
-              Secured £10,000+ in competitive funding. 85% parity with traditional canes.
+              Co-founder &amp; Technical Lead. Detachable haptic-feedback handle for white-cane users. Secured £10,000+ in competitive funding. 85%
+              parity with traditional canes.
             </div>
           </div>
           <div class="bento-tags">
@@ -139,8 +140,7 @@ layout: default
             <div class="bento-category">Research · Dissertation · 91%</div>
             <div class="bento-title">CFD of Intracranial Aneurysms</div>
             <div class="bento-desc">
-              Patient-specific Navier–Stokes simulations. WSS, OSI, TAWSS haemodynamic analysis.
-              Pending publication in Scientific Reports.
+              Patient-specific Navier–Stokes simulations. WSS, OSI, TAWSS haemodynamic analysis. Pending publication in Scientific Reports.
             </div>
           </div>
           <div class="bento-tags">
@@ -163,8 +163,7 @@ layout: default
             <div class="bento-category">MSc Dissertation · Imperial</div>
             <div class="bento-title">QCPINN — AI-Accelerated CFD</div>
             <div class="bento-desc">
-              Physics-informed neural networks for real-time intracranial haemodynamics.
-              Quasi-Cartesian architecture trained on HPC clusters.
+              Physics-informed neural networks for real-time intracranial haemodynamics. Quasi-Cartesian architecture trained on HPC clusters.
             </div>
           </div>
           <div class="bento-tags">
@@ -184,7 +183,13 @@ layout: default
       <!-- Hyperloop — SM -->
       <a href="/projects/hyperloop/" class="bento-cell bento-sm" aria-label="Hyperloop project">
         <div class="bento-img-wrap">
-          <img src="{{ '/assets/img/thumbnails/Lathe.png' | relative_url }}" alt="Hyperloop" class="bento-img" loading="lazy" style="object-position: center;">
+          <img
+            src="{{ '/assets/img/thumbnails/Lathe.png' | relative_url }}"
+            alt="Hyperloop"
+            class="bento-img"
+            loading="lazy"
+            style="object-position: center;"
+          >
         </div>
         <div class="bento-overlay"></div>
         <div class="bento-content">
@@ -235,8 +240,8 @@ layout: default
         </div>
         <div class="bento-arrow" aria-hidden="true">↗</div>
       </div>
-
-    </div><!-- /bento-grid -->
+    </div>
+    <!-- /bento-grid -->
 
     <div style="margin-top: 2rem; text-align: center;" data-reveal data-reveal-delay="200">
       <a href="/projects/" class="btn-outline-custom">
@@ -249,22 +254,20 @@ layout: default
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════════════ TIMELINE ═══ -->
 {% if page.announcements and page.announcements.enabled %}
-<section class="timeline-section" id="timeline" aria-label="Timeline">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <span class="eyebrow">Timeline</span>
-      <h2>News &amp; Milestones</h2>
+  <section class="timeline-section" id="timeline" aria-label="Timeline">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Timeline</span>
+        <h2>News &amp; Milestones</h2>
+      </div>
+      <div data-reveal data-reveal-delay="100">
+        {% include news.liquid limit=true %}
+      </div>
     </div>
-    <div data-reveal data-reveal-delay="100">
-      {% include news.liquid limit=true %}
-    </div>
-  </div>
-</section>
+  </section>
 {% endif %}
-
 
 <!-- ═══════════════════════════════════════════════════════ ABOUT BIO ═══ -->
 <section class="section" style="padding: 4rem 0 6rem; border-top: 1px solid var(--border);" aria-label="About">
@@ -276,9 +279,9 @@ layout: default
           {{ content }}
         </div>
         {% if page.social %}
-        <div class="hero-socials" style="margin-top: 1.5rem;">
-          {% include social.liquid %}
-        </div>
+          <div class="hero-socials" style="margin-top: 1.5rem;">
+            {% include social.liquid %}
+          </div>
         {% endif %}
       </div>
     </div>

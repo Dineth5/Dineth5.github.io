@@ -12,12 +12,10 @@
 
   // Subtle grid background
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
@@ -60,7 +58,7 @@
     color: var(--clr-gold);
     margin-bottom: 1.5rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.1s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
 
     span.dot {
       width: 5px;
@@ -75,33 +73,36 @@
     font-size: clamp(2.6rem, 6vw, 4.8rem);
     font-weight: 700;
     letter-spacing: -0.04em;
-    line-height: 1.0;
+    line-height: 1;
     color: var(--text-primary);
     margin-bottom: 0.25rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.2s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 
-    .name-dim { color: var(--text-secondary); font-weight: 300; }
+    .name-dim {
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
   }
 
   .hero-period {
     font-size: clamp(2.6rem, 6vw, 4.8rem);
     font-weight: 700;
     color: var(--clr-gold);
-    line-height: 1.0;
+    line-height: 1;
     letter-spacing: -0.04em;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.25s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
   }
 
   .hero-role {
     margin-top: 1.5rem;
     margin-bottom: 1.25rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.35s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
 
     .role-line {
-      font-size: 1.0rem;
+      font-size: 1rem;
       color: var(--text-secondary);
       font-weight: 400;
       line-height: 1.5;
@@ -120,7 +121,7 @@
     max-width: 480px;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.45s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
   }
 
   .hero-cta {
@@ -129,7 +130,7 @@
     gap: 0.75rem;
     margin-bottom: 2.5rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.55s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
   }
 
   .hero-socials {
@@ -137,7 +138,7 @@
     align-items: center;
     gap: 0.25rem;
     opacity: 0;
-    animation: heroFadeUp 0.7s cubic-bezier(.16,1,.3,1) 0.65s forwards;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
 
     .social-icon {
       display: flex;
@@ -177,7 +178,7 @@
 .hero-visual {
   position: relative;
   opacity: 0;
-  animation: heroFadeIn 1s cubic-bezier(.16,1,.3,1) 0.4s forwards;
+  animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
 
   @media (max-width: 900px) {
     order: -1;
@@ -204,8 +205,9 @@
     }
 
     // Corner accent
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       position: absolute;
       width: 16px;
       height: 16px;
@@ -215,11 +217,13 @@
       opacity: 0.6;
     }
     &::before {
-      top: 10px; left: 10px;
+      top: 10px;
+      left: 10px;
       border-width: 1.5px 0 0 1.5px;
     }
     &::after {
-      bottom: 10px; right: 10px;
+      bottom: 10px;
+      right: 10px;
       border-width: 0 1.5px 1.5px 0;
     }
   }
@@ -229,7 +233,7 @@
     bottom: 14px;
     left: 14px;
     font-size: 0.65rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -251,7 +255,7 @@
     align-items: center;
     gap: 0.4rem;
     font-size: 0.65rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
     color: rgba(200, 169, 126, 0.8);
     background: rgba(7, 13, 28, 0.75);
     backdrop-filter: blur(4px);
@@ -260,7 +264,7 @@
     z-index: 3;
 
     &::before {
-      content: '';
+      content: "";
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -304,26 +308,50 @@
     animation: scrollBounce 1.5s ease-in-out infinite;
   }
 
-  &:hover { opacity: 0.7; }
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 // ─── Animations ──────────────────────────────────────────────────────────────
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes heroFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes livePulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px #48bb78; }
-  50%       { opacity: 0.5; box-shadow: 0 0 12px #48bb78; }
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 6px #48bb78;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 12px #48bb78;
+  }
 }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: rotate(45deg) translateY(0); }
-  50%       { transform: rotate(45deg) translateY(4px); }
+  0%,
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(4px);
+  }
 }

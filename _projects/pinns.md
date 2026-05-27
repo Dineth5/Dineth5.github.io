@@ -36,12 +36,12 @@ Training runs on **Imperial's HPC cluster (CX3)** using PyTorch + CUDA, with ada
 
 ### Key Results
 
-| Metric | Value |
-|--------|-------|
-| Velocity MAE vs. CFD | < 4% |
-| Pressure field RMSE | < 6% |
+| Metric                         | Value       |
+| ------------------------------ | ----------- |
+| Velocity MAE vs. CFD           | < 4%        |
+| Pressure field RMSE            | < 6%        |
 | Inference time (full 3D field) | **< 80 ms** |
-| Training time (HPC, 4× A100) | ~14 hours |
+| Training time (HPC, 4× A100)   | ~14 hours   |
 
 The model achieves real-time inference over a patient-specific geometry — enabling a potential clinical tool where a surgeon inputs geometry from MRA imaging and receives haemodynamic risk maps within seconds rather than hours.
 

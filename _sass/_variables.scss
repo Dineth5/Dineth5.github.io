@@ -5,31 +5,31 @@
 @use "sass:color";
 
 // ─── Legacy (Bootstrap + al-folio plugin compat) ────────────────────────────
-$red-color:          #e53e3e !default;
-$red-color-dark:     #c53030 !default;
-$orange-color:       #dd6b20 !default;
-$blue-color:         #2d5a8e !default;
-$blue-color-dark:    #1e3a6e !default;
-$cyan-color:         #4a78b0 !default;
-$light-cyan-color:   color.adjust($cyan-color, $lightness: 25%);
-$green-color:        #38a169 !default;
-$green-color-lime:   #9ae6b4 !default;
-$green-color-dark:   #276749 !default;
-$green-color-light:  #f0fff4 !default;
+$red-color: #e53e3e !default;
+$red-color-dark: #c53030 !default;
+$orange-color: #dd6b20 !default;
+$blue-color: #2d5a8e !default;
+$blue-color-dark: #1e3a6e !default;
+$cyan-color: #4a78b0 !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #38a169 !default;
+$green-color-lime: #9ae6b4 !default;
+$green-color-dark: #276749 !default;
+$green-color-light: #f0fff4 !default;
 $green-color-bright: #48bb78 !default;
-$purple-color:       #6b46c1 !default;
+$purple-color: #6b46c1 !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color:         #d53f8c !default;
-$pink-color-light:   #fed7e2 !default;
-$yellow-color:       #d69e2e !default;
+$pink-color: #d53f8c !default;
+$pink-color-light: #fed7e2 !default;
+$yellow-color: #d69e2e !default;
 
-$grey-color:         #718096 !default;
-$grey-color-light:   color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark:    #1a202c;
-$grey-900:           #171923;
+$grey-color: #718096 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #1a202c;
+$grey-900: #171923;
 
-$white-color:        #ffffff !default;
-$black-color:        #000000 !default;
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
 
 // ─── Navy Palette ─────────────────────────────────────────────────────────
 $navy-950: #030a14;
@@ -43,13 +43,13 @@ $navy-400: #4a78b0;
 $navy-300: #7aa3c8;
 $navy-200: #b8d0e8;
 $navy-100: #e8f1fb;
-$navy-50:  #f4f8fd;
+$navy-50: #f4f8fd;
 
 // ─── Warm Neutrals ─────────────────────────────────────────────────────────
 $warm-white: #f7f5f0;
-$warm-100:   #f0ede7;
-$warm-200:   #e4dfd7;
-$warm-300:   #cdc7bc;
+$warm-100: #f0ede7;
+$warm-200: #e4dfd7;
+$warm-300: #cdc7bc;
 
 // ─── Gold Accent ───────────────────────────────────────────────────────────
 $gold-700: #8a6535;
@@ -61,16 +61,16 @@ $gold-200: #f0e6d3;
 
 // ─── Code bg ───────────────────────────────────────────────────────────────
 $code-bg-color-light: rgba(10, 31, 68, 0.04) !default;
-$code-bg-color-dark:  #0d1a2d !default;
+$code-bg-color-dark: #0d1a2d !default;
 
 // ─── Icon fonts ────────────────────────────────────────────────────────────
 $fa-font-path: "../webfonts";
 $ti-font-path: "../fonts";
 
 // ─── Back-to-top ──────────────────────────────────────────────────────────
-$back-to-top-z-index:  10;
-$back-to-top-bottom:   30px;
-$back-to-top-right:    30px;
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
-$back-to-top-height:   $back-to-top-diameter;
-$back-to-top-width:    $back-to-top-diameter;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;

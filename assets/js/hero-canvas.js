@@ -4,11 +4,11 @@
  * Canvas fills .hero-canvas; adapts to dark/light theme automatically.
  */
 (function () {
-  'use strict';
+  "use strict";
 
-  const canvas = document.getElementById('hero-canvas');
+  const canvas = document.getElementById("hero-canvas");
   if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   // ─── Geometry helpers ───────────────────────────────────────────────────────
   let W, H;
@@ -17,23 +17,23 @@
   function computeGeometry() {
     W = canvas.offsetWidth;
     H = canvas.offsetHeight;
-    canvas.width  = W * window.devicePixelRatio;
+    canvas.width = W * window.devicePixelRatio;
     canvas.height = H * window.devicePixelRatio;
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
 
     vesselY = H * 0.65;
     vesselR = H * 0.1;
-    sacX    = W * 0.55;
-    sacY    = vesselY - H * 0.28;
-    sacRx   = W * 0.12;
-    sacRy   = H * 0.22;
-    neckW   = W * 0.08;
+    sacX = W * 0.55;
+    sacY = vesselY - H * 0.28;
+    sacRx = W * 0.12;
+    sacRy = H * 0.22;
+    neckW = W * 0.08;
   }
 
   // ─── Velocity field ─────────────────────────────────────────────────────────
   // Returns {vx, vy} at world coords (x, y)
   function velocityAt(x, y, phase) {
-    const dy    = y - vesselY;
+    const dy = y - vesselY;
     const inVessel = Math.abs(dy) < vesselR;
 
     // Oscillatory inlet (cardiac cycle) – peak at phase ≈ 0
@@ -50,7 +50,7 @@
         const upFraction = Math.max(0, 1 - distToNeck / (neckW * 1.5));
         return {
           vx: baseSpeed * (1 - upFraction * 0.4),
-          vy: -baseSpeed * upFraction * 0.35
+          vy: -baseSpeed * upFraction * 0.35,
         };
       }
       return { vx: baseSpeed, vy: (vesselY - y) * 0.8 };
@@ -63,11 +63,12 @@
     if (dist < 1.1) {
       // Tangential velocity (vortex), decays with r
       const tangFactor = 60 * (1 - dist) * pulseFactor;
-      const ax = (x - sacX), ay = (y - sacY);
+      const ax = x - sacX,
+        ay = y - sacY;
       const len = Math.sqrt(ax * ax + ay * ay) || 1;
       return {
         vx: (-ay / len) * tangFactor,
-        vy:  (ax / len) * tangFactor
+        vy: (ax / len) * tangFactor,
       };
     }
 
@@ -76,22 +77,24 @@
 
   // ─── Particles ──────────────────────────────────────────────────────────────
   const MAX_PARTICLES = 240;
-  const particles     = [];
+  const particles = [];
 
   class Particle {
-    constructor() { this.respawn(); }
+    constructor() {
+      this.respawn();
+    }
 
     respawn() {
       // Start from inlet (left side) in vessel
-      this.x   = -10 + Math.random() * W * 0.05;
-      this.y   = vesselY + (Math.random() * 2 - 1) * vesselR * 0.9;
+      this.x = -10 + Math.random() * W * 0.05;
+      this.y = vesselY + (Math.random() * 2 - 1) * vesselR * 0.9;
       this.age = 0;
       const lifespan = 160 + Math.random() * 180;
-      this.maxAge  = lifespan;
+      this.maxAge = lifespan;
       this.opacity = 0;
-      this.speed   = 0;
-      this.size    = 1.2 + Math.random() * 0.8;
-      this.trail   = [];
+      this.speed = 0;
+      this.size = 1.2 + Math.random() * 0.8;
+      this.trail = [];
       this.trailLen = 8 + Math.floor(Math.random() * 8);
     }
 
@@ -115,13 +118,7 @@
     }
 
     isDead() {
-      return (
-        this.age >= this.maxAge ||
-        this.x > W + 20 ||
-        this.x < -30 ||
-        this.y > H + 20 ||
-        this.y < -20
-      );
+      return this.age >= this.maxAge || this.x > W + 20 || this.x < -30 || this.y > H + 20 || this.y < -20;
     }
 
     color() {
@@ -132,13 +129,13 @@
       if (t < 0.3) {
         // deep blue → cyan
         const s = t / 0.3;
-        r = Math.round(20  + s * 0);
-        g = Math.round(80  + s * 140);
+        r = Math.round(20 + s * 0);
+        g = Math.round(80 + s * 140);
         b = Math.round(200 + s * 55);
       } else if (t < 0.65) {
         // cyan → gold
         const s = (t - 0.3) / 0.35;
-        r = Math.round(20  + s * 190);
+        r = Math.round(20 + s * 190);
         g = Math.round(220 - s * 55);
         b = Math.round(255 - s * 205);
       } else {
@@ -146,7 +143,7 @@
         const s = (t - 0.65) / 0.35;
         r = Math.round(210 + s * 45);
         g = Math.round(165 - s * 145);
-        b = Math.round(50  - s * 40);
+        b = Math.round(50 - s * 40);
       }
       return `rgba(${r},${g},${b},${this.opacity})`;
     }
@@ -181,29 +178,34 @@
 
   // ─── Draw geometry ──────────────────────────────────────────────────────────
   function drawGeometry() {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
-                   !document.documentElement.getAttribute('data-theme');
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark" || !document.documentElement.getAttribute("data-theme");
 
     // Background
-    ctx.fillStyle = isDark ? '#070d1c' : '#0a1323';
+    ctx.fillStyle = isDark ? "#070d1c" : "#0a1323";
     ctx.fillRect(0, 0, W, H);
 
     // Grid
-    ctx.strokeStyle = 'rgba(74, 120, 176, 0.07)';
+    ctx.strokeStyle = "rgba(74, 120, 176, 0.07)";
     ctx.lineWidth = 0.5;
     const gridStep = 40;
     for (let gx = 0; gx < W; gx += gridStep) {
-      ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, H); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(gx, 0);
+      ctx.lineTo(gx, H);
+      ctx.stroke();
     }
     for (let gy = 0; gy < H; gy += gridStep) {
-      ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(0, gy);
+      ctx.lineTo(W, gy);
+      ctx.stroke();
     }
 
     // Vessel walls
     const wallGrad = ctx.createLinearGradient(0, vesselY - vesselR, 0, vesselY + vesselR);
-    wallGrad.addColorStop(0, 'rgba(74, 120, 176, 0.25)');
-    wallGrad.addColorStop(0.5, 'rgba(74, 120, 176, 0.08)');
-    wallGrad.addColorStop(1, 'rgba(74, 120, 176, 0.25)');
+    wallGrad.addColorStop(0, "rgba(74, 120, 176, 0.25)");
+    wallGrad.addColorStop(0.5, "rgba(74, 120, 176, 0.08)");
+    wallGrad.addColorStop(1, "rgba(74, 120, 176, 0.25)");
 
     ctx.beginPath();
     ctx.rect(0, vesselY - vesselR, W, vesselR * 2);
@@ -211,7 +213,7 @@
     ctx.fill();
 
     // Vessel wall borders
-    ctx.strokeStyle = 'rgba(74, 120, 176, 0.5)';
+    ctx.strokeStyle = "rgba(74, 120, 176, 0.5)";
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.moveTo(0, vesselY - vesselR);
@@ -226,7 +228,7 @@
     ctx.lineTo(W, vesselY - vesselR);
     ctx.stroke();
 
-    ctx.strokeStyle = 'rgba(74, 120, 176, 0.5)';
+    ctx.strokeStyle = "rgba(74, 120, 176, 0.5)";
     ctx.beginPath();
     ctx.moveTo(0, vesselY + vesselR);
     ctx.lineTo(W, vesselY + vesselR);
@@ -234,57 +236,60 @@
 
     // Aneurysm sac
     const sacGrad = ctx.createRadialGradient(sacX, sacY + sacRy * 0.2, 0, sacX, sacY, sacRy);
-    sacGrad.addColorStop(0, 'rgba(10, 31, 68, 0.15)');
-    sacGrad.addColorStop(0.7, 'rgba(10, 31, 68, 0.08)');
-    sacGrad.addColorStop(1, 'rgba(74, 120, 176, 0.22)');
+    sacGrad.addColorStop(0, "rgba(10, 31, 68, 0.15)");
+    sacGrad.addColorStop(0.7, "rgba(10, 31, 68, 0.08)");
+    sacGrad.addColorStop(1, "rgba(74, 120, 176, 0.22)");
 
     ctx.save();
     ctx.beginPath();
     ctx.ellipse(sacX, sacY, sacRx, sacRy, 0, 0, Math.PI * 2);
     ctx.fillStyle = sacGrad;
     ctx.fill();
-    ctx.strokeStyle = 'rgba(74, 120, 176, 0.55)';
+    ctx.strokeStyle = "rgba(74, 120, 176, 0.55)";
     ctx.lineWidth = 1.5;
     ctx.stroke();
     ctx.restore();
 
     // Fill neck opening
-    ctx.fillStyle = '#070d1c';
+    ctx.fillStyle = "#070d1c";
     ctx.fillRect(sacX - neckW * 0.48, vesselY - vesselR - 1, neckW * 0.96, 14);
   }
 
   // ─── Annotations ────────────────────────────────────────────────────────────
   function drawAnnotations() {
     // WSS label near neck
-    ctx.fillStyle = 'rgba(200, 169, 126, 0.55)';
+    ctx.fillStyle = "rgba(200, 169, 126, 0.55)";
     ctx.font = '500 10px "JetBrains Mono", monospace';
-    ctx.textAlign = 'center';
-    ctx.fillText('HIGH WSS', sacX, vesselY - vesselR - 18);
+    ctx.textAlign = "center";
+    ctx.fillText("HIGH WSS", sacX, vesselY - vesselR - 18);
 
     // Aneurysm sac label
-    ctx.fillStyle = 'rgba(74, 120, 176, 0.6)';
+    ctx.fillStyle = "rgba(74, 120, 176, 0.6)";
     ctx.font = '500 9px "JetBrains Mono", monospace';
-    ctx.fillText('ANEURYSM SAC', sacX, sacY - sacRy * 0.6);
+    ctx.fillText("ANEURYSM SAC", sacX, sacY - sacRy * 0.6);
 
     // Velocity scale (mini colorbar)
-    const barX = W - 70, barY = 20, barW = 60, barH = 6;
+    const barX = W - 70,
+      barY = 20,
+      barW = 60,
+      barH = 6;
     const barGrad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
-    barGrad.addColorStop(0,    'rgba(20,80,200,0.9)');
-    barGrad.addColorStop(0.3,  'rgba(20,220,255,0.9)');
-    barGrad.addColorStop(0.65, 'rgba(210,165,50,0.9)');
-    barGrad.addColorStop(1,    'rgba(255,20,10,0.9)');
+    barGrad.addColorStop(0, "rgba(20,80,200,0.9)");
+    barGrad.addColorStop(0.3, "rgba(20,220,255,0.9)");
+    barGrad.addColorStop(0.65, "rgba(210,165,50,0.9)");
+    barGrad.addColorStop(1, "rgba(255,20,10,0.9)");
     ctx.fillStyle = barGrad;
     ctx.fillRect(barX, barY, barW, barH);
-    ctx.fillStyle = 'rgba(185, 213, 235, 0.5)';
+    ctx.fillStyle = "rgba(185, 213, 235, 0.5)";
     ctx.font = '8px "JetBrains Mono", monospace';
-    ctx.textAlign = 'left';
-    ctx.fillText('0', barX, barY + barH + 10);
-    ctx.textAlign = 'right';
-    ctx.fillText('Vmax', barX + barW, barY + barH + 10);
-    ctx.textAlign = 'center';
-    ctx.fillStyle = 'rgba(185, 213, 235, 0.4)';
+    ctx.textAlign = "left";
+    ctx.fillText("0", barX, barY + barH + 10);
+    ctx.textAlign = "right";
+    ctx.fillText("Vmax", barX + barW, barY + barH + 10);
+    ctx.textAlign = "center";
+    ctx.fillStyle = "rgba(185, 213, 235, 0.4)";
     ctx.font = '7px "JetBrains Mono", monospace';
-    ctx.fillText('velocity', barX + barW / 2, barY - 4);
+    ctx.fillText("velocity", barX + barW / 2, barY - 4);
   }
 
   // ─── Main loop ──────────────────────────────────────────────────────────────
@@ -326,7 +331,7 @@
 
   // Responsive resize
   let resizeTimer;
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       if (rafId) cancelAnimationFrame(rafId);
@@ -336,7 +341,7 @@
   });
 
   // Pause when tab hidden
-  document.addEventListener('visibilitychange', () => {
+  document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       cancelAnimationFrame(rafId);
     } else {
