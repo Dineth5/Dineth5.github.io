@@ -19,6 +19,11 @@ nav_order: 4
     </div>
   </div>
 
+  <div class="gallery-note" data-reveal data-reveal-delay="50">
+    I shoot on 35mm film — mostly Kodak Gold 200 and Fuji Superia. The grain, the waiting, the one-chance-only discipline of it all
+    keeps the eye honest. These are frames from Sri Lanka, the UK, and wherever else the light was interesting.
+  </div>
+
   <div class="photo-grid" data-reveal data-reveal-delay="100">
     <div class="photo-item" title="Anuradhapura">
       <img

@@ -6,6 +6,17 @@ nav: true
 nav_order: 2
 ---
 
+<div class="cv-download-banner" data-reveal>
+  <div class="cv-banner-text">
+    <strong style="font-size: 0.95rem; color: var(--text-primary);">Download a copy</strong>
+    <p>Prefer a PDF? Download directly — note it may not reflect the latest updates.</p>
+  </div>
+  <a href="/assets/pdf/DinethCV.pdf" download class="btn-primary-custom" style="white-space: nowrap; flex-shrink: 0;">
+    <i class="fa-solid fa-download"></i>
+    Download CV
+  </a>
+</div>
+
 <div style="max-width: 560px; margin: 3rem auto; text-align: center;">
 
 <span class="eyebrow">Curriculum Vitae</span>

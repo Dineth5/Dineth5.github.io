@@ -8,11 +8,33 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
-  </header>
+{% if page.img %}
+  <div class="project-hero">
+    <div
+      class="project-hero-img"
+      style="background-image: url('{{ page.img | relative_url }}');"
+    ></div>
+    <div class="project-hero-content">
+      <div class="container" style="max-width: 900px;">
+        {% if page.category %}
+          <span class="eyebrow">{{ page.category }}</span>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="post{% if page.img %} post-with-hero{% endif %}">
+  {% unless page.img %}
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-description">{{ page.description }}</p>
+    </header>
+  {% endunless %}
 
   <article>
     {{ content }}
