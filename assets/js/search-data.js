@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-publications",
           title: "Publications",
-          description: "",
+          description: "Peer-reviewed research in computational fluid dynamics, haemodynamics, and physics-informed machine learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-contact",
           title: "Contact",
-          description: "📬 Get in touch with me",
+          description: "Get in touch — open to research collaborations, engineering roles, and interesting problems.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/contact/";
