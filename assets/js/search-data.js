@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-gallery",
           title: "Gallery",
-          description: "Film photography — 35mm analog archive.",
+          description: "35mm film photography — Olympus OM10 &amp; Yashica 635.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/gallery/";
@@ -137,8 +137,8 @@ ninja.data = [{
           description: "Vacuum capsule structural lead — airlock design, FEA, fabrication",
           section: "Projects",handler: () => {
               window.location.href = "/projects/hyperloop/";
-            },},{id: "projects-qcpinn-ai-accelerated-cfd",
-          title: 'QCPINN — AI-Accelerated CFD',
+            },},{id: "projects-pinns-ai-accelerated-cfd",
+          title: 'PINNs — AI-Accelerated CFD',
           description: "Physics-Informed Neural Networks for real-time intracranial haemodynamics (Imperial MSc Dissertation)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/pinns/";
