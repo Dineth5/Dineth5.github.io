@@ -45,27 +45,30 @@
   <footer
     class="sticky-bottom mt-5"
     role="contentinfo"
-    style="background: #0d1a2d; border-top: 1px solid rgba(232,241,251,0.07);"
+    style="background: var(--global-footer-bg-color); border-top: 1px solid var(--global-footer-divider-color);"
   >
     {% if site.newsletter.enabled %}{% include newsletter.liquid %}{% endif %}
 
     <div class="container" style="max-width: 1200px; padding: 3.5rem 2rem 2.5rem;">
       <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; align-items: start;">
-        <!-- Col 1: Brand — always on dark bg, so hardcode light colours -->
-        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <!-- Col 1: Brand -->
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
           <div
-            style="font-size: 1.1rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; margin: 0 0 0.5rem 0; padding: 0; line-height: 1.3;"
+            style="font-size: 1.1rem; font-weight: 700; color: var(--footer-brand-color); letter-spacing: -0.02em; margin: 0 0 0.35rem 0; padding: 0; line-height: 1.3;"
           >
             {{ site.first_name }}
             {{ site.last_name }}
           </div>
+          <div style="font-size: 0.82rem; color: var(--global-footer-text-color); line-height: 1.6; margin: 0 0 0.1rem 0; padding: 0;">
+            Engineering @ Imperial
+          </div>
           <div
-            style="font-size: 0.82rem; color: #7aa3c8; line-height: 1.7; max-width: 280px; margin: 0 0 1.25rem 0; padding: 0;"
+            style="font-size: 0.82rem; color: var(--global-footer-text-color); line-height: 1.6; margin: 0 0 1.25rem 0; padding: 0;"
           >
-            {{ site.footer_tagline }}
+            Building @ VIMA
           </div>
           <!-- Social icons -->
-          <div style="display: flex; gap: 0.625rem; align-items: center;">
+          <div style="display: flex; gap: 0.625rem; align-items: center; justify-content: center;">
             {% for social in site.data.socials %}
               {% case social[0] %}
                 {% when 'github_username' %}
@@ -73,9 +76,9 @@
                     href="https://github.com/{{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='#7aa3c8'"
+                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
                     title="GitHub"
                     ><i class="fa-brands fa-github"></i
                   ></a>
@@ -84,9 +87,9 @@
                     href="https://www.linkedin.com/in/{{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='#7aa3c8'"
+                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
                     title="LinkedIn"
                     ><i class="fa-brands fa-linkedin"></i
                   ></a>
@@ -95,18 +98,18 @@
                     href="https://scholar.google.com/citations?user={{ social[1] }}"
                     target="_blank"
                     rel="noopener"
-                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='#7aa3c8'"
+                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
                     title="Google Scholar"
                     ><i class="ai ai-google-scholar"></i
                   ></a>
                 {% when 'email' %}
                   <a
                     href="mailto:{{ social[1] | encode_email }}"
-                    style="color: #7aa3c8; font-size: 1.1rem; transition: color 0.2s;"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
                     onmouseover="this.style.color='#c8a97e'"
-                    onmouseout="this.style.color='#7aa3c8'"
+                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
                     title="Email"
                     ><i class="fa-solid fa-envelope"></i
                   ></a>
@@ -122,7 +125,7 @@
           >
             Work
           </div>
-          {% assign work_links = '/projects/|Projects,/projects/VIMA/|VIMA,/projects/Aneurysms/|CFD Research,/projects/pinns/|PINNs (Imperial),/cv/|Curriculum Vitae'
+          {% assign work_links = '/projects/|Projects,/projects/VIMA/|VIMA,/projects/Aneurysms/|CFD Research,/projects/pinns/|PINNs (Imperial)'
             | split: ','
           %}
           {% for link in work_links %}
@@ -130,9 +133,9 @@
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
-                onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='#7aa3c8'"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-link-color').trim()"
+                onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
               >
                 {{- parts[1] -}}
               </a>
@@ -155,9 +158,9 @@
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
-                onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='#7aa3c8'"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-link-color').trim()"
+                onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
               >
                 {{- parts[1] -}}
               </a>
@@ -172,15 +175,17 @@
           >
             More
           </div>
-          {% assign other_links = '/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact' | split: ',' %}
+          {% assign other_links = '/cv/|Curriculum Vitae,/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact'
+            | split: ','
+          %}
           {% for link in other_links %}
             {% assign parts = link | split: '|' %}
             <div style="margin-bottom: 0.5rem;">
               <a
                 href="{{ parts[0] }}"
-                style="font-size: 0.83rem; color: #7aa3c8; text-decoration: none; transition: color 0.2s;"
-                onmouseover="this.style.color='#e8f1fb'"
-                onmouseout="this.style.color='#7aa3c8'"
+                style="font-size: 0.83rem; color: var(--global-footer-text-color); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-link-color').trim()"
+                onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
               >
                 {{- parts[1] -}}
               </a>
@@ -192,9 +197,9 @@
 
       <!-- Bottom bar -->
       <div
-        style="border-top: 1px solid rgba(232,241,251,0.07); padding-top: 1.5rem; text-align: center;"
+        style="border-top: 1px solid var(--global-footer-divider-color); padding-top: 1.5rem; text-align: center;"
       >
-        <span style="font-size: 0.75rem; color: #4a78b0;"> &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma </span>
+        <span style="font-size: 0.75rem; color: var(--global-footer-text-color);"> &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma </span>
       </div>
     </div>
   </footer>

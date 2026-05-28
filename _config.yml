@@ -15,7 +15,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   CFD, FEA, AI/ML, embedded systems, and medical device design.
 footer_text: >
 
-footer_tagline: "MSc Biomedical Engineering · Imperial College London — Building at the boundary of computation and clinical medicine."
+footer_tagline: "Engineering @ Imperial · Building @ VIMA"
 
 keywords: Dineth Ilapperuma, mechanical engineer, biomedical engineering, Imperial College London, University of Manchester, CFD, FEA, PINNs, VIMA, intracranial aneurysm, machine learning, SolidWorks, PyTorch # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)

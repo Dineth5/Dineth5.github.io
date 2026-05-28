@@ -39,9 +39,11 @@
   --global-theme-color: #{$navy-700};
   --global-hover-color: #{$navy-600};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$navy-800};
-  --global-footer-text-color: #{$navy-300};
-  --global-footer-link-color: #{$navy-100};
+  --global-footer-bg-color: #{$warm-100};
+  --global-footer-text-color: #{$navy-500};
+  --global-footer-link-color: #{$navy-700};
+  --global-footer-divider-color: rgba(10, 31, 68, 0.1);
+  --footer-brand-color: #{$navy-700};
   --global-distill-app-color: #{$navy-400};
   --global-divider-color: rgba(10, 31, 68, 0.08);
   --global-card-bg-color: #{$white-color};
@@ -132,6 +134,8 @@ html[data-theme="dark"] {
   --global-footer-bg-color: #{$navy-950};
   --global-footer-text-color: #{$navy-400};
   --global-footer-link-color: #{$navy-200};
+  --global-footer-divider-color: rgba(232, 241, 251, 0.07);
+  --footer-brand-color: #{$white-color};
   --global-distill-app-color: #{$navy-400};
   --global-divider-color: rgba(232, 241, 251, 0.07);
   --global-card-bg-color: #{$navy-800};
