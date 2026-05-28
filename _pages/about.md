@@ -20,4 +20,4 @@ Before Imperial, I graduated with a **First-Class BEng in Mechanical Engineering
 
 Beyond the lab, I'm the co-founder of **[VIMA](https://github.com/Dineth5)**, an assistive technology venture building haptic-feedback navigation handles for visually impaired users, which secured £10,000+ in competitive funding. I've also held leadership roles in the Mechanical Engineering Society (1,200+ members), served as PASS Student Coordinator (200+ mentees), co-founded the Solar Car Society, and led structural engineering for the Hyperloop Manchester team.
 
-Outside of engineering, I shoot 35mm film, appreciate classic cars, and have a particular interest in JLC Reversos.
+When I'm not in the lab, I shoot analog film — some frames are in the [Analog Archive](/gallery/).

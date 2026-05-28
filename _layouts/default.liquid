@@ -82,7 +82,7 @@
     <!-- Custom JS -->
     <script defer src="{{ '/assets/js/main.js' | relative_url | bust_file_cache }}"></script>
 
-    {% if page.layout == 'about' or page.canvas == true %}
+    {% if page.canvas == true %}
       <script defer src="{{ '/assets/js/hero-canvas.js' | relative_url | bust_file_cache }}"></script>
     {% endif %}
   </body>

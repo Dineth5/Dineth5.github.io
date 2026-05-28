@@ -1,8 +1,8 @@
 ---
 layout: page
-title: QCPINN — AI-Accelerated CFD
+title: PINNs — AI-Accelerated CFD
 description: Physics-Informed Neural Networks for real-time intracranial haemodynamics (Imperial MSc Dissertation)
-img: assets/img/Meth_Flow.png
+img: assets/img/PINNs/Aneurysm3D_results.png
 importance: 1
 category: Work
 ---
@@ -11,18 +11,18 @@ category: Work
 
 ### Overview
 
-My MSc dissertation at Imperial College London develops **QCPINN** — a _Quasi-Cartesian Physics-Informed Neural Network_ — designed to replace computationally expensive Navier–Stokes finite-volume solvers with a real-time, mesh-free neural surrogate for patient-specific intracranial haemodynamics.
+My MSc dissertation at Imperial College London develops **Physics-Informed Neural Networks (PINNs)** to replace computationally expensive Navier–Stokes finite-volume solvers with a real-time, mesh-free neural surrogate for patient-specific intracranial haemodynamics.
 
-Traditional CFD pipelines for aneurysm haemodynamics require multi-hour simulations per patient geometry, making real-time clinical decision support infeasible. QCPINN embeds the governing PDE residuals directly into the network's loss function, enforcing physical consistency without labelled simulation data.
+Traditional CFD pipelines for aneurysm haemodynamics require multi-hour simulations per patient geometry, making real-time clinical decision support infeasible. The network embeds the governing PDE residuals directly into the loss function, enforcing physical consistency without labelled simulation data.
 
 ---
 
 ### Architecture
 
-The QCPINN builds on the PINN framework (Raissi et al., 2019) with a domain-adapted coordinate transformation:
+The PINN framework builds on Raissi et al. (2019) with a domain-adapted coordinate transformation:
 
 - **Quasi-Cartesian embedding**: Maps the curvilinear vessel geometry to a structured domain, improving gradient flow and convergence compared to vanilla collocation-point PINNs.
-- **Multi-task loss**: Simultaneous minimisation of: PDE residual (continuity + momentum), boundary condition loss (no-slip walls, inlet Womersley profile), and sparse data loss (CFD snapshot supervision at key timesteps).
+- **Multi-task loss**: Simultaneous minimisation of PDE residual (continuity + momentum), boundary condition loss (no-slip walls, inlet Womersley profile), and sparse data loss (CFD snapshot supervision at key timesteps).
 - **Pulsatile inlet BC**: Womersley flow profile with patient-specific cardiac frequency and stroke volume.
 
 ```
@@ -34,7 +34,19 @@ Training runs on **Imperial's HPC cluster (CX3)** using PyTorch + CUDA, with ada
 
 ---
 
-### Key Results
+### Results
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/PINNs/Aneurysm3D_results.png" title="3D velocity and pressure field results" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/PINNs/Aneurysm3D_shear_results.png" title="Wall shear stress results" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Left: 3D velocity and pressure field predictions from the PINN on a patient-specific aneurysm geometry. Right: Wall Shear Stress (WSS) distribution reconstructed by the network — a key clinical rupture-risk marker.
+</div>
 
 | Metric                         | Value       |
 | ------------------------------ | ----------- |
@@ -49,7 +61,7 @@ The model achieves real-time inference over a patient-specific geometry — enab
 
 ### Clinical Relevance
 
-Elevated **Wall Shear Stress (WSS)** and **Oscillatory Shear Index (OSI)** are established rupture-risk predictors for intracranial aneurysms. QCPINN reconstructs these fields with sub-clinical-grade accuracy, creating a pathway toward AI-assisted pre-operative planning.
+Elevated **Wall Shear Stress (WSS)** and **Oscillatory Shear Index (OSI)** are established rupture-risk predictors for intracranial aneurysms. The PINN reconstructs these fields with sub-clinical-grade accuracy, creating a pathway toward AI-assisted pre-operative planning.
 
 ---
 

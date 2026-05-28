@@ -73,11 +73,20 @@ layout: default
       </div>
       <!-- /hero-text -->
 
-      <!-- Right: CFD canvas visualization -->
+      <!-- Right: CFD WSS simulation video -->
       <div class="hero-visual">
         <div class="canvas-wrapper">
-          <canvas id="hero-canvas" aria-label="Real-time blood flow simulation in an intracranial aneurysm" role="img"></canvas>
-          <div class="canvas-live-dot" aria-hidden="true">LIVE SIM</div>
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            aria-label="CFD simulation of Wall Shear Stress in an intracranial aneurysm"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
+          >
+            <source src="{{ '/assets/img/Videos/Front_case2_wss.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <div class="canvas-live-dot" aria-hidden="true">CFD · WSS</div>
           <div class="canvas-label" aria-hidden="true">Intracranial Haemodynamics · CFD</div>
         </div>
       </div>
@@ -107,13 +116,13 @@ layout: default
       <!-- PINNs — XL (large, half width) -->
       <a href="/projects/pinns/" class="bento-cell bento-xl" aria-label="PINNs project">
         <div class="bento-img-wrap">
-          <img src="{{ '/assets/img/Meth_Flow.png' | relative_url }}" alt="PINNs" class="bento-img" loading="lazy">
+          <img src="{{ '/assets/img/PINNs/Aneurysm3D_results.png' | relative_url }}" alt="PINNs" class="bento-img" loading="lazy">
         </div>
         <div class="bento-overlay"></div>
         <div class="bento-content">
           <div>
             <div class="bento-category">MSc Dissertation · Imperial College London</div>
-            <div class="bento-title">QCPINN — Physics-Informed Neural Networks for CFD</div>
+            <div class="bento-title">PINNs — Physics-Informed Neural Networks for CFD</div>
             <div class="bento-desc">
               Quasi-Cartesian PINNs for real-time intracranial haemodynamics. Replaces multi-hour Navier–Stokes solvers with sub-second AI inference.
               Trained on Imperial's HPC cluster.

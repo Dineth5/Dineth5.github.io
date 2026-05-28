@@ -13,6 +13,26 @@ My undergraduate dissertation, _Computational Fluid Dynamics for Intracranial An
 
 ---
 
+### Methodology
+
+The pipeline moved from medical imaging through to quantitative haemodynamic output in four stages:
+
+1. **Geometry segmentation** — Patient-specific aneurysm geometries were extracted from 3D rotational angiography (3DRA) data and segmented to produce anatomically accurate surface meshes.
+2. **CFD meshing** — High-fidelity polyhedral meshes were generated in STAR-CCM+, with prism-layer refinement at vessel walls to capture near-wall shear gradients accurately.
+3. **Simulation** — Pulsatile Navier–Stokes simulations were run across the cardiac cycle using patient-derived boundary conditions (inlet velocity waveforms, outlet pressure profiles). Both untreated and post-treatment (coiling, flow-diverting stent) cases were modelled.
+4. **Haemodynamic analysis** — Post-processing extracted Wall Shear Stress (WSS), Oscillatory Shear Index (OSI), and Time-Averaged WSS (TAWSS) — all established markers for aneurysm rupture risk in the clinical literature.
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/CFD/Meth_Flow.png" title="Methodology flowchart" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  End-to-end CFD pipeline: from patient imaging to haemodynamic risk output.
+</div>
+
+---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/CFD/C2_OSI1.png" title="C2 OSI 1" class="img-fluid rounded z-depth-1" %}
