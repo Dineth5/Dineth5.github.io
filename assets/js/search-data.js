@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Request my CV.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "nav-publications",
           title: "Publications",
           description: "Peer-reviewed research in computational fluid dynamics, haemodynamics, and physics-informed machine learning.",
@@ -29,13 +36,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/gallery/";
-          },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Request my CV.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
           },
         },{id: "nav-contact",
           title: "Contact",
@@ -71,8 +71,8 @@ ninja.data = [{
           section: "News",},{id: "news-began-my-msc-in-computational-biomedical-engineering-at-imperial-college-london",
           title: 'Began my MSc in Computational Biomedical Engineering at Imperial College London.',
           description: "",
-          section: "News",},{id: "news-commenced-imperial-msc-dissertation-on-physics-informed-neural-networks-pinns-for-real-time-intracranial-haemodynamics-running-training-on-imperial-s-hpc-cluster-cx3",
-          title: 'Commenced Imperial MSc dissertation on physics-informed neural networks (PINNs) for real-time intracranial haemodynamics,...',
+          section: "News",},{id: "news-commenced-imperial-msc-dissertation-on-physics-informed-neural-networks-pinns-for-real-time-intracranial-haemodynamics",
+          title: 'Commenced Imperial MSc dissertation on physics-informed neural networks (PINNs) for real-time intracranial haemodynamics....',
           description: "",
           section: "News",},{id: "projects-cfd-of-aneurysms",
           title: 'CFD of Aneurysms',
