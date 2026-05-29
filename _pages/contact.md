@@ -51,9 +51,9 @@ nav_order: 6
 
       <div class="contact-info-card">
         <h4>Direct</h4>
-        <a href="mailto:dineth330@gmail.com" class="contact-link-row">
+        <a href="mailto:dineth.ilapperuma@gmail.com" class="contact-link-row">
           <i class="fa-solid fa-envelope"></i>
-          dineth330@gmail.com
+          dineth.ilapperuma@gmail.com
         </a>
         <a href="https://www.linkedin.com/in/ilapperuma" target="_blank" rel="noopener" class="contact-link-row">
           <i class="fa-brands fa-linkedin"></i>

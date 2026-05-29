@@ -1,26 +1,4 @@
 <style>
-  #tardis-egg {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 60px;
-    cursor: pointer;
-    z-index: 50;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  #tardis-egg img {
-    width: 100%;
-    display: block;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-    transition: filter 0.2s ease;
-  }
-
-  #tardis-egg:hover img {
-    filter: drop-shadow(0 4px 14px rgba(0, 62, 116, 0.55));
-  }
-
   @keyframes tardis-jump {
     0% {
       transform: translateY(0);
@@ -43,6 +21,10 @@
     animation: tardis-jump 0.45s ease-out both;
   }
 
+  #tardis-egg:hover img {
+    filter: drop-shadow(0 4px 14px rgba(0, 62, 116, 0.55)) !important;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     #tardis-egg.jumping {
       animation: none;
@@ -50,21 +32,27 @@
   }
 </style>
 
-<div id="tardis-egg" aria-hidden="true" title="...it's bigger on the inside.">
-  <img src="{{ '/assets/gif/TARDIS.gif' | relative_url }}" alt="TARDIS">
-</div>
-
 <script>
   (function () {
     var el = document.getElementById('tardis-egg');
-    if (!el) return;
+    var img = document.getElementById('tardis-img');
+    if (!el || !img) return;
+
+    var gifs = ['{{ "/assets/gif/TARDIS.gif" | relative_url }}', '{{ "/assets/gif/Penguin.gif" | relative_url }}'];
+    var current = 0;
+
     el.addEventListener('click', function () {
       el.classList.remove('jumping');
-      void el.offsetWidth; // reflow to restart animation
+      void el.offsetWidth; // force reflow to restart animation
       el.classList.add('jumping');
     });
+
     el.addEventListener('animationend', function () {
       el.classList.remove('jumping');
+      current = (current + 1) % gifs.length;
+      img.src = gifs[current];
+      // Update tooltip to match current character
+      el.title = current === 0 ? "...it's bigger on the inside." : 'Waddle waddle.';
     });
   })();
 </script>

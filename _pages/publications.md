@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 description: Peer-reviewed research in computational fluid dynamics, haemodynamics, and physics-informed machine learning.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <div class="publications-intro" data-reveal>

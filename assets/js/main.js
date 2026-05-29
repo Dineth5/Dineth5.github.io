@@ -68,7 +68,7 @@
       { prefix: "", target: null, suffix: "" }, // "First‑Class" — fade only
       { prefix: "", target: 91, suffix: "%" },
       { prefix: "", target: 200, suffix: "+" },
-      { prefix: "", target: 2, suffix: "" },
+      { prefix: "", target: null, suffix: "" }, // "Distinction" — fade only
     ];
 
     const numEls = strip.querySelectorAll(".about-stat-num");

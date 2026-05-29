@@ -4,7 +4,7 @@ title: Gallery
 permalink: /gallery/
 description: 35mm film photography — Olympus OM10 & Yashica 635.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 <div class="gallery-page">

@@ -45,7 +45,7 @@
   <footer
     class="sticky-bottom mt-5"
     role="contentinfo"
-    style="background: var(--global-footer-bg-color); border-top: 1px solid var(--global-footer-divider-color);"
+    style="background: var(--global-footer-bg-color); border-top: 1px solid var(--global-footer-divider-color); position: relative;"
   >
     {% if site.newsletter.enabled %}{% include newsletter.liquid %}{% endif %}
 
@@ -206,9 +206,24 @@
 
       <!-- Bottom bar -->
       <div
-        style="border-top: 1px solid var(--global-footer-divider-color); padding-top: 1.5rem; text-align: center;"
+        style="border-top: 1px solid var(--global-footer-divider-color); padding-top: 1.5rem; text-align: center; position: relative;"
       >
         <span style="font-size: 0.75rem; color: var(--global-footer-text-color);"> &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma </span>
+
+        <!-- Easter egg: TARDIS / Penguin — alternates on click -->
+        <div
+          id="tardis-egg"
+          aria-hidden="true"
+          title="...it's bigger on the inside."
+          style="position: absolute; bottom: 0; right: 1.5rem; width: 58px; cursor: pointer; user-select: none; -webkit-user-select: none;"
+        >
+          <img
+            id="tardis-img"
+            src="{{ '/assets/gif/TARDIS.gif' | relative_url }}"
+            alt="Easter egg"
+            style="width: 100%; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); transition: filter 0.2s ease;"
+          >
+        </div>
       </div>
     </div>
   </footer>

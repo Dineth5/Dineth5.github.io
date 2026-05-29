@@ -4,7 +4,7 @@ title: CV
 permalink: /cv/
 description: Request my CV.
 nav: true
-nav_order: 5
+nav_order: 2
 ---
 
 <div class="contact-page">
