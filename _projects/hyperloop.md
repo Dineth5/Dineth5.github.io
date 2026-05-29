@@ -2,7 +2,7 @@
 layout: page
 title: Hyperloop Manchester
 description: Vacuum capsule structural lead — airlock design, FEA, fabrication
-img: assets/img/thumbnails/Lathe.png
+img: assets/img/Hyperloop/shell.png
 importance: 2
 category: Side Quests
 ---

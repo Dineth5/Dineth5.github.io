@@ -6,10 +6,14 @@
 
 <!-- SEO Meta Tags -->
 <title>Dineth Ilapperuma</title>
-<meta name="description" content="Dineth Ilapperuma – MSc Computational Biomedical Engineering, publications, projects, CV, news">
+<meta name="description" content="{{ page.description | default: site.description | strip_html | truncate: 160 }}">
 <meta name="author" content="Dineth Ilapperuma">
-<meta name="keywords" content="Dineth Ilapperuma, aneurysm, biomedical engineering, Imperial College, Manchester University">
-<meta name="robots" content="index, follow">
+<meta name="keywords" content="{{ site.keywords }}">
+{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}, follow">
+{% else %}
+  <meta name="robots" content="index, follow">
+{% endif %}
 
 <!-- Canonical -->
 {% if page.url == '/' or page.url == '/index.html' %}
