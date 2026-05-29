@@ -211,17 +211,20 @@
         <span style="font-size: 0.75rem; color: var(--global-footer-text-color);"> &copy; {{ site.time | date: '%Y' }} Dineth Ilapperuma </span>
 
         <!-- Easter egg: TARDIS / Penguin — alternates on click -->
+        <!-- Fixed bounding box 58×50px (TARDIS natural dims at 58px wide).     -->
+        <!-- Penguin scales to 32×50px inside via object-fit:contain, bottom-right aligned. -->
+        <!-- Position: bottom:-25px right:14px (5px lower, 10px right vs prev commit) -->
         <div
           id="tardis-egg"
           aria-hidden="true"
           title="...it's bigger on the inside."
-          style="position: absolute; bottom: -20px; right: 1.5rem; width: 58px; cursor: pointer; user-select: none; -webkit-user-select: none;"
+          style="position: absolute; bottom: -25px; right: 14px; width: 58px; height: 50px; cursor: pointer; user-select: none; -webkit-user-select: none;"
         >
           <img
             id="tardis-img"
             src="{{ '/assets/gif/TARDIS.gif' | relative_url }}"
             alt="Easter egg"
-            style="width: 100%; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); transition: filter 0.2s ease;"
+            style="width: 100%; height: 100%; object-fit: contain; object-position: bottom right; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); transition: filter 0.2s ease;"
           >
         </div>
       </div>
