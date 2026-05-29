@@ -14,14 +14,10 @@ nav_order: 4
     <p>35mm film. One frame at a time.</p>
     <div class="film-spec">
       <span class="tag">35mm</span>
+      <span class="tag">120 film</span>
       <span class="tag">Olympus OM10</span>
       <span class="tag">Yashica 635</span>
     </div>
-  </div>
-
-  <div class="gallery-note" data-reveal data-reveal-delay="50">
-    I shoot on 35mm film — mostly Kodak Gold 200 and Fuji Superia. The grain, the waiting, the one-chance-only discipline of it all
-    keeps the eye honest. These are frames from Sri Lanka, the UK, and wherever else the light was interesting.
   </div>
 
   <div class="photo-grid" data-reveal data-reveal-delay="100">

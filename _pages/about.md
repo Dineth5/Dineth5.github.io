@@ -4,7 +4,7 @@ title: About
 permalink: /
 subtitle: MSc Computational Biomedical Engineering · Imperial College London
 
-social: true
+social: false
 
 announcements:
   enabled: true

@@ -30,11 +30,11 @@
             >Gallery</a
           >
           <a
-            href="/cv/"
+            href="/contact/"
             style="font-size: 0.78rem; color: var(--global-footer-text-color); text-decoration: none; opacity: 0.7; transition: opacity 0.2s;"
             onmouseover="this.style.opacity=1"
             onmouseout="this.style.opacity=0.7"
-            >CV</a
+            >Contact</a
           >
         </div>
       </div>
@@ -113,6 +113,17 @@
                     title="Email"
                     ><i class="fa-solid fa-envelope"></i
                   ></a>
+                {% when 'youtube_id' %}
+                  <a
+                    href="https://youtube.com/@{{ social[1] }}"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--global-footer-text-color); font-size: 1.1rem; transition: color 0.2s;"
+                    onmouseover="this.style.color='#c8a97e'"
+                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--global-footer-text-color').trim()"
+                    title="YouTube"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
               {% endcase %}
             {% endfor %}
           </div>
@@ -175,7 +186,7 @@
           >
             More
           </div>
-          {% assign other_links = '/cv/|Curriculum Vitae,/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact' | split: ',' %}
+          {% assign other_links = '/gallery/|Analog Archive,/publications/|Publications,/contact/|Contact' | split: ',' %}
           {% for link in other_links %}
             {% assign parts = link | split: '|' %}
             <div style="margin-bottom: 0.5rem;">

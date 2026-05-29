@@ -37,38 +37,7 @@ layout: default
               <path d="M2.5 7h9m-4-4.5 4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <a href="/cv/" class="btn-outline-custom">Request CV</a>
-        </div>
-
-        <div class="hero-socials">
-          {% for social in site.data.socials %}
-            {% case social[0] %}
-              {% when 'github_username' %}
-                <a href="https://github.com/{{ social[1] }}" class="social-icon" title="GitHub" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              {% when 'linkedin_username' %}
-                <a href="https://www.linkedin.com/in/{{ social[1] }}" class="social-icon" title="LinkedIn" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-              {% when 'scholar_userid' %}
-                <a
-                  href="https://scholar.google.com/citations?user={{ social[1] }}"
-                  class="social-icon"
-                  title="Google Scholar"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i class="ai ai-google-scholar"></i>
-                </a>
-              {% when 'email' %}
-                <a href="mailto:{{ social[1] | encode_email }}" class="social-icon" title="Email">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-            {% endcase %}
-          {% endfor %}
-          <div class="social-divider" aria-hidden="true"></div>
-          <span class="social-label hide-xs">London · Dubai · Colombo</span>
+          <a href="/contact/" class="btn-outline-custom">Get in touch</a>
         </div>
       </div>
       <!-- /hero-text -->
@@ -98,7 +67,6 @@ layout: default
 
   <!-- Scroll indicator -->
   <a href="#work" class="hero-scroll-indicator" aria-label="Scroll to projects">
-    <span>Scroll</span>
     <div class="scroll-chevron" aria-hidden="true"></div>
   </a>
 </section>
@@ -391,11 +359,6 @@ layout: default
         <div style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-width: 700px;">
           {{ content }}
         </div>
-        {% if page.social %}
-          <div class="hero-socials" style="margin-top: 1.5rem;">
-            {% include social.liquid %}
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>
