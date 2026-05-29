@@ -1,6 +1,6 @@
 /**
  * main.js — Custom interactions for dinethilapperuma.com
- * Custom cursor · Scroll reveal · Frosted nav · Gallery lightbox · Smooth UX
+ * Scroll reveal · Frosted nav · Gallery lightbox · Smooth UX · Stats count-up
  */
 (function () {
   "use strict";
@@ -11,88 +11,7 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-  // ─── 1. Custom cursor ─────────────────────────────────────────────────────
-  if (!isTouchDevice && !prefersReducedMotion) {
-    const dot = document.createElement("div");
-    const ring = document.createElement("div");
-    dot.className = "cursor-dot";
-    ring.className = "cursor-ring";
-    document.body.append(dot, ring);
-
-    let mx = -200,
-      my = -200;
-    let rx = -200,
-      ry = -200;
-    let isHovered = false;
-    let isClicking = false;
-    let hasEnteredViewport = false;
-
-    document.addEventListener("mousemove", (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      dot.style.left = mx + "px";
-      dot.style.top = my + "px";
-      // Reveal cursor on first real mouse movement
-      if (!hasEnteredViewport) {
-        hasEnteredViewport = true;
-        dot.style.opacity = "1";
-        ring.style.opacity = "0.7";
-      }
-    });
-
-    document.addEventListener("mousedown", () => {
-      isClicking = true;
-      ring.classList.add("clicking");
-    });
-
-    document.addEventListener("mouseup", () => {
-      isClicking = false;
-      ring.classList.remove("clicking");
-    });
-
-    // Hover on interactive elements
-    const interactiveSelector = 'a, button, [role="button"], input, textarea, select, label, .bento-cell, .photo-item';
-
-    function updateHoverState(e) {
-      const el = e.target.closest(interactiveSelector);
-      if (el && !isClicking) {
-        isHovered = true;
-        ring.classList.add("hovered");
-      } else {
-        isHovered = false;
-        ring.classList.remove("hovered");
-      }
-    }
-
-    document.addEventListener("mouseover", updateHoverState);
-    document.addEventListener("mouseout", () => {
-      ring.classList.remove("hovered");
-      isHovered = false;
-    });
-
-    // Animate ring with spring lag
-    function animateRing() {
-      const ease = isHovered ? 0.14 : 0.12;
-      rx += (mx - rx) * ease;
-      ry += (my - ry) * ease;
-      ring.style.left = rx + "px";
-      ring.style.top = ry + "px";
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    // Hide on leave
-    document.addEventListener("mouseleave", () => {
-      dot.style.opacity = "0";
-      ring.style.opacity = "0";
-    });
-    document.addEventListener("mouseenter", () => {
-      dot.style.opacity = "1";
-      ring.style.opacity = "1";
-    });
-  }
-
-  // ─── 2. Frosted-glass navbar on scroll ───────────────────────────────────
+  // ─── 1. Frosted-glass navbar on scroll ───────────────────────────────────
   const navbar = $("#navbar");
   if (navbar) {
     let lastScroll = 0;
@@ -107,7 +26,7 @@
     );
   }
 
-  // ─── 3. Scroll reveal ─────────────────────────────────────────────────────
+  // ─── 2. Scroll reveal ─────────────────────────────────────────────────────
   if (!prefersReducedMotion && "IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
       (entries) => {
@@ -128,7 +47,7 @@
     $$("[data-reveal]").forEach((el) => el.classList.add("revealed"));
   }
 
-  // ─── 4. Stagger children on parent reveal ────────────────────────────────
+  // ─── 3. Stagger children on parent reveal ────────────────────────────────
   $$("[data-reveal-stagger]").forEach((parent) => {
     const children = $$(":scope > *", parent);
     children.forEach((child, i) => {
@@ -136,6 +55,67 @@
       child.setAttribute("data-reveal-delay", i * 80);
     });
   });
+
+  // ─── 4. Stats count-up ───────────────────────────────────────────────────
+  (function () {
+    const strip = document.querySelector(".about-stats-strip");
+    if (!strip) return;
+
+    // Map each .about-stat-num to its animation config
+    // null target = fade-in only (text stays as-is)
+    const statConfigs = [
+      { prefix: "£", target: 10, suffix: "k+" },
+      { prefix: "", target: null, suffix: "" }, // "First‑Class" — fade only
+      { prefix: "", target: 91, suffix: "%" },
+      { prefix: "", target: 200, suffix: "+" },
+      { prefix: "", target: 2, suffix: "" },
+    ];
+
+    const numEls = strip.querySelectorAll(".about-stat-num");
+
+    function runCountUp(cfg, el, duration) {
+      if (cfg.target === null) {
+        // Fade in the text without counting
+        el.style.opacity = "0";
+        el.style.transition = "opacity 0.9s ease";
+        requestAnimationFrame(() => {
+          el.style.opacity = "1";
+        });
+        return;
+      }
+      if (prefersReducedMotion) {
+        el.textContent = cfg.prefix + cfg.target + cfg.suffix;
+        return;
+      }
+      const start = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        const val = Math.round(ease * cfg.target);
+        el.textContent = cfg.prefix + val + cfg.suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+    }
+
+    let fired = false;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || fired) return;
+          fired = true;
+          io.unobserve(entry.target);
+          numEls.forEach((el, i) => {
+            const cfg = statConfigs[i];
+            if (!cfg) return;
+            setTimeout(() => runCountUp(cfg, el, 1200), i * 120);
+          });
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    io.observe(strip);
+  })();
 
   // ─── 5. Gallery lightbox ─────────────────────────────────────────────────
   const photoItems = $$(".photo-item");

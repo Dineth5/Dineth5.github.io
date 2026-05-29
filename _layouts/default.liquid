@@ -43,10 +43,6 @@
   </head>
 
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Custom cursor elements (hidden on touch) -->
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
-
     <!-- Header -->
     {% include header.liquid %}
 
@@ -85,5 +81,8 @@
     {% if page.canvas == true %}
       <script defer src="{{ '/assets/js/hero-canvas.js' | relative_url | bust_file_cache }}"></script>
     {% endif %}
+
+    <!-- TARDIS Easter egg -->
+    {% include tardis.liquid %}
   </body>
 </html>
