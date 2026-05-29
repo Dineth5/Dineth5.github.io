@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /blog/
 
 Sitemap: https://www.dinethilapperuma.com/sitemap.xml
