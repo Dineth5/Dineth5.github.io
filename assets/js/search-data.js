@@ -79,6 +79,11 @@ ninja.data = [{
           description: "CFD to predict rupture risk in intracranial aneurysms",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Aneurysms/";
+            },},{id: "projects-gaze-controlled-wheelchair",
+          title: 'Gaze-Controlled Wheelchair',
+          description: "EU MDR Class IIa medical device — gaze-driven wheelchair enabling hands-free mobility for users with severe motor impairment",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/GazeWheelchair/";
             },},{id: "projects-2-axes-cnc-lathe",
           title: '2-Axes CNC Lathe',
           description: "Mechanical design project for a compact classroom CNC lathe",
