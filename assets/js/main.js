@@ -1,5 +1,5 @@
 /**
- * main.js — Custom interactions for dinethilapperuma.com
+ * main.js — Custom interactions for dineth5.github.io
  * Scroll reveal · Frosted nav · Gallery lightbox · Smooth UX · Stats count-up
  */
 (function () {
