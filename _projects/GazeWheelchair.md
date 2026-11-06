@@ -36,7 +36,7 @@ The system relies on three hardware layers working in tight coordination:
 
 2. **RGB-D depth camera** — Mounted on the wheelchair, it captures real-time depth data over a 0.5–4.0 m operating range. An affine transformation fuses the gaze vector with depth to compute a 3D gaze point in world coordinates. A floor-detection algorithm filters gaze landing on non-navigable surfaces (walls, objects) from gaze on the floor — preventing the classic "Midas Touch" problem of unintended activation.
 
-3. **Control algorithm** — Two modes were designed and validated: a *Continuous Control Field* interface mapping gaze position to proportional velocity commands, and a *Natural Decoder* interface using a probabilistic model of natural gaze behaviour to output discrete motion states (forward, reverse, left, right). The Natural Decoder achieves **15.3 bits/second** of information throughput — far exceeding conventional switch-based interfaces.
+3. **Control algorithm** — Two modes were designed and validated: a _Continuous Control Field_ interface mapping gaze position to proportional velocity commands, and a _Natural Decoder_ interface using a probabilistic model of natural gaze behaviour to output discrete motion states (forward, reverse, left, right). The Natural Decoder achieves **15.3 bits/second** of information throughput — far exceeding conventional switch-based interfaces.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
