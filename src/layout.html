@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="author" content="Dineth Ilapperuma">
+<link rel="canonical" href="{{url}}">
+{{robots}}
+<meta name="google-site-verification" content="5ZGcQ6cZ-Qo1Mr-P6DW8xdiWZF5qkNiVAou5xSXQLaA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dineth Ilapperuma">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:image" content="{{image}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eeeeea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/HankenGrotesk-normal-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/PlayfairDisplay-italic-400-600.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+/* Set the theme before first paint so there is no flash. */
+(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}
+document.documentElement.classList.add("js")})();
+</script>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ver}}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Dineth Ilapperuma","url":"https://dineth5.github.io/","jobTitle":"Mechanical & Computational Engineer","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Imperial College London"},{"@type":"CollegeOrUniversity","name":"The University of Manchester"}],"sameAs":["https://www.linkedin.com/in/ilapperuma","https://github.com/Dineth5"]}
+</script>
+</head>
+<body class="{{class}}">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav" data-nav>
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Dineth Ilapperuma, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 1.5v29M1.5 16h29" stroke="currentColor" stroke-width=".75" stroke-dasharray="1.5 2.5"/><path d="M10 9.5h4.2a6.5 6.5 0 0 1 0 13H10z" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M22.5 9.5v13" stroke="currentColor" stroke-width="1.75"/></svg>
+      <span>Dineth Ilapperuma</span>
+    </a>
+    <nav class="nav-links" id="menu" aria-label="Main">
+      <a class="nav-link" href="/projects/">Work</a>
+      <a class="nav-link" href="/#experience">Experience</a>
+      <a class="nav-link" href="/cv/">CV</a>
+      <a class="nav-link" href="/gallery/">Film</a>
+      <a class="nav-link nav-cta" href="/contact/">Get in touch</a>
+    </nav>
+    <button class="theme" type="button" data-theme-toggle aria-label="Switch between light and dark theme">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg>
+    </button>
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="menu" aria-label="Menu"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+{{content}}
+</main>
+
+<footer class="footer" data-scrub="footer">
+  <div class="wrap">
+    <p class="mono footer-kicker">Next step</p>
+    <h2 class="footer-cta"><a href="/contact/">Let's build <em>something</em><i class="arrow arrow-big"></i></a></h2>
+    <p class="footer-lede">Based in Dubai and open to engineering, R&amp;D and strategy roles across the UAE.</p>
+  </div>
+  <div class="skyline" data-scrub="skyline" aria-hidden="true"><!--@skyline--></div>
+  <div class="wrap footer-base">
+    <div class="footer-cols">
+      <div>
+        <h3 class="mono">Direct</h3>
+        <a href="mailto:dineth.ilapperuma@gmail.com">dineth.ilapperuma@gmail.com</a>
+        <a href="https://www.linkedin.com/in/ilapperuma" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Dineth5" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div>
+        <h3 class="mono">Site</h3>
+        <a href="/projects/">Work</a>
+        <a href="/cv/">Request CV</a>
+        <a href="/gallery/">Film archive</a>
+      </div>
+      <div>
+        <h3 class="mono">Drawing</h3>
+        <span>Sheet 01 of 01 · Rev <!--@year--></span>
+        <span>Scale 1:1 · All dimensions in pixels</span>
+        <span>Drawn, checked and approved: D.I.</span>
+      </div>
+    </div>
+    <div class="footer-legal mono">
+      <span>© <!--@year--> Dineth Ilapperuma</span>
+      <button class="egg" type="button" data-egg aria-label="A small surprise" title="Do not press">⌖</button>
+      <span>Custom-built. No template, no trackers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js?v={{ver}}" defer></script>
+</body>
+</html>
