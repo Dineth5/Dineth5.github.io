@@ -21,7 +21,7 @@ Needs Node 20 or newer. Nothing to install.
 | `src/layout.html` | The shell shared by every page: head, navigation, footer. |
 | `src/partials/` | SVG drawings (footer skyline, Hyperloop capsule). |
 | `src/assets/css/site.css` | All styles. Colours and fonts are variables at the top. |
-| `src/assets/js/site.js` | Scroll effects, the hero flow field, forms, theme toggle. |
+| `src/assets/js/site.js` | Scroll effects, forms, theme toggle. |
 | `src/assets/img/` | Generated images. Do not edit by hand. |
 | `media-originals/` | The source images. Not deployed. |
 | `tools/` | Build script, link checker, image generators. |

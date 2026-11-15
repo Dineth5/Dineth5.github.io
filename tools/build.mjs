@@ -196,7 +196,7 @@ const expand = (html) => html.replace(/<!--@([\w-]+)-->/g, (m, k) => (includes[k
 
 const pages = [];
 function render({ url, title, description, body, cls = "", image = "/assets/img/og.png", noindex = false }) {
-  const full = title ? `${title} — Dineth Ilapperuma` : "Dineth Ilapperuma — Mechanical & Computational Engineer, Dubai";
+  const full = title ? `${title} — Dineth Ilapperuma` : "Dineth Ilapperuma — Engineer";
   let html = layout
     .replaceAll("{{title}}", esc(full))
     .replaceAll("{{description}}", esc(description || ""))
@@ -223,7 +223,7 @@ projects.forEach((p, i) =>
 );
 
 // Old al-folio URLs that no longer have their own page.
-for (const [from, to] of Object.entries({ "/news/": "/#experience", "/publications/": "/projects/Aneurysms/", "/blog/": "/" })) {
+for (const [from, to] of Object.entries({ "/news/": "/", "/publications/": "/projects/Aneurysms/", "/blog/": "/" })) {
   write(from + "index.html", `<!doctype html><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="${SITE}${to}"><meta http-equiv="refresh" content="0; url=${to}"><meta name="robots" content="noindex"><a href="${to}">This page has moved.</a>`);
 }
 
