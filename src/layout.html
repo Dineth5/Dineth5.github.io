@@ -33,7 +33,7 @@ document.documentElement.classList.add("js")})();
 </script>
 <link rel="stylesheet" href="/assets/css/site.css?v={{ver}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Dineth Ilapperuma","url":"https://dineth5.github.io/","jobTitle":"Engineer","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Imperial College London"},{"@type":"CollegeOrUniversity","name":"The University of Manchester"}],"sameAs":["https://www.linkedin.com/in/ilapperuma","https://github.com/Dineth5"]}
+{"@context":"https://schema.org","@type":"Person","name":"Dineth Ilapperuma","url":"https://dineth5.github.io/","jobTitle":"Engineer","alumniOf":[{"@type":"CollegeOrUniversity","name":"Imperial College London"},{"@type":"CollegeOrUniversity","name":"The University of Manchester"}],"sameAs":["https://www.linkedin.com/in/ilapperuma","https://github.com/Dineth5"]}
 </script>
 </head>
 <body class="{{class}}">
@@ -63,30 +63,21 @@ document.documentElement.classList.add("js")})();
 {{content}}
 </main>
 
-<footer class="footer" data-scrub="footer">
+<footer class="footer">
   <div class="wrap">
     <h2 class="footer-cta"><a href="/contact/">Let's build <em>something</em><i class="arrow arrow-big"></i></a></h2>
   </div>
-  <div class="skyline" data-scrub="skyline" aria-hidden="true"><!--@skyline--></div>
+  <div class="skyline" aria-hidden="true"><!--@skyline--></div>
   <div class="wrap footer-base">
-    <div class="footer-cols">
-      <div>
-        <h3 class="mono">Direct</h3>
-        <a href="mailto:dineth.ilapperuma@gmail.com">dineth.ilapperuma@gmail.com</a>
-        <a href="https://www.linkedin.com/in/ilapperuma" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Dineth5" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div>
-        <h3 class="mono">Site</h3>
-        <a href="/projects/">Work</a>
-        <a href="/cv/">Request CV</a>
-        <a href="/gallery/">Film archive</a>
-      </div>
-    </div>
-    <div class="footer-legal mono">
+    <nav class="footer-links" aria-label="Footer">
+      <a href="mailto:dineth.ilapperuma@gmail.com">dineth.ilapperuma@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ilapperuma" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Dineth5" target="_blank" rel="noopener">GitHub</a>
+      <a href="/projects/">Work</a>
+      <a href="/cv/">Request CV</a>
+      <a href="/gallery/">Film archive</a>
       <span>© <!--@year--> Dineth Ilapperuma</span>
-      <button class="egg" type="button" data-egg aria-label="A small surprise" title="Do not press">⌖</button>
-    </div>
+    </nav>
   </div>
 </footer>
 

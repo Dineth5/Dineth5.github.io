@@ -63,8 +63,6 @@
   const nav = $("[data-nav]");
   const hero = $('[data-scrub="hero"]');
   const sheets = $$("[data-sheet]");
-  const skyline = $('[data-scrub="skyline"]');
-  const skySvg = skyline && $("svg", skyline);
   let lastY = scrollY;
   let ticking = false;
 
@@ -96,14 +94,6 @@
     }
 
 
-    if (skyline) {
-      const r = skyline.getBoundingClientRect();
-      const p = clamp((vh - r.top) / (vh * 0.75));
-      skyline.style.setProperty("--p", p.toFixed(3));
-      // on narrow screens the drawing is wider than the viewport: pan along the journey
-      const extra = skySvg.getBoundingClientRect().width - r.width;
-      skyline.style.setProperty("--pan", (extra > 1 ? extra * p : 0).toFixed(1));
-    }
 
   }
   // A sheet taller than the screen sticks by its bottom edge instead of its top,
@@ -142,19 +132,5 @@
         msg.innerHTML = 'That did not send. Please email <a href="mailto:dineth.ilapperuma@gmail.com">dineth.ilapperuma@gmail.com</a> instead.';
       }
     });
-  });
-
-  /* ---------- a small surprise in the footer ---------- */
-  let eggN = 0;
-  $("[data-egg]")?.addEventListener("click", () => {
-    if (reduce) return;
-    const img = new Image();
-    img.src = eggN++ % 2 ? "/assets/gif/Penguin.gif" : "/assets/gif/TARDIS.gif";
-    img.alt = "";
-    img.className = "egg-fly";
-    img.onload = () => {
-      document.body.append(img);
-      img.addEventListener("animationend", () => img.remove());
-    };
   });
 })();
