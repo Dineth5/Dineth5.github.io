@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /blog/
+Allow: /
 
 Sitemap: https://dineth5.github.io/sitemap.xml

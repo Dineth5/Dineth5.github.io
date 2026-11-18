@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <url> <loc>https://dineth5.github.io/projects/Aneurysms/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/GazeWheelchair/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/Lathe/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/VIMA/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/firehose/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/hydropede/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/hyperloop/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/pinns/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/projects/pipeclimber/</loc> <lastmod>2026-11-06T16:03:44+00:00</lastmod> </url> <url> <loc>https://dineth5.github.io/</loc> </url> <url> <loc>https://dineth5.github.io/contact/</loc> </url> <url> <loc>https://dineth5.github.io/cv/</loc> </url> <url> <loc>https://dineth5.github.io/gallery/</loc> </url> <url> <loc>https://dineth5.github.io/news/</loc> </url> <url> <loc>https://dineth5.github.io/projects/</loc> </url> <url> <loc>https://dineth5.github.io/publications/</loc> </url> </urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dineth5.github.io/contact/</loc></url>
+  <url><loc>https://dineth5.github.io/cv/</loc></url>
+  <url><loc>https://dineth5.github.io/gallery/</loc></url>
+  <url><loc>https://dineth5.github.io/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/VIMA/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/hyperloop/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/pinns/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/GazeWheelchair/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/Lathe/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/Aneurysms/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/firehose/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/hydropede/</loc></url>
+  <url><loc>https://dineth5.github.io/projects/pipeclimber/</loc></url>
+</urlset>
