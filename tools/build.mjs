@@ -16,6 +16,15 @@ const SRC = path.join(ROOT, "src");
 const DIST = path.join(ROOT, "dist");
 const SITE = "https://dineth5.github.io";
 
+// Google Search Console: the "content" value of the HTML-tag verification method.
+const GSC_TOKEN = "5ZGcQ6cZ-Qo1Mr-P6DW8xdiWZF5qkNiVAou5xSXQLaA";
+// Google Analytics 4: paste the measurement ID (G-XXXXXXXXXX) to switch it on. Empty = off.
+const GA_ID = "";
+const ANALYTICS = GA_ID
+  ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${GA_ID}");</script>`
+  : "";
+
 const read = (p) => fs.readFileSync(p, "utf8");
 const write = (rel, body) => {
   const out = path.join(DIST, rel);
@@ -204,6 +213,8 @@ function render({ url, title, description, body, cls = "", image = "/assets/img/
     .replaceAll("{{image}}", SITE + image)
     .replaceAll("{{class}}", cls)
     .replaceAll("{{robots}}", noindex ? '<meta name="robots" content="noindex">' : "")
+    .replaceAll("{{gsc}}", GSC_TOKEN ? `<meta name="google-site-verification" content="${GSC_TOKEN}">` : "")
+    .replaceAll("{{analytics}}", ANALYTICS)
     .replaceAll("{{ver}}", VER)
     .replace("{{content}}", () => body);
   html = sizeImages(expand(html));

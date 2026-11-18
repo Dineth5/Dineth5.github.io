@@ -41,6 +41,8 @@ metrics:  38% = lower peak stress | 2.5× = safety factor
 
 **Change experience, education or skills.** Edit `src/pages/index.html`.
 
+**Search Console and Analytics.** Both are set at the top of `tools/build.mjs`: `GSC_TOKEN` is the verification tag's `content` value, and `GA_ID` is the Google Analytics measurement ID (`G-…`). Leave `GA_ID` empty to keep analytics off.
+
 **Change colours.** Edit the variables under `:root` in `site.css`. Light and dark values sit next to each other.
 
 ## Deploy
