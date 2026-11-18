@@ -1,0 +1,20 @@
+<svg viewBox="0 0 640 400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 96H620M20 304H620" stroke-dasharray="14 6 2 6" opacity=".7"/>
+  <path d="M150 140H430Q520 140 548 200Q520 260 430 260H150Q104 260 92 200Q104 140 150 140Z"/>
+  <path d="M190 140V260M400 140V260M190 172H400M190 228H400" opacity=".75"/>
+  <rect x="250" y="156" width="92" height="88" rx="14"/>
+  <rect x="262" y="168" width="68" height="64" rx="8" opacity=".6"/>
+  <circle cx="248" cy="176" r="5"/><circle cx="248" cy="224" r="5"/>
+  <path d="M342 200h14"/><circle cx="361" cy="200" r="5"/>
+  <path d="M430 150Q500 152 532 200Q500 248 430 250" opacity=".6"/>
+  <path d="M120 270v14M180 270v14M420 270v14M480 270v14M110 284h80M410 284h80" opacity=".8"/>
+  <path d="M320 20V380M40 200H600" stroke-dasharray="20 5 3 5" stroke-width=".8" opacity=".55"/>
+  <path d="M92 330H548M92 322v16M548 322v16M100 326l-8 4 8 4M540 326l8 4-8 4" stroke-width="1"/>
+  <path d="M590 96V304M582 96h16M582 304h16M586 104l4-8 4 8M586 296l4 8 4-8" stroke-width="1"/>
+  <g stroke="none" fill="currentColor" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="1">
+    <text x="320" y="358" text-anchor="middle">CAPSULE · AIRLOCK SECTION</text>
+    <text x="296" y="132" text-anchor="middle" font-size="11">DOOR</text>
+    <text x="24" y="84" font-size="11">TUBE · 10⁻³ mbar</text>
+    <text x="616" y="84" font-size="11" text-anchor="end">ΔP 101 kPa</text>
+  </g>
+</svg>

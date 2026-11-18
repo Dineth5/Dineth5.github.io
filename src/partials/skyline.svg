@@ -1,0 +1,42 @@
+<svg class="skyline-svg" viewBox="0 0 1600 232" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+  <path class="sky-route" d="M340 96 Q425 36 510 96M885 84 Q928 40 970 84M1175 84 Q1220 40 1265 84"/>
+  <circle class="sky-sun" cx="542" cy="66" r="17"/>
+  <g class="sky-draw">
+    <path pathLength="1" d="M0 200H1600"/>
+    <!-- Sri Lanka: dagoba, palms, lighthouse -->
+    <path pathLength="1" d="M84 200v-8h132v8M98 192a52 52 0 0 1 104 0M138 141h24v-12h-24zM143 129l7-46 7 46M150 83v-9"/>
+    <path pathLength="1" d="M252 200q-7-40 4-78M256 122q-22-15-41 1M256 122q-12-27-35-25M256 122q3-29 26-31M256 122q22-13 41 5M256 122q16-1 27 17"/>
+    <path pathLength="1" d="M286 200q-4-24 3-48M289 152q-14-10-26 0M289 152q-7-17-22-16M289 152q3-18 17-19M289 152q14-8 26 4"/>
+    <path pathLength="1" d="M318 200l4-58h12l4 58M320 142h16v-11h-16zM320 131l8-10 8 10M320 162h17M319 181h19M358 196q8-6 16 0t16 0t16 0"/>
+    <path pathLength="1" d="M40 84l6 5 6-5M66 70l5 4 5-4M408 60l6 5 6-5"/>
+    <!-- Dubai: Burj Al Arab, Burj Khalifa, Museum of the Future, dunes -->
+    <g transform="translate(-720)">
+      <path pathLength="1" d="M1318 200V86M1318 90q56 40 44 110M1318 118h27M1318 146h39M1318 174h44M1318 106h-11"/>
+      <path pathLength="1" d="M1420 200V150h4V112h4V80h4V52h3V30h2V6V30h2V52h3V80h4V112h4V150h4V200M1428 150h18M1432 112h10"/>
+      <g transform="rotate(-14 1524 168)"><ellipse pathLength="1" cx="1524" cy="168" rx="35" ry="24"/><ellipse pathLength="1" cx="1524" cy="168" rx="13" ry="9"/></g>
+      <path pathLength="1" d="M1500 200l7-9h34l7 9M1236 200q34-20 70 0M1560 200q20-12 40-2"/>
+    </g>
+    <!-- Manchester: mill chimney, sawtooth works, town hall, Beetham Tower -->
+    <g transform="translate(400)">
+      <path pathLength="1" d="M574 200l4-92h9l4 92M577 108h11M600 200v-32l20-14v14l20-14v14l20-14v46"/>
+      <path pathLength="1" d="M686 200v-92h28v92M683 108h34M688 108l12-46 12 46M700 62v-10M693 150v50M707 150v50"/>
+      <circle pathLength="1" cx="700" cy="128" r="7.5"/>
+      <path pathLength="1" d="M748 200V52h22v148M748 112h-7V52h7M770 52V26M748 82h22M748 142h22M748 172h22"/>
+    </g>
+    <!-- London: Queen's Tower, Elizabeth Tower, the Eye, the Shard -->
+    <g transform="translate(330)">
+      <path pathLength="1" d="M940 200V102h22v98M937 102h28M942 102a9 13 0 0 1 18 0M951 89V76M946 130h10M946 160h10"/>
+      <path pathLength="1" d="M1000 200V98h20v102M997 98h26M1001 98l9-36 9 36M1010 62v-9"/>
+      <circle pathLength="1" cx="1010" cy="114" r="6.5"/>
+      <circle pathLength="1" cx="1084" cy="150" r="44"/>
+      <path pathLength="1" d="M1084 150l-18 50M1084 150l18 50M1084 106v88M1040 150h88M1053 119l62 62M1115 119l-62 62"/>
+      <path pathLength="1" d="M1152 200l17-162 5 20 16 142M1170 58v142M1160 120h22M1156 160h30"/>
+    </g>
+  </g>
+  <g class="sky-labels" stroke="none" fill="currentColor">
+    <text x="150" y="224" text-anchor="middle">SRI LANKA</text>
+    <text x="718" y="224" text-anchor="middle">DUBAI</text>
+    <text x="1090" y="224" text-anchor="middle">MANCHESTER</text>
+    <text x="1400" y="224" text-anchor="middle">LONDON</text>
+  </g>
+</svg>

@@ -1,0 +1,242 @@
+{
+ "CFD/C2_OSI1.webp": [
+  500,
+  449
+ ],
+ "CFD/C2_OSI2.webp": [
+  500,
+  449
+ ],
+ "CFD/C2_OSI3.webp": [
+  500,
+  449
+ ],
+ "CFD/C2_OSI4.webp": [
+  500,
+  449
+ ],
+ "CFD/Meth_Flow.webp": [
+  720,
+  405
+ ],
+ "Fire/Advancer1.webp": [
+  1600,
+  682
+ ],
+ "Fire/Advancer2.webp": [
+  1600,
+  716
+ ],
+ "Fire/Roller.webp": [
+  1304,
+  1234
+ ],
+ "Fire/Whole.webp": [
+  1600,
+  1261
+ ],
+ "GazeWheelchair/chassis_internals.webp": [
+  828,
+  654
+ ],
+ "GazeWheelchair/depth_camera.webp": [
+  835,
+  584
+ ],
+ "GazeWheelchair/exploded_assembly.webp": [
+  864,
+  812
+ ],
+ "GazeWheelchair/eyetracker_glasses.webp": [
+  726,
+  416
+ ],
+ "GazeWheelchair/wheelchair_front.webp": [
+  514,
+  790
+ ],
+ "GazeWheelchair/wheelchair_iso.webp": [
+  575,
+  782
+ ],
+ "Hydropede/batterypack.webp": [
+  960,
+  500
+ ],
+ "Hydropede/bent.webp": [
+  800,
+  300
+ ],
+ "Hydropede/contracted.webp": [
+  800,
+  300
+ ],
+ "Hydropede/extended.webp": [
+  800,
+  300
+ ],
+ "Hydropede/modular.webp": [
+  1440,
+  500
+ ],
+ "Hyperloop/shell.webp": [
+  1600,
+  900
+ ],
+ "Lathe/Cross.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Full_explo.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Lathe.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Lathe_drawing.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Z1.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Z1_Drawing.webp": [
+  1800,
+  1273
+ ],
+ "Lathe/Z2.webp": [
+  1200,
+  700
+ ],
+ "Lathe/Z2_Drawing.webp": [
+  1800,
+  1273
+ ],
+ "PINNs/Aneurysm3D_results.webp": [
+  2200,
+  1288
+ ],
+ "PINNs/Aneurysm3D_shear_results.webp": [
+  2200,
+  1201
+ ],
+ "Photos/Anuradhapura_1.webp": [
+  1600,
+  2407
+ ],
+ "Photos/Anuradhapura_2.webp": [
+  1600,
+  1060
+ ],
+ "Pipe/Assembly.webp": [
+  1600,
+  1133
+ ],
+ "Pipe/Explo1.webp": [
+  1102,
+  900
+ ],
+ "Pipe/Explo2.webp": [
+  1100,
+  640
+ ],
+ "Pipe/sketch_pipe.webp": [
+  1600,
+  1086
+ ],
+ "VIMA/VIMA_assembly.webp": [
+  635,
+  352
+ ],
+ "VIMA/VIMA_cross.webp": [
+  834,
+  390
+ ],
+ "VIMA/VIMA_expo.webp": [
+  1600,
+  900
+ ],
+ "VIMA/VIMA_sketch.webp": [
+  1213,
+  561
+ ],
+ "coil.webp": [
+  601,
+  601
+ ],
+ "plates/aneurysms.webp": [
+  1269,
+  1400
+ ],
+ "plates/chassis.webp": [
+  1317,
+  1071
+ ],
+ "plates/firehose.webp": [
+  1210,
+  1091
+ ],
+ "plates/gaze-wheelchair.webp": [
+  1304,
+  1287
+ ],
+ "plates/hydropede.webp": [
+  1374,
+  374
+ ],
+ "plates/lathe.webp": [
+  1400,
+  689
+ ],
+ "plates/pinns.webp": [
+  1211,
+  1368
+ ],
+ "plates/pipeclimber.webp": [
+  1303,
+  1143
+ ],
+ "plates/vima.webp": [
+  1222,
+  720
+ ],
+ "plates/wheelchair-iso.webp": [
+  1016,
+  1381
+ ],
+ "stent.webp": [
+  601,
+  601
+ ],
+ "thumbnails/C2.webp": [
+  800,
+  600
+ ],
+ "thumbnails/Fire.webp": [
+  800,
+  600
+ ],
+ "thumbnails/GazeWheelchair.webp": [
+  800,
+  600
+ ],
+ "thumbnails/Iso.webp": [
+  800,
+  600
+ ],
+ "thumbnails/Lathe.webp": [
+  800,
+  600
+ ],
+ "thumbnails/VIMA_logo.webp": [
+  800,
+  600
+ ],
+ "thumbnails/hydropede.webp": [
+  800,
+  600
+ ]
+}
