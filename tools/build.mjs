@@ -17,7 +17,7 @@ const DIST = path.join(ROOT, "dist");
 const SITE = "https://dineth5.github.io";
 
 // Google Search Console: the "content" value of the HTML-tag verification method.
-const GSC_TOKEN = "5ZGcQ6cZ-Qo1Mr-P6DW8xdiWZF5qkNiVAou5xSXQLaA";
+const GSC_TOKEN = "xqOHeGvoEbrv1bhwe7aM4n6J9S9MvIO-kPC3jwaqJUA";
 // Google Analytics 4: paste the measurement ID (G-XXXXXXXXXX) to switch it on. Empty = off.
 const GA_ID = "";
 const ANALYTICS = GA_ID
